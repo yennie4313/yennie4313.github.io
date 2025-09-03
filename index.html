@@ -4,52 +4,56 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>YEEUN — Composer for Film & Media</title>
-  <meta name="description" content="Color grading-inspired reel and film scoring portfolio." />
+  <meta name="description" content="Cinematic scoring and color grading-inspired portfolio." />
 
   <!-- Open Graph / SEO -->
   <meta property="og:title" content="YEEUN — Composer for Film & Media" />
   <meta property="og:description" content="Cinematic scoring with a colorist's eye. Watch the reel and explore selected work." />
-  <meta property="og:image" content="https://yennie4313.github.io/images/og.jpg" />
+  <meta property="og:image" content="/images/og.jpg" />
   <link rel="icon" href="/images/favicon.png" />
 
   <!-- Webfont -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --bg:#0a0a0a;      /* deep cinema black */
-      --panel:#101214;   /* card bg */
-      --text:#e5e7eb;    /* gray-200 */
-      --muted:#9ca3af;   /* gray-400 */
-      --accent:#ffffff;  /* subtle white accents */
-      --maxw:1200px;
-      --gap:clamp(16px,2vw,28px);
-      --radius:16px;
+      --bg:#0a0a0a; --panel:#101214; --text:#e5e7eb;
+      --muted:#9ca3af; --accent:#ffffff;
+      --maxw:1200px; --gap:clamp(16px,2vw,28px); --radius:16px;
     }
     *{box-sizing:border-box}
-    html,body{height:100%}
-    body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    body{margin:0;background:var(--bg);color:var(--text);
+      font:16px/1.6 Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
     a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block;height:auto}
+    img,video{max-width:100%;display:block}
 
     /* NAV */
-    header{position:fixed;inset:0 0 auto;z-index:50;background:rgba(10,10,10,.55);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.06)}
-    .nav{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
-    .brand{font-weight:600;letter-spacing:.2px}
+    header{position:fixed;inset:0 0 auto;z-index:50;
+      background:rgba(10,10,10,.55);backdrop-filter:blur(8px);
+      border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav{max-width:var(--maxw);margin:0 auto;display:flex;
+      align-items:center;justify-content:space-between;padding:14px 20px}
+    .brand{font-weight:600}
     .menu{display:flex;gap:18px;font-size:14px;color:var(--muted)}
     .menu a:hover{color:var(--text)}
 
-    /* HERO video */
-    .hero{position:relative;height:78vh;min-height:520px;display:grid;place-items:center;overflow:hidden}
-    .hero video, .hero .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.6) saturate(1.1)}
-    .hero .overlay{position:absolute;inset:0;background:radial-gradient(120% 140% at 50% 20%, rgba(0,0,0,.2) 0, rgba(0,0,0,.65) 60%, rgba(0,0,0,.85) 100%)}
-    .hero .content{position:relative;z-index:2;text-align:center;padding:0 20px;max-width:900px}
+    /* HERO */
+    .hero{position:relative;height:78vh;min-height:520px;
+      display:grid;place-items:center;overflow:hidden}
+    .hero video,.hero .poster{position:absolute;inset:0;width:100%;height:100%;
+      object-fit:cover;filter:brightness(.6) saturate(1.1)}
+    .hero .overlay{position:absolute;inset:0;
+      background:radial-gradient(120% 140% at 50% 20%,
+        rgba(0,0,0,.2) 0, rgba(0,0,0,.65) 60%, rgba(0,0,0,.85) 100%)}
+    .hero .content{position:relative;z-index:2;text-align:center;
+      padding:0 20px;max-width:900px}
     .hero h1{margin:0 0 10px;font-size:clamp(34px,5vw,54px);line-height:1.1}
     .hero p{margin:0 auto;max-width:65ch;color:var(--muted)}
     .actions{margin-top:18px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-    .btn{display:inline-block;border:1px solid rgba(255,255,255,.22);padding:10px 14px;border-radius:999px;font-size:14px}
+    .btn{display:inline-block;border:1px solid rgba(255,255,255,.22);
+      padding:10px 14px;border-radius:999px;font-size:14px;background:rgba(255,255,255,.02)}
     .btn:hover{border-color:#fff}
 
     /* Sections */
@@ -60,7 +64,9 @@
 
     /* Grid */
     .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gap)}
-    .card{grid-column:span 12;background:var(--panel);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);overflow:hidden;transition:transform .18s ease, box-shadow .18s ease}
+    .card{grid-column:span 12;background:var(--panel);
+      border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);
+      overflow:hidden;transition:transform .18s ease,box-shadow .18s ease}
     .thumb{aspect-ratio:16/9;object-fit:cover;background:#111}
     .card:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(0,0,0,.35)}
     .card-body{padding:14px 16px 18px}
@@ -73,13 +79,31 @@
 
     footer{border-top:1px solid rgba(255,255,255,.06);color:var(--muted);font-size:14px}
   </style>
+
+  <!-- Nicole-like overrides -->
+  <style id="nicole-like-overrides">
+    :root{ --bg:#0b0b0b; --panel:#101214; --text:#e7e9ee; --muted:#a8b0bb; --accent:#ffffff; --maxw:1120px; --gap:clamp(16px,2vw,28px); --radius:14px; }
+    body{ background:var(--bg)!important; color:var(--text)!important; }
+    header{ background:rgba(11,11,11,.6)!important; backdrop-filter:blur(10px)!important; border-bottom:1px solid rgba(255,255,255,.06)!important; }
+    .nav{ max-width:var(--maxw)!important; padding:16px 24px!important; }
+    .brand{ font-weight:700!important; letter-spacing:-.01em!important; }
+    .menu{ gap:22px!important; font-size:13px!important; color:var(--muted)!important; }
+    .hero{ height:92vh!important; min-height:560px!important; }
+    .hero h1{ margin:0 0 14px!important; font-size:clamp(42px,6vw,68px)!important; line-height:1.05!important; letter-spacing:-.02em!important; font-weight:700!important; }
+    .hero p{ margin:0 auto 4px!important; max-width:70ch!important; color:var(--muted)!important; font-size:clamp(14px,1.2vw,16px)!important; }
+    .btn{ border:1px solid rgba(255,255,255,.25)!important; padding:10px 16px!important; border-radius:999px!important; background:rgba(255,255,255,.02)!important; }
+    .grid{ grid-template-columns:repeat(12,1fr)!important; gap:clamp(14px,1.8vw,24px)!important; }
+    .card{ background:var(--panel)!important; border:1px solid rgba(255,255,255,.07)!important; border-radius:var(--radius)!important; box-shadow:none; }
+    .card:hover{ transform:translateY(-2px)!important; box-shadow:0 8px 28px rgba(0,0,0,.35)!important; }
+    footer{ border-top:1px solid rgba(255,255,255,.06)!important; color:var(--muted)!important; }
+  </style>
 </head>
 <body>
   <!-- NAV -->
   <header>
     <div class="nav">
       <a class="brand" href="#top">YEEUN</a>
-      <nav class="menu" aria-label="Primary">
+      <nav class="menu">
         <a href="#work">My work</a>
         <a href="#grading">Color Grading Portfolio</a>
         <a href="#about">About</a>
@@ -88,12 +112,14 @@
     </div>
   </header>
 
-  <!-- HERO: fullscreen autoplay video with dark cinema mood -->
+  <!-- HERO -->
   <section id="top" class="hero" aria-label="Hero video">
-    <video id="heroVideo" autoplay muted playsinline webkit-playsinline loop preload="auto" poster="/images/hero-poster.jpg">
+    <video id="heroVideo" autoplay muted playsinline webkit-playsinline loop preload="auto" poster="/images/hero-poster.jpg"
+           style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.6) saturate(1.1)">
       <source src="/video/hero.mp4" type="video/mp4" />
     </video>
-    <img class="poster" src="/images/hero-poster.jpg" alt="Hero poster" />
+    <img class="poster" src="/images/hero-poster.jpg" alt="Hero poster"
+         style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block" />
     <div class="overlay" aria-hidden="true"></div>
     <div class="content">
       <h1>Composer for Film & Media</h1>
@@ -107,40 +133,46 @@
   </section>
 
   <main>
-    <!-- COLOR GRADING (featured) -->
-    <section id="grading" class="wrap" aria-labelledby="grading-title">
-      <h2 id="grading-title">Color Grading Portfolio</h2>
-      <p class="sub">A concise reel emphasizing tone, contrast, and palette. (Replace the embed URL with your video.)</p>
-      <!-- Replace the src below with your YouTube/Vimeo link -->
-      <div style="position:relative;padding-top:56.25%;border-radius:var(--radius);overflow:hidden;border:1px solid rgba(255,255,255,.06)">
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID?rel=0" title="Color Grading Portfolio" allow="autoplay; encrypted-media" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe>
+    <!-- COLOR GRADING -->
+    <section id="grading" class="wrap">
+      <h2>Color Grading Portfolio</h2>
+      <p class="sub">A concise reel emphasizing tone, contrast, and palette.</p>
+      <div style="position:relative;padding-top:56.25%;border-radius:var(--radius);
+                  overflow:hidden;border:1px solid rgba(255,255,255,.06)">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID?rel=0"
+                title="Color Grading Portfolio" allow="autoplay; encrypted-media"
+                allowfullscreen
+                style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe>
       </div>
     </section>
 
     <!-- WORK GRID -->
-    <section id="work" class="wrap" aria-labelledby="work-title">
-      <h2 id="work-title">Selected Work</h2>
+    <section id="work" class="wrap">
+      <h2>Selected Work</h2>
       <p class="sub">Trailers, shorts, and reels. Click to watch.</p>
       <div class="grid">
-        <!-- Card 1 -->
         <a class="card" href="https://youtu.be/VIDEO_ID_1" target="_blank" rel="noopener">
-          <img class="thumb" src="/images/cover1.jpg" onerror="this.src='https://placehold.co/1280x720/111/EEE?text=Project+1'" alt="Project 1 thumbnail" />
+          <img class="thumb" src="/images/cover1.jpg"
+               onerror="this.src='https://placehold.co/1280x720/111/EEE?text=Project+1'"
+               alt="Project 1 thumbnail" />
           <div class="card-body">
             <div class="title"><h3>Short Film — TITLE</h3><span>2025</span></div>
             <p>Elegant tension, orchestral hybrid.</p>
           </div>
         </a>
-        <!-- Card 2 -->
         <a class="card" href="https://youtu.be/VIDEO_ID_2" target="_blank" rel="noopener">
-          <img class="thumb" src="/images/cover2.jpg" onerror="this.src='https://placehold.co/1280x720/111/EEE?text=Project+2'" alt="Project 2 thumbnail" />
+          <img class="thumb" src="/images/cover2.jpg"
+               onerror="this.src='https://placehold.co/1280x720/111/EEE?text=Project+2'"
+               alt="Project 2 thumbnail" />
           <div class="card-body">
             <div class="title"><h3>Trailer — TITLE</h3><span>2024</span></div>
             <p>Cinematic pulse built for cutdowns.</p>
           </div>
         </a>
-        <!-- Card 3 -->
         <a class="card" href="https://soundcloud.com/USERNAME/SET" target="_blank" rel="noopener">
-          <img class="thumb" src="/images/cover3.jpg" onerror="this.src='https://placehold.co/1280x720/111/EEE?text=Project+3'" alt="Project 3 thumbnail" />
+          <img class="thumb" src="/images/cover3.jpg"
+               onerror="this.src='https://placehold.co/1280x720/111/EEE?text=Project+3'"
+               alt="Project 3 thumbnail" />
           <div class="card-body">
             <div class="title"><h3>Showreel — 90s</h3><span>Playlist</span></div>
             <p>Suspense, romance, uplifting cues.</p>
@@ -150,17 +182,19 @@
     </section>
 
     <!-- ABOUT -->
-    <section id="about" class="wrap" aria-labelledby="about-title" style="max-width:65ch">
-      <h2 id="about-title">About</h2>
-      <p>Seoul-based composer crafting cinematic atmospheres with refined motifs and hybrid textures. Recent work spans short films and trailers; comfortable in Logic Pro with orchestral libraries.</p>
-      <p><strong>Highlights:</strong> 2025 Seoul Indie Film Festival selection; choir/strings arranging; assistant to <em>Composer Name</em>.</p>
+    <section id="about" class="wrap" style="max-width:65ch">
+      <h2>About</h2>
+      <p>Seoul-based composer crafting cinematic atmospheres with refined motifs and hybrid textures.</p>
+      <p><strong>Highlights:</strong> 2025 Seoul Indie Film Festival selection; choir/strings arranging.</p>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="wrap" aria-labelledby="contact-title" style="max-width:65ch">
-      <h2 id="contact-title">Contact</h2>
+    <section id="contact" class="wrap" style="max-width:65ch">
+      <h2>Contact</h2>
       <p><a class="btn" href="mailto:email@domain.com">email@domain.com</a></p>
-      <p class="sub">Also on <a href="https://instagram.com/USERNAME" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.youtube.com/@USERNAME" target="_blank" rel="noopener">YouTube</a> · <a href="https://soundcloud.com/USERNAME" target="_blank" rel="noopener">SoundCloud</a></p>
+      <p class="sub">Also on <a href="https://instagram.com/USERNAME" target="_blank">Instagram</a> ·
+         <a href="https://www.youtube.com/@USERNAME" target="_blank">YouTube</a> ·
+         <a href="https://soundcloud.com/USERNAME" target="_blank">SoundCloud</a></p>
     </section>
   </main>
 
@@ -169,27 +203,27 @@
   </footer>
 
   <script>
-    // Year stamp
-    document.getElementById('y') && (document.getElementById('y').textContent = new Date().getFullYear());
+    document.getElementById('y').textContent = new Date().getFullYear();
 
-    // Autoplay helper for iOS/Safari & others
+    // Autoplay helper for Safari/iOS and hide poster when playing
     const v = document.getElementById('heroVideo');
     const posterImg = document.querySelector('.hero .poster');
     function hidePoster(){ if(posterImg) posterImg.style.display='none'; }
-    function tryPlay(){ if(!v) return; v.muted = true; const p = v.play(); if(p && p.catch){ p.catch(()=>{}); } }
-
+    function tryPlay(){
+      if(!v) return;
+      v.muted = true; v.setAttribute('muted','');
+      const p = v.play();
+      if(p && p.catch){ p.catch(()=>{}); }
+    }
     if(v){
       v.addEventListener('canplay', hidePoster, {once:true});
       v.addEventListener('playing', hidePoster, {once:true});
-      // Some browsers need an explicit kick after load/visibility
       window.addEventListener('load', tryPlay, {once:true});
       document.addEventListener('visibilitychange', ()=>{ if(!document.hidden) tryPlay(); });
-      // Fallback: first user interaction
       ['pointerdown','touchstart','keydown','scroll'].forEach(evt=>{
         document.addEventListener(evt, function onAny(){ tryPlay(); document.removeEventListener(evt, onAny); }, {once:true, passive:true});
       });
     }
   </script>
 </body>
-</html>
 </html>
