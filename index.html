@@ -81,22 +81,64 @@
   </style>
 
   <!-- Nicole-like overrides -->
-  <style id="nicole-like-overrides">
-    :root{ --bg:#0b0b0b; --panel:#101214; --text:#e7e9ee; --muted:#a8b0bb; --accent:#ffffff; --maxw:1120px; --gap:clamp(16px,2vw,28px); --radius:14px; }
-    body{ background:var(--bg)!important; color:var(--text)!important; }
-    header{ background:rgba(11,11,11,.6)!important; backdrop-filter:blur(10px)!important; border-bottom:1px solid rgba(255,255,255,.06)!important; }
-    .nav{ max-width:var(--maxw)!important; padding:16px 24px!important; }
-    .brand{ font-weight:700!important; letter-spacing:-.01em!important; }
-    .menu{ gap:22px!important; font-size:13px!important; color:var(--muted)!important; }
-    .hero{ height:92vh!important; min-height:560px!important; }
-    .hero h1{ margin:0 0 14px!important; font-size:clamp(42px,6vw,68px)!important; line-height:1.05!important; letter-spacing:-.02em!important; font-weight:700!important; }
-    .hero p{ margin:0 auto 4px!important; max-width:70ch!important; color:var(--muted)!important; font-size:clamp(14px,1.2vw,16px)!important; }
-    .btn{ border:1px solid rgba(255,255,255,.25)!important; padding:10px 16px!important; border-radius:999px!important; background:rgba(255,255,255,.02)!important; }
-    .grid{ grid-template-columns:repeat(12,1fr)!important; gap:clamp(14px,1.8vw,24px)!important; }
-    .card{ background:var(--panel)!important; border:1px solid rgba(255,255,255,.07)!important; border-radius:var(--radius)!important; box-shadow:none; }
-    .card:hover{ transform:translateY(-2px)!important; box-shadow:0 8px 28px rgba(0,0,0,.35)!important; }
-    footer{ border-top:1px solid rgba(255,255,255,.06)!important; color:var(--muted)!important; }
-  </style>
+<style id="nicole-like-overrides">
+  /* 전체 톤 */
+  :root{
+    --bg:#0b0b0b; --panel:#101214; --text:#e8ebf0; --muted:#a7afbb; --accent:#ffffff;
+    --maxw:1120px; --gap:clamp(16px,2vw,28px); --radius:14px;
+  }
+  body{ background:var(--bg)!important; color:var(--text)!important; }
+
+  /* 헤더(네비) */
+  header{ background:rgba(11,11,11,.6)!important; backdrop-filter:blur(10px)!important;
+          border-bottom:1px solid rgba(255,255,255,.06)!important; }
+  .nav{ max-width:var(--maxw)!important; padding:16px 24px!important; }
+  .brand{ font-weight:700!important; letter-spacing:-.01em!important; }
+  .menu{ gap:24px!important; font-size:13px!important; color:var(--muted)!important; }
+
+  /* HERO: 텍스트를 화면 아래로 내리고 더 크게 */
+  .hero{
+    height:92vh!important; min-height:560px!important;
+    display:flex!important; align-items:flex-end!important; justify-content:center!important;
+    padding:0 24px 14vh!important; /* 아래로 내리는 핵심 */
+  }
+  .hero h1{
+    margin:0 0 12px!important;
+    font-size:clamp(48px,7.5vw,84px)!important; line-height:1.04!important;
+    letter-spacing:-.02em!important; font-weight:700!important;
+    text-shadow:0 2px 24px rgba(0,0,0,.55)!important; /* 가독성 */
+  }
+  .hero p{
+    margin:0 auto 10px!important; max-width:72ch!important;
+    color:var(--muted)!important; font-size:clamp(15px,1.2vw,17px)!important;
+  }
+  .actions{ gap:16px!important; }
+  .btn{
+    border:1px solid rgba(255,255,255,.28)!important;
+    background:rgba(255,255,255,.03)!important;
+    padding:12px 18px!important; border-radius:999px!important; font-size:14px!important;
+  }
+
+  /* 섹션 여백/제목 */
+  .wrap{ max-width:var(--maxw)!important; padding:72px 24px!important; }
+  h2{ font-size:24px!important; margin:0 0 14px!important; }
+  .sub{ color:var(--muted)!important; font-size:14px!important; margin:0 0 24px!important; }
+
+  /* 그리드/카드: 썸네일을 더 크게(데스크탑 2열) */
+  .grid{ grid-template-columns:repeat(12,1fr)!important; gap:clamp(16px,2vw,26px)!important; }
+  .card{ background:var(--panel)!important; border:1px solid rgba(255,255,255,.07)!important;
+         border-radius:var(--radius)!important; box-shadow:none!important; }
+  .card:hover{ transform:translateY(-2px)!important; box-shadow:0 10px 28px rgba(0,0,0,.38)!important; }
+  .thumb{ aspect-ratio:16/9!important; object-fit:cover!important; }
+
+  /* 반응형: 1100px 이상에서 2열(= 더 큰 썸네일) */
+  @media (min-width:700px){ .card{ grid-column:span 6!important; } }
+  @media (min-width:1100px){ .card{ grid-column:span 6!important; } }
+
+  /* 푸터 */
+  footer{ border-top:1px solid rgba(255,255,255,.06)!important; color:var(--muted)!important; }
+</style>
+
 </head>
 <body>
   <!-- NAV -->
