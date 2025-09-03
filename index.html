@@ -9,54 +9,44 @@
   <!-- Open Graph / SEO -->
   <meta property="og:title" content="YEEUN — Composer for Film & Media" />
   <meta property="og:description" content="Seoul-based cinematic, minimal, and emotionally-driven scores for films, trailers, and media." />
-  <meta property="og:image" content="https://yennie4313.github.io/images/og.jpg" /> <!-- TODO: replace with your actual OG image URL or remove this line -->
-  <link rel="icon" href="/images/favicon.png" /> <!-- Optional: place favicon.png in /images -->
+  <meta property="og:image" content="https://yennie4313.github.io/images/og.jpg" />
+  <link rel="icon" href="/images/favicon.png" />
 
-  <!-- Webfont (clean English UI) -->
+  <!-- Webfont -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
-    /* ——— Base ——— */
     :root {
       --bg: #ffffff;
       --text: #111111;
-      --muted: #6b7280; /* gray-500 */
-      --accent: #e91e63; /* subtle pink accent you liked */
+      --muted: #6b7280;
+      --accent: #e91e63;
       --grid-gap: clamp(16px, 2vw, 28px);
       --maxw: 1000px;
     }
     * { box-sizing: border-box; }
-    html, body { height: 100%; }
     body {
       margin: 0;
       font: 16px/1.6 Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji;
       color: var(--text);
       background: var(--bg);
-      text-rendering: optimizeLegibility;
-      -webkit-font-smoothing: antialiased;
     }
     a { color: inherit; text-decoration: none; }
     img { max-width: 100%; display: block; height: auto; }
     .wrap { max-width: var(--maxw); margin: 0 auto; padding: 40px 20px; }
-
-    /* ——— Header ——— */
     header { position: sticky; top: 0; background: rgba(255,255,255,.85); backdrop-filter: blur(8px); border-bottom: 1px solid #eee; }
-    .nav { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-    .brand { font-weight: 600; letter-spacing: .2px; }
+    .nav { display: flex; align-items: center; justify-content: space-between; }
+    .brand { font-weight: 600; }
     .menu { display: flex; gap: 18px; font-size: 14px; color: var(--muted); }
     .menu a:hover { color: var(--text); }
-
-    /* ——— Hero ——— */
     .hero { padding: 64px 20px 28px; }
     .hero h1 { font-size: clamp(28px, 4vw, 42px); line-height: 1.2; margin: 0 0 10px; }
     .hero p { margin: 0; color: var(--muted); max-width: 65ch; }
     .buttons { margin-top:16px; display:flex; gap:10px; flex-wrap: wrap; }
-
-    /* ——— Project Grid ——— */
     .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--grid-gap); margin-top: 36px; }
-    .card { grid-column: span 12; border: 1px solid #eee; border-radius: 14px; overflow: hidden; transition: transform .15s ease, box-shadow .15s ease; background: #fff; }
+    .card { grid-column: span 12; border: 1px solid #eee; border-radius: 14px; overflow: hidden; background: #fff; }
     .card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.06); }
     .card img { aspect-ratio: 16/9; object-fit: cover; background: #f5f5f5; }
     .card-body { padding: 14px 16px 18px; }
@@ -64,15 +54,9 @@
     .card-title h3 { margin: 0; font-size: 18px; font-weight: 600; }
     .card-title span { font-size: 13px; color: var(--muted); }
     .card p { margin: 10px 0 0; color: var(--muted); }
-
     @media (min-width: 640px) { .card { grid-column: span 6; } }
     @media (min-width: 1000px){ .card { grid-column: span 4; } }
-
-    /* ——— Footer ——— */
     footer { border-top: 1px solid #eee; color: var(--muted); font-size: 14px; }
-
-    /* ——— Utilities ——— */
-    .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
     .btn { display: inline-block; border: 1px solid #e5e7eb; padding: 10px 14px; border-radius: 999px; font-size: 14px; }
     .btn:hover { border-color: var(--accent); }
   </style>
@@ -81,7 +65,7 @@
   <header>
     <div class="wrap nav">
       <a class="brand" href="#top">YEEUN</a>
-      <nav class="menu" aria-label="Primary">
+      <nav class="menu">
         <a href="#work">Work</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
@@ -95,16 +79,15 @@
       <p>Seoul-based. I write cinematic, minimal, and emotionally-driven scores for films, trailers, and media. Available for collaboration.</p>
       <div class="buttons">
         <a class="btn" href="#contact">Get in touch</a>
-        <a class="btn" href="/Yeeun_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a> <!-- TODO: upload Yeeun_Resume.pdf to repo root -->
+        <a class="btn" href="/Yeeun_Resume.pdf" target="_blank">Resume (PDF)</a>
       </div>
     </section>
 
-    <section id="work" aria-labelledby="work-title">
-      <h2 id="work-title" class="sr-only">Selected Work</h2>
+    <section id="work">
+      <h2 class="sr-only">Selected Work</h2>
       <div class="grid">
-        <!-- ——— Project Card 1 ——— -->
-        <a class="card" href="https://youtu.be/VIDEO_ID_1" target="_blank" rel="noopener">
-          <img src="/images/cover1.jpg" alt="Short Film — Project still" />
+        <a class="card" href="#" target="_blank">
+          <img src="/images/cover1.jpg" onerror="this.src='https://placehold.co/800x450?text=Project+1'" alt="Project 1 placeholder" />
           <div class="card-body">
             <div class="card-title">
               <h3>Short Film — TITLE</h3>
@@ -113,9 +96,8 @@
             <p>Thriller • Orchestral hybrid. Music, mixing, and palette design.</p>
           </div>
         </a>
-        <!-- ——— Project Card 2 ——— -->
-        <a class="card" href="https://youtu.be/VIDEO_ID_2" target="_blank" rel="noopener">
-          <img src="/images/cover2.jpg" alt="Trailer — Project poster" />
+        <a class="card" href="#" target="_blank">
+          <img src="/images/cover2.jpg" onerror="this.src='https://placehold.co/800x450?text=Project+2'" alt="Project 2 placeholder" />
           <div class="card-body">
             <div class="card-title">
               <h3>Trailer — TITLE</h3>
@@ -124,9 +106,8 @@
             <p>Cinematic tension with elegant motifs; cutdown-friendly structure.</p>
           </div>
         </a>
-        <!-- ——— Project Card 3 ——— -->
-        <a class="card" href="https://soundcloud.com/USERNAME/SET" target="_blank" rel="noopener">
-          <img src="/images/cover3.jpg" alt="Showreel playlist artwork" />
+        <a class="card" href="#" target="_blank">
+          <img src="/images/cover3.jpg" onerror="this.src='https://placehold.co/800x450?text=Project+3'" alt="Project 3 placeholder" />
           <div class="card-body">
             <div class="card-title">
               <h3>Showreel — 90s</h3>
@@ -135,7 +116,6 @@
             <p>Focused selection: suspense, romance, uplifting cues.</p>
           </div>
         </a>
-        <!-- Duplicate this block for more projects; keep images 16:9. -->
       </div>
     </section>
 
@@ -148,8 +128,8 @@
     <section id="contact" style="margin-top:48px; max-width:65ch;">
       <h2>Contact</h2>
       <p>Available for film, series, ads, and game trailers.</p>
-      <p><a href="mailto:email@domain.com" class="btn">email@domain.com</a> <!-- TODO: replace with your real email --></p>
-      <p style="color:var(--muted); font-size:14px;">Also on <a href="https://instagram.com/USERNAME" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.youtube.com/@USERNAME" target="_blank" rel="noopener">YouTube</a> · <a href="https://soundcloud.com/USERNAME" target="_blank" rel="noopener">SoundCloud</a></p>
+      <p><a href="mailto:email@domain.com" class="btn">email@domain.com</a></p>
+      <p style="color:var(--muted); font-size:14px;">Also on <a href="https://instagram.com/USERNAME" target="_blank">Instagram</a> · <a href="https://www.youtube.com/@USERNAME" target="_blank">YouTube</a> · <a href="https://soundcloud.com/USERNAME" target="_blank">SoundCloud</a></p>
     </section>
   </main>
 
@@ -158,13 +138,11 @@
   </footer>
 
   <script>
-    // Year stamp
     document.getElementById('y').textContent = new Date().getFullYear();
-    // Smooth scroll for same-page anchors
     document.querySelectorAll('a[href^="#"]').forEach(a=>{
       a.addEventListener('click', e=>{
         const href = a.getAttribute('href');
-        if(href.length > 1){ e.preventDefault(); document.querySelector(href).scrollIntoView({behavior:'smooth', block:'start'}); }
+        if(href.length > 1){ e.preventDefault(); document.querySelector(href).scrollIntoView({behavior:'smooth'}); }
       })
     });
   </script>
