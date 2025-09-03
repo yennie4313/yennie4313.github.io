@@ -4,9 +4,7 @@
 :root{
   /* Brand palette — 원하는 색으로 변경 가능 */
   --brand:#111;             /* 본문/버튼 기본 */
-  --brand-acc:#0ea5e9;      /* 포인트 (하늘색) */
-  /* Alt palette (연한 보라):
-     --brand-acc:#7c3aed;  */
+  --brand-acc:#d4af37;      /* 포인트 컬러 (Classic Gold 예시) */
 
   --text:#111;
   --muted:#555;
@@ -17,19 +15,6 @@
   --radius:14px;
   --shadow: 0 6px 24px rgba(0,0,0,.06);
   --gap:1.2rem;
-}
-
-/* 자동 다크 모드 (OS 설정 연동) */
-@media (prefers-color-scheme: dark){
-  :root{
-    --text:#f3f3f3;
-    --muted:#bdbdbd;
-    --bg:#0b0b0c;
-    --border:#1d1d1f;
-    --card:#121214;
-    --brand:#f7f7f7;
-    --shadow: 0 10px 30px rgba(0,0,0,.35);
-  }
 }
 
 /* ============ Base ============ */
@@ -54,7 +39,7 @@ a:hover{opacity:.85}
   display:flex; align-items:center; justify-content:space-between;
   padding:1rem 1.2rem;
   border-bottom:1px solid var(--border);
-  background:color-mix(in oklab, var(--bg) 90%, transparent);
+  background:rgba(255,255,255,.9);
   backdrop-filter:saturate(120%) blur(6px);
 }
 .brand{font-family:'Montserrat',sans-serif;font-weight:800;letter-spacing:.04em}
