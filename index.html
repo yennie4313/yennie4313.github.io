@@ -4,12 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>YEEUN — Composer for Film & Media</title>
-  <meta name="description" content="Portfolio of YEEUN — Composer for Film & Media" />
+  <meta name="description" content="Cinematic scoring and color grading-inspired portfolio." />
 
   <!-- Open Graph / SEO -->
   <meta property="og:title" content="YEEUN — Composer for Film & Media" />
-  <meta property="og:description" content="Seoul-based cinematic, minimal, and emotionally-driven scores for films, trailers, and media." />
-  <meta property="og:image" content="https://yennie4313.github.io/images/og.jpg" />
+  <meta property="og:description" content="Cinematic scoring with a colorist's eye. Watch the reel and explore selected work." />
+  <meta property="og:image" content="/images/og.jpg" />
   <link rel="icon" href="/images/favicon.png" />
 
   <!-- Webfont -->
@@ -18,118 +18,164 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --bg: #ffffff;
-      --text: #111111;
-      --muted: #6b7280;
-      --accent: #e91e63;
-      --grid-gap: clamp(16px, 2vw, 28px);
-      --maxw: 1000px;
+    :root{
+      --bg:#0a0a0a; --panel:#101214; --text:#e5e7eb;
+      --muted:#9ca3af; --accent:#ffffff;
+      --maxw:1200px; --gap:clamp(16px,2vw,28px); --radius:16px;
     }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font: 16px/1.6 Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji;
-      color: var(--text);
-      background: var(--bg);
-    }
-    a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; display: block; height: auto; }
-    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 40px 20px; }
-    header { position: sticky; top: 0; background: rgba(255,255,255,.85); backdrop-filter: blur(8px); border-bottom: 1px solid #eee; }
-    .nav { display: flex; align-items: center; justify-content: space-between; }
-    .brand { font-weight: 600; }
-    .menu { display: flex; gap: 18px; font-size: 14px; color: var(--muted); }
-    .menu a:hover { color: var(--text); }
-    .hero { padding: 64px 20px 28px; }
-    .hero h1 { font-size: clamp(28px, 4vw, 42px); line-height: 1.2; margin: 0 0 10px; }
-    .hero p { margin: 0; color: var(--muted); max-width: 65ch; }
-    .buttons { margin-top:16px; display:flex; gap:10px; flex-wrap: wrap; }
-    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--grid-gap); margin-top: 36px; }
-    .card { grid-column: span 12; border: 1px solid #eee; border-radius: 14px; overflow: hidden; background: #fff; }
-    .card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.06); }
-    .card img { aspect-ratio: 16/9; object-fit: cover; background: #f5f5f5; }
-    .card-body { padding: 14px 16px 18px; }
-    .card-title { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
-    .card-title h3 { margin: 0; font-size: 18px; font-weight: 600; }
-    .card-title span { font-size: 13px; color: var(--muted); }
-    .card p { margin: 10px 0 0; color: var(--muted); }
-    @media (min-width: 640px) { .card { grid-column: span 6; } }
-    @media (min-width: 1000px){ .card { grid-column: span 4; } }
-    footer { border-top: 1px solid #eee; color: var(--muted); font-size: 14px; }
-    .btn { display: inline-block; border: 1px solid #e5e7eb; padding: 10px 14px; border-radius: 999px; font-size: 14px; }
-    .btn:hover { border-color: var(--accent); }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);
+      font:16px/1.6 Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    a{color:inherit;text-decoration:none}
+    img,video{max-width:100%;display:block}
+
+    /* NAV */
+    header{position:fixed;inset:0 0 auto;z-index:50;
+      background:rgba(10,10,10,.55);backdrop-filter:blur(8px);
+      border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav{max-width:var(--maxw);margin:0 auto;display:flex;
+      align-items:center;justify-content:space-between;padding:14px 20px}
+    .brand{font-weight:600}
+    .menu{display:flex;gap:18px;font-size:14px;color:var(--muted)}
+    .menu a:hover{color:var(--text)}
+
+    /* HERO */
+    .hero{position:relative;height:78vh;min-height:520px;
+      display:grid;place-items:center;overflow:hidden}
+    .hero video,.hero .poster{position:absolute;inset:0;width:100%;height:100%;
+      object-fit:cover;filter:brightness(.6) saturate(1.1)}
+    .hero .overlay{position:absolute;inset:0;
+      background:radial-gradient(120% 140% at 50% 20%,
+        rgba(0,0,0,.2) 0, rgba(0,0,0,.65) 60%, rgba(0,0,0,.85) 100%)}
+    .hero .content{position:relative;z-index:2;text-align:center;
+      padding:0 20px;max-width:900px}
+    .hero h1{margin:0 0 10px;font-size:clamp(34px,5vw,54px);line-height:1.1}
+    .hero p{margin:0 auto;max-width:65ch;color:var(--muted)}
+    .actions{margin-top:18px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+    .btn{display:inline-block;border:1px solid rgba(255,255,255,.22);
+      padding:10px 14px;border-radius:999px;font-size:14px}
+    .btn:hover{border-color:#fff}
+
+    /* Sections */
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:60px 20px}
+    section{scroll-margin-top:72px}
+    h2{font-size:22px;margin:0 0 16px}
+    .sub{color:var(--muted);font-size:14px;margin:0 0 22px}
+
+    /* Grid */
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gap)}
+    .card{grid-column:span 12;background:var(--panel);
+      border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);
+      overflow:hidden;transition:transform .18s ease,box-shadow .18s ease}
+    .thumb{aspect-ratio:16/9;object-fit:cover;background:#111}
+    .card:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(0,0,0,.35)}
+    .card-body{padding:14px 16px 18px}
+    .title{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+    .title h3{margin:0;font-size:18px;font-weight:600}
+    .title span{font-size:12px;color:var(--muted)}
+    .card p{margin:10px 0 0;color:var(--muted)}
+    @media(min-width:700px){.card{grid-column:span 6}}
+    @media(min-width:1100px){.card{grid-column:span 4}}
+
+    footer{border-top:1px solid rgba(255,255,255,.06);color:var(--muted);font-size:14px}
   </style>
 </head>
 <body>
+  <!-- NAV -->
   <header>
-    <div class="wrap nav">
+    <div class="nav">
       <a class="brand" href="#top">YEEUN</a>
       <nav class="menu">
-        <a href="#work">Work</a>
+        <a href="#work">My work</a>
+        <a href="#grading">Color Grading Portfolio</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main id="top" class="wrap">
-    <section class="hero">
+  <!-- HERO -->
+  <section id="top" class="hero">
+    <video id="heroVideo" autoplay muted playsinline loop poster="/images/hero-poster.jpg">
+      <source src="/video/hero.mp4" type="video/mp4" />
+    </video>
+    <img class="poster" src="/images/hero-poster.jpg" alt="Hero poster"
+         onerror="this.style.display='none'" />
+    <div class="overlay"></div>
+    <div class="content">
       <h1>Composer for Film & Media</h1>
-      <p>Seoul-based. I write cinematic, minimal, and emotionally-driven scores for films, trailers, and media. Available for collaboration.</p>
-      <div class="buttons">
+      <p>Dark, elegant, and cinematic. Music that feels like the room lights just dimmed.</p>
+      <div class="actions">
+        <a class="btn" href="#work">My work</a>
+        <a class="btn" href="#grading">Color Grading Portfolio</a>
         <a class="btn" href="#contact">Get in touch</a>
-        <a class="btn" href="/Yeeun_Resume.pdf" target="_blank">Resume (PDF)</a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <!-- COLOR GRADING -->
+    <section id="grading" class="wrap">
+      <h2>Color Grading Portfolio</h2>
+      <p class="sub">A concise reel emphasizing tone, contrast, and palette.</p>
+      <div style="position:relative;padding-top:56.25%;border-radius:var(--radius);
+                  overflow:hidden;border:1px solid rgba(255,255,255,.06)">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID?rel=0"
+                title="Color Grading Portfolio" allow="autoplay; encrypted-media"
+                allowfullscreen
+                style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe>
       </div>
     </section>
 
-    <section id="work">
-      <h2 class="sr-only">Selected Work</h2>
+    <!-- WORK GRID -->
+    <section id="work" class="wrap">
+      <h2>Selected Work</h2>
+      <p class="sub">Trailers, shorts, and reels. Click to watch.</p>
       <div class="grid">
-        <a class="card" href="#" target="_blank">
-          <img src="/images/cover1.jpg" onerror="this.src='https://placehold.co/800x450?text=Project+1'" alt="Project 1 placeholder" />
+        <a class="card" href="https://youtu.be/VIDEO_ID_1" target="_blank">
+          <img class="thumb" src="/images/cover1.jpg"
+               onerror="this.src='https://placehold.co/1280x720/111/EEE?text=Project+1'"
+               alt="Project 1 thumbnail" />
           <div class="card-body">
-            <div class="card-title">
-              <h3>Short Film — TITLE</h3>
-              <span>2025</span>
-            </div>
-            <p>Thriller • Orchestral hybrid. Music, mixing, and palette design.</p>
+            <div class="title"><h3>Short Film — TITLE</h3><span>2025</span></div>
+            <p>Elegant tension, orchestral hybrid.</p>
           </div>
         </a>
-        <a class="card" href="#" target="_blank">
-          <img src="/images/cover2.jpg" onerror="this.src='https://placehold.co/800x450?text=Project+2'" alt="Project 2 placeholder" />
+        <a class="card" href="https://youtu.be/VIDEO_ID_2" target="_blank">
+          <img class="thumb" src="/images/cover2.jpg"
+               onerror="this.src='https://placehold.co/1280x720/111/EEE?text=Project+2'"
+               alt="Project 2 thumbnail" />
           <div class="card-body">
-            <div class="card-title">
-              <h3>Trailer — TITLE</h3>
-              <span>2024</span>
-            </div>
-            <p>Cinematic tension with elegant motifs; cutdown-friendly structure.</p>
+            <div class="title"><h3>Trailer — TITLE</h3><span>2024</span></div>
+            <p>Cinematic pulse built for cutdowns.</p>
           </div>
         </a>
-        <a class="card" href="#" target="_blank">
-          <img src="/images/cover3.jpg" onerror="this.src='https://placehold.co/800x450?text=Project+3'" alt="Project 3 placeholder" />
+        <a class="card" href="https://soundcloud.com/USERNAME/SET" target="_blank">
+          <img class="thumb" src="/images/cover3.jpg"
+               onerror="this.src='https://placehold.co/1280x720/111/EEE?text=Project+3'"
+               alt="Project 3 thumbnail" />
           <div class="card-body">
-            <div class="card-title">
-              <h3>Showreel — 90s</h3>
-              <span>Playlist</span>
-            </div>
-            <p>Focused selection: suspense, romance, uplifting cues.</p>
+            <div class="title"><h3>Showreel — 90s</h3><span>Playlist</span></div>
+            <p>Suspense, romance, uplifting cues.</p>
           </div>
         </a>
       </div>
     </section>
 
-    <section id="about" style="margin-top:64px; max-width:65ch;">
+    <!-- ABOUT -->
+    <section id="about" class="wrap" style="max-width:65ch">
       <h2>About</h2>
-      <p>Composer based in Seoul. I craft cinematic and elegant tension with clean motifs. Recent work spans short films and trailers. Comfortable in Logic Pro with orchestral libraries and hybrid textures.</p>
-      <p><strong>Highlights:</strong> 2025 Seoul Indie Film Festival selection; choir/strings arranging; assistant to <em>Composer Name</em>.</p>
+      <p>Seoul-based composer crafting cinematic atmospheres with refined motifs and hybrid textures.</p>
+      <p><strong>Highlights:</strong> 2025 Seoul Indie Film Festival selection; choir/strings arranging.</p>
     </section>
 
-    <section id="contact" style="margin-top:48px; max-width:65ch;">
+    <!-- CONTACT -->
+    <section id="contact" class="wrap" style="max-width:65ch">
       <h2>Contact</h2>
-      <p>Available for film, series, ads, and game trailers.</p>
-      <p><a href="mailto:email@domain.com" class="btn">email@domain.com</a></p>
-      <p style="color:var(--muted); font-size:14px;">Also on <a href="https://instagram.com/USERNAME" target="_blank">Instagram</a> · <a href="https://www.youtube.com/@USERNAME" target="_blank">YouTube</a> · <a href="https://soundcloud.com/USERNAME" target="_blank">SoundCloud</a></p>
+      <p><a class="btn" href="mailto:email@domain.com">email@domain.com</a></p>
+      <p class="sub">Also on <a href="https://instagram.com/USERNAME" target="_blank">Instagram</a> ·
+         <a href="https://www.youtube.com/@USERNAME" target="_blank">YouTube</a> ·
+         <a href="https://soundcloud.com/USERNAME" target="_blank">SoundCloud</a></p>
     </section>
   </main>
 
@@ -139,12 +185,6 @@
 
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', e=>{
-        const href = a.getAttribute('href');
-        if(href.length > 1){ e.preventDefault(); document.querySelector(href).scrollIntoView({behavior:'smooth'}); }
-      })
-    });
   </script>
 </body>
 </html>
