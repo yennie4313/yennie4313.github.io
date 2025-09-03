@@ -1,86 +1,61 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>YEEUN — Film Music Composer</title>
-  <meta name="description" content="Portfolio of Yeeun — Film music composer & sound designer.">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>YEEUN — Composer for Film & Media</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Fonts later:
+  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  -->
 </head>
 <body>
-  <div class="container">
-    <nav class="nav">
-      <div class="brand">YEEUN</div>
-      <div>
-        <a class="active" href="index.html">Home</a>
-        <a href="sound-design.html">Works</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </div>
+  <header class="site-header">
+    <a class="brand" href="index.html">YEEUN</a>
+    <nav class="site-nav">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </nav>
+  </header>
 
-    <header class="hero">
-      <h1>YEEUN</h1>
-      <p class="sub">Film Music Composer · Sound Design</p>
-      <div class="buttons">
-        <a class="btn" href="sound-design.html">View Works</a>
-        <a class="btn" href="mailto:hello@example.com">Contact</a>
+  <main>
+    <section class="hero">
+      <h1>Composer for Film &amp; Media</h1>
+      <p class="sub">Orchestral depth with modern textures for picture.</p>
+      <div class="actions">
+        <a class="btn" href="portfolio.html">View Portfolio</a>
+        <a class="btn outline" href="contact.html">Contact</a>
       </div>
-    </header>
-
-    <div class="section-title">SELECTED WORKS</div>
-    <p class="lead">A curated selection of film scores and sound design for VR concerts and short films.</p>
-
-    <section class="grid">
-      <article class="card">
-        <div class="thumb">
-          <iframe src="https://www.youtube.com/embed/9XMyK3I8s4E" allowfullscreen title="Zara VR Concert"></iframe>
-        </div>
-        <div class="body">
-          <p class="title">Zara Larsson — AmazeVR Concert</p>
-          <p class="desc">Interlude composition & sound design.</p>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="thumb">
-          <iframe src="https://www.youtube.com/embed/9h8a3O3iG1I" allowfullscreen title="aespa VR at KWANGYA"></iframe>
-        </div>
-        <div class="body">
-          <p class="title">aespa — VR Concert</p>
-          <p class="desc">Sound effects & ambient textures.</p>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="thumb">
-          <iframe src="https://www.youtube.com/embed/dfg6l1oO1xE" allowfullscreen title="LYNK-POP"></iframe>
-        </div>
-        <div class="body">
-          <p class="title">LYNK-POP — The VR Concert</p>
-          <p class="desc">FX layers & transition cues.</p>
-        </div>
-      </article>
+      <!-- Optional: short preview later
+      <audio controls autoplay muted>
+        <source src="audio/preview.mp3" type="audio/mpeg" />
+      </audio>
+      -->
     </section>
 
-    <section id="about">
-      <hr class="sep">
-      <div class="section-title">ABOUT</div>
-      <p class="lead">Composer focused on cinematic storytelling — crafting elegant, modern scores with a subtle pulse. Experienced in VR concerts and short-form films.</p>
+    <section class="home-grid">
+      <div class="tile">
+        <h3>Film Score</h3>
+        <p>Selected cues for scenes and trailers.</p>
+        <a class="link" href="portfolio.html">Explore →</a>
+      </div>
+      <div class="tile">
+        <h3>Media Music</h3>
+        <p>Standalone compositions crafted for future visuals.</p>
+        <a class="link" href="portfolio.html">Explore →</a>
+      </div>
+      <div class="tile">
+        <h3>Soundtrack Highlights</h3>
+        <p>Curated themes and textures.</p>
+        <a class="link" href="portfolio.html">Explore →</a>
+      </div>
     </section>
+  </main>
 
-    <section id="contact">
-      <hr class="sep">
-      <div class="section-title">CONTACT</div>
-      <p class="lead">
-        Email: <a href="mailto:hello@example.com">hello@example.com</a> · 
-        <a href="https://youtube.com" target="_blank">YouTube</a> · 
-        <a href="https://soundcloud.com" target="_blank">SoundCloud</a> · 
-        <a href="https://instagram.com" target="_blank">Instagram</a>
-      </p>
-    </section>
-
-    <footer class="footer">© YEEUN</footer>
-  </div>
+  <footer class="site-footer">
+    <p>© 2025 Yeeun — All rights reserved.</p>
+  </footer>
 </body>
 </html>
