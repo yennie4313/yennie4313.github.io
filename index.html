@@ -3,127 +3,71 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nicole Goode Color — (Your Name)</title>
-  <meta name="description" content="Color grading portfolio." />
+  <title>YEEUN — Composer for Film & Media</title>
 
-  <!-- Font (Nicole 느낌: 얇고 세련된 산세리프) -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --bg:#0b0b0b;        /* 전체 배경 (거의 검정) */
-      --panel:#111;        /* 패널/프레임 */
-      --text:#e9ecef;      /* 기본 글자 */
-      --muted:#b8c0cc;     /* 연한 본문 */
-      --gold:#d4b26f;      /* 포인트(링크/밑줄) */
-      --maxw:1120px;       /* 본문 최대 너비 */
-      --radius:14px;       /* 카드/비디오 라운드 */
+      --bg:#0b0b0b;
+      --text:#f1f1f1;
+      --muted:#aaa;
+      --accent:#d4af37; /* 골드 포인트 */
+      --maxw:1100px;
     }
-    *{box-sizing:border-box}
-    html,body{margin:0}
-    body{
-      background:var(--bg);
-      color:var(--text);
-      font:16px/1.7 "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-      -webkit-font-smoothing:antialiased;
-      text-rendering:optimizeLegibility;
-    }
-    a{color:inherit;text-decoration:none}
-    img,video{max-width:100%;display:block}
+    *{box-sizing:border-box; margin:0; padding:0;}
+    body{background:var(--bg); color:var(--text); font-family:'Inter',sans-serif; line-height:1.6;}
 
-    /* ---------- NAV ---------- */
-    header{
-      position:sticky; top:0; z-index:50;
-      background:rgba(11,11,11,.6);
-      backdrop-filter:blur(10px);
-      border-bottom:1px solid rgba(255,255,255,.06);
-    }
-    .nav{
-      max-width:var(--maxw); margin:0 auto; padding:16px 24px;
-      display:flex; align-items:center; justify-content:space-between;
-    }
-    .brand{ font-weight:400; letter-spacing:.2px; color:#eae7e2 }
-    .menu{ display:flex; gap:28px; color:#c8ced7; font-size:15px; }
-    .menu a:hover{ color:#fff }
+    /* NAV */
+    header{position:fixed; top:0; left:0; right:0; z-index:50;
+      background:rgba(0,0,0,.35); backdrop-filter:blur(6px);}
+    .nav{max-width:var(--maxw);margin:0 auto;display:flex;
+      justify-content:space-between;align-items:center;padding:16px 24px;}
+    .brand{font-weight:400; font-size:18px;}
+    .menu{display:flex; gap:28px; font-size:14px; color:var(--text);}
+    .menu a{text-decoration:none; color:var(--text);}
+    .menu a:hover{color:var(--accent);}
 
-    /* ---------- WRAPPER ---------- */
-    .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 24px; }
-
-    /* ---------- HERO (영상만) ---------- */
-    .hero{ padding:28px 0 0 }
-    .hero-frame{
+    /* HERO 영상 */
+    .hero{
       position:relative;
-      background:var(--panel);
-      border:1px solid rgba(255,255,255,.08);
-      border-radius:var(--radius);
+      width:100%;
+      height:100vh; /* 화면 전체 높이 */
       overflow:hidden;
-      box-shadow:0 16px 50px rgba(0,0,0,.45);
     }
     .hero video{
-      width:100%; height:78vh; min-height:520px;
-      object-fit:cover;
-      filter:brightness(.72) saturate(1.05);
+      position:absolute;
+      top:0; left:0;
+      width:100%; height:100%;
+      object-fit:cover; /* 꽉 채우기 */
     }
-    /* 우하단 음소거/재생 아이콘 (간단버전) */
-    .controls{
-      position:absolute; right:14px; bottom:14px; display:flex; gap:10px;
-    }
-    .ctrl-btn{
-      width:38px; height:38px; display:grid; place-items:center;
-      border-radius:999px; border:1px solid rgba(255,255,255,.28);
-      background:rgba(0,0,0,.35); color:#fff; font-size:14px; cursor:pointer;
-      user-select:none;
+    .overlay{
+      position:absolute; inset:0;
+      background:rgba(0,0,0,.25);
     }
 
-    /* ---------- INTRO SECTION (영상 아래 텍스트) ---------- */
-    .intro{ padding:56px 0 28px }
-    .intro h1{
-      margin:0 0 10px;
-      font-weight:400;
-      font-size:clamp(28px,3.8vw,34px);   /* Nicole처럼 과하지 않게 */
-      color:#eae7e2;
-    }
-    .intro h3{
-      margin:12px 0 24px;
-      font-weight:300;
-      font-size:clamp(22px,3.2vw,26px);
-      color:#eae7e2;
-    }
-    .intro p{
-      margin:0 0 14px; max-width:62ch; color:var(--muted);
-    }
-    .readmore{
-      margin-top:18px; display:inline-flex; align-items:center; gap:8px;
-      color:var(--gold);
-      border-bottom:1px solid var(--gold);
-      padding-bottom:2px;
-    }
+    /* 소개 섹션 */
+    section.wrap{max-width:var(--maxw); margin:0 auto; padding:100px 24px;}
+    h1{font-size:28px; font-weight:600; margin-bottom:12px;}
+    h2{font-size:20px; font-weight:400; margin-bottom:16px; color:var(--muted);}
+    p{margin-bottom:16px; color:var(--text); font-weight:300;}
+    a.readmore{color:var(--accent); text-decoration:none; font-size:14px;}
 
-    /* ---------- QUOTE ---------- */
-    .quote{
-      padding:72px 0 64px; text-align:center;
-      color:#d6d8db;
-    }
-    .quote p{ margin:0; font-weight:300; font-size:clamp(18px,2.2vw,22px) }
-    .quote p + p{ margin-top:6px }
-
-    /* ---------- CONTACT / FOOTER ---------- */
-    footer{
-      padding:40px 0 68px; text-align:center; color:var(--muted);
-    }
-    .contact a{ color:#eae7e2; border-bottom:1px solid #eae7e2 }
-    .socials{ margin-top:12px; display:flex; gap:14px; justify-content:center }
-    .socials a{ color:#eae7e2; opacity:.9 }
-    .made{ margin-top:18px; font-size:14px; opacity:.7 }
+    /* 푸터 */
+    footer{padding:60px 24px; text-align:center; color:var(--muted); font-size:14px;}
+    footer a{color:var(--text); text-decoration:none;}
+    footer a:hover{color:var(--accent);}
   </style>
 </head>
 <body>
+
   <!-- NAV -->
   <header>
     <div class="nav">
-      <div class="brand">Nicole Goode Color</div>
+      <div class="brand">YEEUN</div>
       <nav class="menu">
         <a href="#work">My Work</a>
         <a href="#services">Services</a>
@@ -135,83 +79,42 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="wrap">
-      <div class="hero-frame">
-        <video id="heroVideo" autoplay muted playsinline webkit-playsinline loop preload="auto" poster="/images/hero-poster.jpg">
-          <source src="/video/hero.mp4" type="video/mp4" />
-        </video>
-        <div class="controls" aria-hidden="true">
-          <div class="ctrl-btn" id="togglePlay" title="Play/Pause">❚❚</div>
-          <div class="ctrl-btn" id="toggleMute" title="Mute/Unmute">🔈</div>
-        </div>
-      </div>
-    </div>
+    <video id="heroVideo" autoplay muted loop playsinline>
+      <source src="/video/hero.mp4" type="video/mp4" />
+    </video>
+    <div class="overlay"></div>
   </section>
 
-  <!-- INTRO (영상 아래 텍스트) -->
-  <section class="intro">
-    <div class="wrap">
-      <h1>Nicole Goode Color</h1>
-      <h3>Freelance Colorist.</h3>
-
-      <p>I am a professional colorist with a color grading studio based in Prague,
-        Czech Republic. I offer local grading as well as remote grading worldwide.</p>
-      <p>I love building up stories through the intricacies and complexities of
-        color. Every film has a unique character that is crafted by a team of creatives.
-        My priority is to bring all of the elements together and work with you to make
-        your vision come to life.</p>
-
-      <a class="readmore" href="#about">Read More →</a>
-    </div>
+  <!-- 소개 -->
+  <section class="wrap" id="about">
+    <h2>Freelance Composer.</h2>
+    <p>I am a professional composer based in Seoul, creating cinematic and emotionally-driven music for film and media projects worldwide.</p>
+    <p>I love crafting stories through orchestral textures and hybrid sound design. Every score has a unique voice, bringing all elements together to enhance the vision of the director.</p>
+    <a href="#" class="readmore">Read More →</a>
   </section>
 
-  <!-- QUOTE -->
-  <section class="quote">
-    <div class="wrap" style="text-align:center">
-      <p>Stories bring us together,</p>
-      <p><strong>Goode Color sets your story apart.</strong></p>
-    </div>
+  <!-- 인용 -->
+  <section class="wrap" style="text-align:center;">
+    <p style="font-size:18px; font-style:italic; color:var(--muted);">
+      “Stories bring us together,<br/>Yeeun’s music sets your story apart.”
+    </p>
   </section>
 
   <!-- CONTACT -->
   <footer id="contact">
-    <div class="wrap">
-      <div class="contact">
-        <p><a href="mailto:nicoleelizabethgoode@gmail.com">nicoleelizabethgoode@gmail.com</a></p>
-        <p>+420 776 007 419</p>
-      </div>
-      <div class="socials">
-        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
-        <a href="https://vimeo.com" target="_blank" rel="noopener" aria-label="Vimeo">Vimeo</a>
-        <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a>
-      </div>
-      <div class="made">Made with Minimalio</div>
-    </div>
+    <p><a href="mailto:yourmail@example.com">yourmail@example.com</a></p>
+    <p>+82 10-1234-5678</p>
+    <p>
+      <a href="https://instagram.com" target="_blank">Instagram</a> ·
+      <a href="https://youtube.com" target="_blank">YouTube</a> ·
+      <a href="https://soundcloud.com" target="_blank">SoundCloud</a>
+    </p>
+    <p>© <span id="year"></span> YEEUN — Composer for Film & Media</p>
   </footer>
 
   <script>
-    // 연도 찍고 싶으면 아래처럼 쓰세요 (원하면 푸터에 추가)
-    // document.getElementById('year').textContent = new Date().getFullYear();
-
-    // 자동재생 안정화 + 간단 컨트롤
-    const v = document.getElementById('heroVideo');
-    const btnPlay = document.getElementById('togglePlay');
-    const btnMute = document.getElementById('toggleMute');
-
-    function safePlay(){ if(!v) return; v.muted=true; v.setAttribute('muted',''); const p=v.play(); if(p && p.catch){ p.catch(()=>{}); } }
-    window.addEventListener('load', safePlay, {once:true});
-    document.addEventListener('visibilitychange', ()=>{ if(!document.hidden) safePlay(); });
-    ['pointerdown','touchstart','keydown','scroll'].forEach(evt=>{
-      document.addEventListener(evt, function onAny(){ safePlay(); document.removeEventListener(evt, onAny); }, {once:true, passive:true});
-    });
-
-    btnPlay.addEventListener('click', ()=>{
-      if(v.paused){ v.play(); btnPlay.textContent='❚❚'; } else { v.pause(); btnPlay.textContent='▶'; }
-    });
-    btnMute.addEventListener('click', ()=>{
-      v.muted = !v.muted;
-      btnMute.textContent = v.muted ? '🔈' : '🔊';
-    });
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>
