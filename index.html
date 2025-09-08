@@ -3,189 +3,215 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>YEEUN — Composer for Film & Media</title>
-  <meta name="description" content="Cinematic scoring and color grading-inspired portfolio." />
+  <title>Nicole Goode Color — (Your Name)</title>
+  <meta name="description" content="Color grading portfolio." />
 
-  <!-- Fonts -->
+  <!-- Font (Nicole 느낌: 얇고 세련된 산세리프) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --bg:#0b0b0b; --panel:#101214; --text:#e8ebf0;
-      --muted:#a7afbb; --accent:#ffffff;
-      --maxw:1120px; --gap:clamp(16px,2vw,28px); --radius:14px;
+      --bg:#0b0b0b;        /* 전체 배경 (거의 검정) */
+      --panel:#111;        /* 패널/프레임 */
+      --text:#e9ecef;      /* 기본 글자 */
+      --muted:#b8c0cc;     /* 연한 본문 */
+      --gold:#d4b26f;      /* 포인트(링크/밑줄) */
+      --maxw:1120px;       /* 본문 최대 너비 */
+      --radius:14px;       /* 카드/비디오 라운드 */
     }
     *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:var(--text);
-      font:16px/1.6 Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    html,body{margin:0}
+    body{
+      background:var(--bg);
+      color:var(--text);
+      font:16px/1.7 "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
     a{color:inherit;text-decoration:none}
     img,video{max-width:100%;display:block}
 
-    /* NAV */
-    header{position:fixed;inset:0 0 auto;z-index:50;
-      background:rgba(11,11,11,.6);backdrop-filter:blur(10px);
-      border-bottom:1px solid rgba(255,255,255,.06)}
-    .nav{max-width:var(--maxw);margin:0 auto;display:flex;
-      align-items:center;justify-content:space-between;padding:16px 24px}
-    .brand{font-weight:700;letter-spacing:-.01em}
-    .menu{display:flex;gap:22px;font-size:13px;color:var(--muted)}
-    .menu a:hover{color:var(--text)}
+    /* ---------- NAV ---------- */
+    header{
+      position:sticky; top:0; z-index:50;
+      background:rgba(11,11,11,.6);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .nav{
+      max-width:var(--maxw); margin:0 auto; padding:16px 24px;
+      display:flex; align-items:center; justify-content:space-between;
+    }
+    .brand{ font-weight:400; letter-spacing:.2px; color:#eae7e2 }
+    .menu{ display:flex; gap:28px; color:#c8ced7; font-size:15px; }
+    .menu a:hover{ color:#fff }
 
-    /* HERO */
-    .hero{position:relative;height:92vh;min-height:560px;
-      display:grid;place-items:center;overflow:hidden}
-    .hero video,.hero .poster{position:absolute;inset:0;width:100%;height:100%;
-      object-fit:cover;filter:brightness(.6) saturate(1.1)}
-    .hero .overlay{position:absolute;inset:0;
-      background:radial-gradient(120% 140% at 50% 20%,
-        rgba(0,0,0,.2) 0, rgba(0,0,0,.65) 60%, rgba(0,0,0,.85) 100%)}
+    /* ---------- WRAPPER ---------- */
+    .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 24px; }
 
-    /* TEXT SECTIONS */
-    .wrap{max-width:var(--maxw);margin:0 auto;padding:72px 24px}
-    h1{font-size:clamp(42px,6vw,68px);margin:0 0 12px;line-height:1.05}
-    h2{font-size:24px;margin:0 0 16px}
-    .sub{color:var(--muted);font-size:14px;margin:0 0 24px}
+    /* ---------- HERO (영상만) ---------- */
+    .hero{ padding:28px 0 0 }
+    .hero-frame{
+      position:relative;
+      background:var(--panel);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:var(--radius);
+      overflow:hidden;
+      box-shadow:0 16px 50px rgba(0,0,0,.45);
+    }
+    .hero video{
+      width:100%; height:78vh; min-height:520px;
+      object-fit:cover;
+      filter:brightness(.72) saturate(1.05);
+    }
+    /* 우하단 음소거/재생 아이콘 (간단버전) */
+    .controls{
+      position:absolute; right:14px; bottom:14px; display:flex; gap:10px;
+    }
+    .ctrl-btn{
+      width:38px; height:38px; display:grid; place-items:center;
+      border-radius:999px; border:1px solid rgba(255,255,255,.28);
+      background:rgba(0,0,0,.35); color:#fff; font-size:14px; cursor:pointer;
+      user-select:none;
+    }
 
-    /* BUTTONS */
-    .actions{margin-top:20px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
-    .btn{display:inline-block;border:1px solid rgba(255,255,255,.28);
-      background:rgba(255,255,255,.03);padding:12px 18px;
-      border-radius:999px;font-size:14px}
-    .btn:hover{border-color:#fff}
+    /* ---------- INTRO SECTION (영상 아래 텍스트) ---------- */
+    .intro{ padding:56px 0 28px }
+    .intro h1{
+      margin:0 0 10px;
+      font-weight:400;
+      font-size:clamp(28px,3.8vw,34px);   /* Nicole처럼 과하지 않게 */
+      color:#eae7e2;
+    }
+    .intro h3{
+      margin:12px 0 24px;
+      font-weight:300;
+      font-size:clamp(22px,3.2vw,26px);
+      color:#eae7e2;
+    }
+    .intro p{
+      margin:0 0 14px; max-width:62ch; color:var(--muted);
+    }
+    .readmore{
+      margin-top:18px; display:inline-flex; align-items:center; gap:8px;
+      color:var(--gold);
+      border-bottom:1px solid var(--gold);
+      padding-bottom:2px;
+    }
 
-    /* GRID */
-    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gap)}
-    .card{grid-column:span 12;background:var(--panel);
-      border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);
-      overflow:hidden;transition:transform .18s ease,box-shadow .18s ease}
-    .thumb{aspect-ratio:16/9;object-fit:cover;background:#111}
-    .card:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(0,0,0,.35)}
-    .card-body{padding:14px 16px 18px}
-    .title{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
-    .title h3{margin:0;font-size:18px;font-weight:600}
-    .title span{font-size:12px;color:var(--muted)}
-    .card p{margin:10px 0 0;color:var(--muted)}
-    @media(min-width:700px){.card{grid-column:span 6}}
-    @media(min-width:1100px){.card{grid-column:span 6}}
+    /* ---------- QUOTE ---------- */
+    .quote{
+      padding:72px 0 64px; text-align:center;
+      color:#d6d8db;
+    }
+    .quote p{ margin:0; font-weight:300; font-size:clamp(18px,2.2vw,22px) }
+    .quote p + p{ margin-top:6px }
 
-    footer{border-top:1px solid rgba(255,255,255,.06);color:var(--muted);font-size:14px}
+    /* ---------- CONTACT / FOOTER ---------- */
+    footer{
+      padding:40px 0 68px; text-align:center; color:var(--muted);
+    }
+    .contact a{ color:#eae7e2; border-bottom:1px solid #eae7e2 }
+    .socials{ margin-top:12px; display:flex; gap:14px; justify-content:center }
+    .socials a{ color:#eae7e2; opacity:.9 }
+    .made{ margin-top:18px; font-size:14px; opacity:.7 }
   </style>
 </head>
 <body>
   <!-- NAV -->
   <header>
     <div class="nav">
-      <a class="brand" href="#top">YEEUN</a>
+      <div class="brand">Nicole Goode Color</div>
       <nav class="menu">
-        <a href="#work">My work</a>
-        <a href="#grading">Color Grading Portfolio</a>
+        <a href="#work">My Work</a>
+        <a href="#services">Services</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- HERO (영상만) -->
-  <section id="top" class="hero" aria-label="Hero video">
-    <video id="heroVideo" autoplay muted playsinline webkit-playsinline loop preload="auto" poster="/images/hero-poster.jpg">
-      <source src="/video/hero.mp4" type="video/mp4" />
-    </video>
-    <img class="poster" src="/images/hero-poster.jpg" alt="Hero poster" />
-    <div class="overlay" aria-hidden="true"></div>
-  </section>
-
-  <!-- HERO 아래 텍스트/버튼 -->
-  <section class="wrap" style="text-align:center;">
-    <h1>Composer for Film & Media</h1>
-    <p>Dark, elegant, and cinematic. Music that feels like the room lights just dimmed.</p>
-    <div class="actions">
-      <a class="btn" href="#work">My work</a>
-      <a class="btn" href="#grading">Color Grading Portfolio</a>
-      <a class="btn" href="#contact">Get in touch</a>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-frame">
+        <video id="heroVideo" autoplay muted playsinline webkit-playsinline loop preload="auto" poster="/images/hero-poster.jpg">
+          <source src="/video/hero.mp4" type="video/mp4" />
+        </video>
+        <div class="controls" aria-hidden="true">
+          <div class="ctrl-btn" id="togglePlay" title="Play/Pause">❚❚</div>
+          <div class="ctrl-btn" id="toggleMute" title="Mute/Unmute">🔈</div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <main>
-    <!-- COLOR GRADING -->
-    <section id="grading" class="wrap">
-      <h2>Color Grading Portfolio</h2>
-      <p class="sub">A concise reel emphasizing tone, contrast, and palette.</p>
-      <div style="position:relative;padding-top:56.25%;border-radius:var(--radius);
-                  overflow:hidden;border:1px solid rgba(255,255,255,.06)">
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID?rel=0"
-                title="Color Grading Portfolio" allow="autoplay; encrypted-media"
-                allowfullscreen
-                style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe>
+  <!-- INTRO (영상 아래 텍스트) -->
+  <section class="intro">
+    <div class="wrap">
+      <h1>Nicole Goode Color</h1>
+      <h3>Freelance Colorist.</h3>
+
+      <p>I am a professional colorist with a color grading studio based in Prague,
+        Czech Republic. I offer local grading as well as remote grading worldwide.</p>
+      <p>I love building up stories through the intricacies and complexities of
+        color. Every film has a unique character that is crafted by a team of creatives.
+        My priority is to bring all of the elements together and work with you to make
+        your vision come to life.</p>
+
+      <a class="readmore" href="#about">Read More →</a>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section class="quote">
+    <div class="wrap" style="text-align:center">
+      <p>Stories bring us together,</p>
+      <p><strong>Goode Color sets your story apart.</strong></p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <footer id="contact">
+    <div class="wrap">
+      <div class="contact">
+        <p><a href="mailto:nicoleelizabethgoode@gmail.com">nicoleelizabethgoode@gmail.com</a></p>
+        <p>+420 776 007 419</p>
       </div>
-    </section>
-
-    <!-- WORK GRID -->
-    <section id="work" class="wrap">
-      <h2>Selected Work</h2>
-      <p class="sub">Trailers, shorts, and reels. Click to watch.</p>
-      <div class="grid">
-        <a class="card" href="https://youtu.be/VIDEO_ID_1" target="_blank" rel="noopener">
-          <img class="thumb" src="/images/cover1.jpg" alt="Project 1 thumbnail" />
-          <div class="card-body">
-            <div class="title"><h3>Short Film — TITLE</h3><span>2025</span></div>
-            <p>Elegant tension, orchestral hybrid.</p>
-          </div>
-        </a>
-        <a class="card" href="https://youtu.be/VIDEO_ID_2" target="_blank" rel="noopener">
-          <img class="thumb" src="/images/cover2.jpg" alt="Project 2 thumbnail" />
-          <div class="card-body">
-            <div class="title"><h3>Trailer — TITLE</h3><span>2024</span></div>
-            <p>Cinematic pulse built for cutdowns.</p>
-          </div>
-        </a>
-        <a class="card" href="https://soundcloud.com/USERNAME/SET" target="_blank" rel="noopener">
-          <img class="thumb" src="/images/cover3.jpg" alt="Project 3 thumbnail" />
-          <div class="card-body">
-            <div class="title"><h3>Showreel — 90s</h3><span>Playlist</span></div>
-            <p>Suspense, romance, uplifting cues.</p>
-          </div>
-        </a>
+      <div class="socials">
+        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+        <a href="https://vimeo.com" target="_blank" rel="noopener" aria-label="Vimeo">Vimeo</a>
+        <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a>
       </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="wrap" style="max-width:65ch">
-      <h2>About</h2>
-      <p>Seoul-based composer crafting cinematic atmospheres with refined motifs and hybrid textures.</p>
-      <p><strong>Highlights:</strong> 2025 Seoul Indie Film Festival selection; choir/strings arranging.</p>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="wrap" style="max-width:65ch">
-      <h2>Contact</h2>
-      <p><a class="btn" href="mailto:email@domain.com">email@domain.com</a></p>
-      <p class="sub">Also on <a href="https://instagram.com/USERNAME" target="_blank">Instagram</a> ·
-         <a href="https://www.youtube.com/@USERNAME" target="_blank">YouTube</a> ·
-         <a href="https://soundcloud.com/USERNAME" target="_blank">SoundCloud</a></p>
-    </section>
-  </main>
-
-  <footer>
-    <div class="wrap">© <span id="y"></span> YEEUN — Composer for Film & Media</div>
+      <div class="made">Made with Minimalio</div>
+    </div>
   </footer>
 
   <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
+    // 연도 찍고 싶으면 아래처럼 쓰세요 (원하면 푸터에 추가)
+    // document.getElementById('year').textContent = new Date().getFullYear();
+
+    // 자동재생 안정화 + 간단 컨트롤
     const v = document.getElementById('heroVideo');
-    const posterImg = document.querySelector('.hero .poster');
-    function hidePoster(){ if(posterImg) posterImg.style.display='none'; }
-    function tryPlay(){ if(!v) return; v.muted = true; v.setAttribute('muted',''); const p = v.play(); if(p && p.catch){ p.catch(()=>{}); } }
-    if(v){
-      v.addEventListener('canplay', hidePoster, {once:true});
-      v.addEventListener('playing', hidePoster, {once:true});
-      window.addEventListener('load', tryPlay, {once:true});
-      document.addEventListener('visibilitychange', ()=>{ if(!document.hidden) tryPlay(); });
-      ['pointerdown','touchstart','keydown','scroll'].forEach(evt=>{
-        document.addEventListener(evt, function onAny(){ tryPlay(); document.removeEventListener(evt, onAny); }, {once:true, passive:true});
-      });
-    }
+    const btnPlay = document.getElementById('togglePlay');
+    const btnMute = document.getElementById('toggleMute');
+
+    function safePlay(){ if(!v) return; v.muted=true; v.setAttribute('muted',''); const p=v.play(); if(p && p.catch){ p.catch(()=>{}); } }
+    window.addEventListener('load', safePlay, {once:true});
+    document.addEventListener('visibilitychange', ()=>{ if(!document.hidden) safePlay(); });
+    ['pointerdown','touchstart','keydown','scroll'].forEach(evt=>{
+      document.addEventListener(evt, function onAny(){ safePlay(); document.removeEventListener(evt, onAny); }, {once:true, passive:true});
+    });
+
+    btnPlay.addEventListener('click', ()=>{
+      if(v.paused){ v.play(); btnPlay.textContent='❚❚'; } else { v.pause(); btnPlay.textContent='▶'; }
+    });
+    btnMute.addEventListener('click', ()=>{
+      v.muted = !v.muted;
+      btnMute.textContent = v.muted ? '🔈' : '🔊';
+    });
   </script>
 </body>
 </html>
