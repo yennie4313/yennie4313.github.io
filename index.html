@@ -4,117 +4,173 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>YEEUN — Composer for Film & Media</title>
+  <meta name="description" content="Cinematic scoring portfolio." />
 
-  <!-- Fonts -->
+  <!-- Webfont -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
-    :root{
-      --bg:#0b0b0b;
-      --text:#f1f1f1;
-      --muted:#aaa;
-      --accent:#d4af37; /* 골드 포인트 */
-      --maxw:1100px;
+    :root {
+      --bg: #0a0a0a;
+      --text: #cccccc;
+      --muted: #999999;
+      --accent: #d4af37; /* 골드 포인트 */
+      --maxw: 1000px;
     }
-    *{box-sizing:border-box; margin:0; padding:0;}
-    body{background:var(--bg); color:var(--text); font-family:'Inter',sans-serif; line-height:1.6;}
+
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: #f0d68a; }
 
     /* NAV */
-    header{position:fixed; top:0; left:0; right:0; z-index:50;
-      background:rgba(0,0,0,.35); backdrop-filter:blur(6px);}
-    .nav{max-width:var(--maxw);margin:0 auto;display:flex;
-      justify-content:space-between;align-items:center;padding:16px 24px;}
-    .brand{font-weight:400; font-size:18px;}
-    .menu{display:flex; gap:28px; font-size:14px; color:var(--text);}
-    .menu a{text-decoration:none; color:var(--text);}
-    .menu a:hover{color:var(--accent);}
-
-    /* HERO 영상 */
-    .hero{
-      position:relative;
-      width:100%;
-      height:100vh; /* 화면 전체 높이 */
-      overflow:hidden;
+    header {
+      position: fixed; top:0; left:0; right:0; z-index:100;
+      display:flex; justify-content:space-between; align-items:center;
+      padding:20px 40px;
+      background:rgba(10,10,10,0.4);
     }
-    .hero video{
-      position:absolute;
-      top:0; left:0;
+    header .brand { color:#fff; font-size:18px; font-weight:400; }
+    header nav { display:flex; gap:28px; font-size:15px; }
+    header nav a { color: var(--text); }
+    header nav a:hover { color:#fff; }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh; /* 화면 꽉 채우기 */
+      overflow: hidden;
+    }
+    .hero video {
+      position:absolute; top:0; left:0;
       width:100%; height:100%;
-      object-fit:cover; /* 꽉 채우기 */
+      object-fit: cover;
     }
-    .overlay{
-      position:absolute; inset:0;
-      background:rgba(0,0,0,.25);
+    .hero .controls {
+      position:absolute; right:20px; bottom:20px;
+      display:flex; gap:10px;
+    }
+    .hero button {
+      background:rgba(0,0,0,0.5);
+      border:1px solid rgba(255,255,255,0.3);
+      color:#fff; padding:6px 10px; border-radius:4px;
+      cursor:pointer;
     }
 
-    /* 소개 섹션 */
-    section.wrap{max-width:var(--maxw); margin:0 auto; padding:100px 24px;}
-    h1{font-size:28px; font-weight:600; margin-bottom:12px;}
-    h2{font-size:20px; font-weight:400; margin-bottom:16px; color:var(--muted);}
-    p{margin-bottom:16px; color:var(--text); font-weight:300;}
-    a.readmore{color:var(--accent); text-decoration:none; font-size:14px;}
+    /* INTRO */
+    .intro {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 80px 20px;
+    }
+    .intro h1 {
+      font-size: 36px;
+      line-height: 1.2;
+      color:#fff;
+      margin-bottom:10px;
+    }
+    .intro h2 {
+      font-size: 20px;
+      font-weight:400;
+      color:#fff;
+      margin-bottom: 30px;
+    }
+    .intro p {
+      margin-bottom: 20px;
+      color: var(--text);
+    }
+    .intro .readmore a {
+      color: var(--accent);
+      font-weight: 600;
+    }
 
-    /* 푸터 */
-    footer{padding:60px 24px; text-align:center; color:var(--muted); font-size:14px;}
-    footer a{color:var(--text); text-decoration:none;}
-    footer a:hover{color:var(--accent);}
+    /* QUOTE */
+    .quote {
+      text-align:center;
+      padding:80px 20px;
+      font-size:20px;
+      color: var(--text);
+    }
+    .quote strong { color:#fff; }
+
+    /* FOOTER */
+    footer {
+      text-align:center;
+      padding:40px 20px;
+      border-top:1px solid rgba(255,255,255,0.1);
+      font-size:15px;
+      color: var(--text);
+    }
+    footer a { margin:0 8px; }
   </style>
 </head>
 <body>
-
   <!-- NAV -->
   <header>
-    <div class="nav">
-      <div class="brand">YEEUN</div>
-      <nav class="menu">
-        <a href="#work">My Work</a>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
+    <div class="brand">YEEUN</div>
+    <nav>
+      <a href="#work">My Work</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
   <!-- HERO -->
   <section class="hero">
-    <video id="heroVideo" autoplay muted loop playsinline>
-      <source src="/video/hero.mp4" type="video/mp4" />
+    <video id="heroVideo" autoplay muted playsinline loop>
+      <source src="video/hero.mp4" type="video/mp4" />
     </video>
-    <div class="overlay"></div>
+    <div class="controls">
+      <button onclick="togglePlay()">⏯</button>
+      <button onclick="toggleMute()">🔈</button>
+    </div>
   </section>
 
-  <!-- 소개 -->
-  <section class="wrap" id="about">
+  <!-- INTRO -->
+  <section class="intro" id="about">
+    <h1>Composer for Film & Media</h1>
     <h2>Freelance Composer.</h2>
-    <p>I am a professional composer based in Seoul, creating cinematic and emotionally-driven music for film and media projects worldwide.</p>
-    <p>I love crafting stories through orchestral textures and hybrid sound design. Every score has a unique voice, bringing all elements together to enhance the vision of the director.</p>
-    <a href="#" class="readmore">Read More →</a>
+    <p>I am a professional composer based in Seoul, creating cinematic and emotionally-driven scores for films, trailers, and media.</p>
+    <p>I love crafting tension, elegance, and hybrid textures. My priority is to bring together all the elements and make your story come alive.</p>
+    <div class="readmore"><a href="#">Read More →</a></div>
   </section>
 
-  <!-- 인용 -->
-  <section class="wrap" style="text-align:center;">
-    <p style="font-size:18px; font-style:italic; color:var(--muted);">
-      “Stories bring us together,<br/>Yeeun’s music sets your story apart.”
-    </p>
+  <!-- QUOTE -->
+  <section class="quote">
+    Stories bring us together,<br>
+    <strong>YEEUN Music sets your story apart.</strong>
   </section>
 
-  <!-- CONTACT -->
+  <!-- FOOTER -->
   <footer id="contact">
-    <p><a href="mailto:yourmail@example.com">yourmail@example.com</a></p>
-    <p>+82 10-1234-5678</p>
+    <p>yeeun@example.com · +82 10 1234 5678</p>
     <p>
-      <a href="https://instagram.com" target="_blank">Instagram</a> ·
-      <a href="https://youtube.com" target="_blank">YouTube</a> ·
-      <a href="https://soundcloud.com" target="_blank">SoundCloud</a>
+      <a href="#">Instagram</a> · 
+      <a href="#">YouTube</a> · 
+      <a href="#">SoundCloud</a>
     </p>
-    <p>© <span id="year"></span> YEEUN — Composer for Film & Media</p>
+    <p style="margin-top:20px;">© 2025 YEEUN</p>
   </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    const video = document.getElementById('heroVideo');
+    function togglePlay(){
+      if(video.paused){ video.play(); } else { video.pause(); }
+    }
+    function toggleMute(){
+      video.muted = !video.muted;
+    }
   </script>
-
 </body>
 </html>
