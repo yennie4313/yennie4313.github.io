@@ -17,36 +17,55 @@
 
   <!-- HEADER -->
 
-  <header class="site-header">
+  <header class="site-header hero-header">
 
     <a href="index.html" class="brand">
       YEEUN
     </a>
 
     <nav class="site-nav">
-
-      <a href="portfolio.html">
-        Portfolio
-      </a>
-
-      <a href="services.html">
-        Services
-      </a>
-
-      <a href="about.html">
-        About
-      </a>
-
-      <a href="contact.html">
-        Contact
-      </a>
-
+      <a href="portfolio.html">Portfolio</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </nav>
 
   </header>
 
 
-  <!-- HOME -->
+  <!-- FULLSCREEN HERO VIDEO -->
+
+  <section class="hero-video">
+
+    <video
+      id="heroVideo"
+      autoplay
+      muted
+      playsinline
+      loop
+    >
+      <source src="hero.mp4" type="video/mp4">
+      <source src="video/hero.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-controls">
+
+      <button id="playButton" type="button" aria-label="Pause video">
+        ❚❚
+      </button>
+
+      <button id="muteButton" type="button" aria-label="Unmute video">
+        🔇
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- INTRO -->
 
   <main>
 
@@ -80,7 +99,7 @@
     </section>
 
 
-    <!-- FEATURED WORK -->
+    <!-- SELECTED WORK -->
 
     <section class="featured">
 
@@ -137,7 +156,7 @@
     </section>
 
 
-    <!-- CLOSING STATEMENT -->
+    <!-- STATEMENT -->
 
     <section class="home-statement">
 
@@ -164,15 +183,8 @@
       </p>
 
       <div class="footer-links">
-
-        <a href="#">
-          YouTube
-        </a>
-
-        <a href="#">
-          Instagram
-        </a>
-
+        <a href="#">YouTube</a>
+        <a href="#">Instagram</a>
       </div>
 
     </div>
@@ -182,6 +194,51 @@
     </p>
 
   </footer>
+
+
+  <!-- VIDEO CONTROLS -->
+
+  <script>
+
+    const video = document.getElementById("heroVideo");
+    const playButton = document.getElementById("playButton");
+    const muteButton = document.getElementById("muteButton");
+
+
+    playButton.addEventListener("click", function () {
+
+      if (video.paused) {
+
+        video.play();
+        playButton.textContent = "❚❚";
+
+      } else {
+
+        video.pause();
+        playButton.textContent = "▶";
+
+      }
+
+    });
+
+
+    muteButton.addEventListener("click", function () {
+
+      video.muted = !video.muted;
+
+      if (video.muted) {
+
+        muteButton.textContent = "🔇";
+
+      } else {
+
+        muteButton.textContent = "🔊";
+
+      }
+
+    });
+
+  </script>
 
 </body>
 </html>
