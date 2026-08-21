@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <title>YEEUN — Composer for Film & Media</title>
+
   <meta
     name="description"
     content="Yeeun is a composer for film and media, creating music for visual storytelling."
@@ -12,6 +18,7 @@
 
   <link rel="stylesheet" href="style.css">
 </head>
+
 
 <body>
 
@@ -24,16 +31,21 @@
     </a>
 
     <nav class="site-nav">
+
       <a href="portfolio.html">Portfolio</a>
+
       <a href="services.html">Services</a>
+
       <a href="about.html">About</a>
+
       <a href="contact.html">Contact</a>
+
     </nav>
 
   </header>
 
 
-  <!-- FULLSCREEN HERO VIDEO -->
+  <!-- HERO VIDEO -->
 
   <section class="hero-video">
 
@@ -43,20 +55,40 @@
       muted
       playsinline
       loop
+      preload="auto"
     >
-      <source src="hero.mp4" type="video/mp4">
-      <source src="video/hero.mp4" type="video/mp4">
+
+      <source
+        src="hero-web.mp4"
+        type="video/mp4"
+      >
+
+      Your browser does not support video playback.
+
     </video>
+
 
     <div class="hero-overlay"></div>
 
+
+    <!-- VIDEO BUTTONS -->
+
     <div class="hero-controls">
 
-      <button id="playButton" type="button" aria-label="Pause video">
+      <button
+        id="playButton"
+        type="button"
+        aria-label="Pause video"
+      >
         ❚❚
       </button>
 
-      <button id="muteButton" type="button" aria-label="Unmute video">
+
+      <button
+        id="muteButton"
+        type="button"
+        aria-label="Turn sound on"
+      >
         🔇
       </button>
 
@@ -76,11 +108,12 @@
         Film &amp; Media.
       </h1>
 
+
       <div class="home-text">
 
         <p>
-          I am a composer creating music for film,
-          visual media, and storytelling.
+          I am a composer creating music
+          for film, visual media, and storytelling.
         </p>
 
         <p>
@@ -90,7 +123,10 @@
           to life.
         </p>
 
-        <a href="about.html" class="text-link">
+        <a
+          href="about.html"
+          class="text-link"
+        >
           Read more →
         </a>
 
@@ -109,7 +145,10 @@
           Selected Work
         </h2>
 
-        <a href="portfolio.html" class="text-link">
+        <a
+          href="portfolio.html"
+          class="text-link"
+        >
           View all →
         </a>
 
@@ -118,7 +157,11 @@
 
       <div class="featured-grid">
 
-        <a href="portfolio.html" class="featured-item">
+
+        <a
+          href="portfolio.html"
+          class="featured-item"
+        >
 
           <div class="featured-placeholder">
             Film Score
@@ -135,7 +178,10 @@
         </a>
 
 
-        <a href="portfolio.html" class="featured-item">
+        <a
+          href="portfolio.html"
+          class="featured-item"
+        >
 
           <div class="featured-placeholder">
             Original Music
@@ -182,12 +228,21 @@
         </a>
       </p>
 
+
       <div class="footer-links">
-        <a href="#">YouTube</a>
-        <a href="#">Instagram</a>
+
+        <a href="#">
+          YouTube
+        </a>
+
+        <a href="#">
+          Instagram
+        </a>
+
       </div>
 
     </div>
+
 
     <p class="copyright">
       © 2026 Yeeun
@@ -200,45 +255,74 @@
 
   <script>
 
-    const video = document.getElementById("heroVideo");
-    const playButton = document.getElementById("playButton");
-    const muteButton = document.getElementById("muteButton");
+    const video =
+      document.getElementById("heroVideo");
+
+    const playButton =
+      document.getElementById("playButton");
+
+    const muteButton =
+      document.getElementById("muteButton");
 
 
-    playButton.addEventListener("click", function () {
+    /* PLAY / PAUSE */
 
-      if (video.paused) {
+    playButton.addEventListener(
+      "click",
+      function () {
 
-        video.play();
-        playButton.textContent = "❚❚";
+        if (video.paused) {
 
-      } else {
+          video.play();
 
-        video.pause();
-        playButton.textContent = "▶";
+          playButton.textContent = "❚❚";
 
-      }
+        } else {
 
-    });
+          video.pause();
 
+          playButton.textContent = "▶";
 
-    muteButton.addEventListener("click", function () {
-
-      video.muted = !video.muted;
-
-      if (video.muted) {
-
-        muteButton.textContent = "🔇";
-
-      } else {
-
-        muteButton.textContent = "🔊";
+        }
 
       }
+    );
 
-    });
+
+    /* MUTE / UNMUTE */
+
+    muteButton.addEventListener(
+      "click",
+      function () {
+
+        video.muted = !video.muted;
+
+        if (video.muted) {
+
+          muteButton.textContent = "🔇";
+
+          muteButton.setAttribute(
+            "aria-label",
+            "Turn sound on"
+          );
+
+        } else {
+
+          muteButton.textContent = "🔊";
+
+          muteButton.setAttribute(
+            "aria-label",
+            "Mute video"
+          );
+
+        }
+
+      }
+    );
 
   </script>
 
+
 </body>
+
 </html>
