@@ -1,21 +1,23 @@
-/* =========================
-   YEEUN — Minimal Portfolio
-   ========================= */
+/* ========================================
+   YEEUN
+   Dark Cinematic Portfolio
+   ======================================== */
 
 :root {
-  --black: #111111;
-  --dark-gray: #333333;
-  --gray: #777777;
-  --light-gray: #e8e8e5;
-  --off-white: #f7f7f5;
-  --white: #ffffff;
+  --bg: #080808;
+  --bg-soft: #101010;
+  --text: #f2f2f2;
+  --muted: #999999;
+  --line: #242424;
+  --hover: #ffffff;
 
-  --max-width: 1240px;
+  --max-width: 1280px;
 }
 
-/* =========================
+
+/* ========================================
    RESET
-   ========================= */
+   ======================================== */
 
 * {
   box-sizing: border-box;
@@ -30,8 +32,9 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background: var(--white);
-  color: var(--black);
+
+  background: var(--bg);
+  color: var(--text);
 
   font-family:
     "Helvetica Neue",
@@ -40,7 +43,7 @@ body {
     sans-serif;
 
   font-size: 15px;
-  line-height: 1.6;
+  line-height: 1.7;
 
   -webkit-font-smoothing: antialiased;
 }
@@ -48,20 +51,19 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+
+  transition:
+    opacity 0.25s ease;
 }
 
 a:hover {
   opacity: 0.55;
 }
 
-img {
-  display: block;
-  width: 100%;
-}
 
-/* =========================
+/* ========================================
    HEADER
-   ========================= */
+   ======================================== */
 
 .site-header {
   width: 100%;
@@ -74,28 +76,165 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  background: var(--bg);
 }
 
 .brand {
+  color: #ffffff;
+
   font-size: 16px;
   font-weight: 500;
-  letter-spacing: 0.08em;
+
+  letter-spacing: 0.1em;
 }
 
 .site-nav {
   display: flex;
+
   gap: 30px;
 }
 
 .site-nav a {
+  color: #d0d0d0;
+
   font-size: 13px;
   font-weight: 400;
+
   letter-spacing: 0.02em;
 }
 
-/* =========================
+.site-nav a:hover {
+  color: #ffffff;
+  opacity: 1;
+}
+
+
+/* ========================================
+   HERO VIDEO
+   ======================================== */
+
+.hero-video {
+  position: relative;
+
+  width: 100%;
+  height: calc(100vh - 77px);
+
+  min-height: 600px;
+
+  overflow: hidden;
+
+  background: #000000;
+}
+
+.hero-video video {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.18),
+      rgba(0,0,0,0.08)
+    );
+
+  pointer-events: none;
+}
+
+
+/* ========================================
+   HERO HEADER
+   ======================================== */
+
+.hero-header {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 20;
+
+  max-width: none;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.65),
+      rgba(0,0,0,0)
+    );
+}
+
+.hero-header .brand,
+.hero-header .site-nav a {
+  color: #ffffff;
+}
+
+
+/* ========================================
+   VIDEO CONTROLS
+   ======================================== */
+
+.hero-controls {
+  position: absolute;
+
+  right: 28px;
+  bottom: 28px;
+
+  z-index: 10;
+
+  display: flex;
+
+  gap: 8px;
+}
+
+.hero-controls button {
+  width: 36px;
+  height: 36px;
+
+  padding: 0;
+
+  border: 1px solid rgba(255,255,255,0.4);
+
+  background: rgba(0,0,0,0.35);
+
+  color: #ffffff;
+
+  font-size: 11px;
+
+  cursor: pointer;
+
+  backdrop-filter: blur(5px);
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.hero-controls button:hover {
+  background: rgba(255,255,255,0.15);
+
+  border-color: rgba(255,255,255,0.7);
+
+  opacity: 1;
+}
+
+
+/* ========================================
    HOME INTRO
-   ========================= */
+   ======================================== */
 
 .home-intro {
   max-width: var(--max-width);
@@ -103,14 +242,14 @@ img {
   margin: 0 auto;
 
   padding:
-    170px 40px
-    150px;
+    150px 40px
+    160px;
 
   display: grid;
 
   grid-template-columns:
     minmax(300px, 1fr)
-    minmax(280px, 420px);
+    minmax(300px, 420px);
 
   column-gap: 120px;
 
@@ -120,7 +259,10 @@ img {
 .home-intro h1 {
   margin: 0;
 
-  font-size: clamp(48px, 6vw, 82px);
+  color: #ffffff;
+
+  font-size:
+    clamp(48px, 6vw, 82px);
 
   font-weight: 300;
 
@@ -130,20 +272,20 @@ img {
 }
 
 .home-text {
-  padding-top: 10px;
+  padding-top: 12px;
 }
 
 .home-text p {
-  max-width: 410px;
+  max-width: 420px;
 
   margin:
-    0 0 22px;
+    0 0 24px;
 
-  color: var(--dark-gray);
+  color: #b5b5b5;
 
-  font-size: 16px;
+  font-size: 15px;
 
-  line-height: 1.8;
+  line-height: 1.9;
 }
 
 .text-link {
@@ -151,21 +293,28 @@ img {
 
   margin-top: 12px;
 
-  padding-bottom: 4px;
+  padding-bottom: 5px;
 
   border-bottom:
-    1px solid var(--black);
+    1px solid #ffffff;
 
-  font-size: 12px;
+  color: #ffffff;
+
+  font-size: 11px;
 
   text-transform: uppercase;
 
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
 }
 
-/* =========================
-   FEATURED WORK
-   ========================= */
+.text-link:hover {
+  opacity: 0.55;
+}
+
+
+/* ========================================
+   SELECTED WORK
+   ======================================== */
 
 .featured {
   max-width: var(--max-width);
@@ -174,7 +323,7 @@ img {
 
   padding:
     0 40px
-    130px;
+    150px;
 }
 
 .section-heading {
@@ -189,19 +338,21 @@ img {
   padding-bottom: 15px;
 
   border-bottom:
-    1px solid var(--light-gray);
+    1px solid var(--line);
 }
 
 .section-heading h2 {
   margin: 0;
 
-  font-size: 13px;
+  color: #ffffff;
+
+  font-size: 12px;
 
   font-weight: 500;
 
   text-transform: uppercase;
 
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
 }
 
 .section-heading .text-link {
@@ -209,7 +360,9 @@ img {
 
   border: 0;
 
-  font-size: 11px;
+  color: #999999;
+
+  font-size: 10px;
 }
 
 .featured-grid {
@@ -233,21 +386,24 @@ img {
   display: flex;
 
   align-items: center;
-
   justify-content: center;
 
-  background: var(--off-white);
+  background: var(--bg-soft);
 
-  color: #999999;
+  border:
+    1px solid var(--line);
 
-  font-size: 11px;
+  color: #666666;
+
+  font-size: 10px;
 
   text-transform: uppercase;
 
-  letter-spacing: 0.12em;
+  letter-spacing: 0.15em;
 
   transition:
-    background 0.25s ease;
+    background 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .featured-item:hover {
@@ -256,29 +412,34 @@ img {
 
 .featured-item:hover
 .featured-placeholder {
-  background: #eeeeeb;
+  background: #161616;
+
+  border-color: #444444;
 }
 
 .featured-item h3 {
   margin:
     18px 0 4px;
 
+  color: #ffffff;
+
   font-size: 16px;
 
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .featured-item p {
   margin: 0;
 
-  color: var(--gray);
+  color: #777777;
 
   font-size: 12px;
 }
 
-/* =========================
+
+/* ========================================
    STATEMENT
-   ========================= */
+   ======================================== */
 
 .home-statement {
   max-width: 900px;
@@ -287,7 +448,7 @@ img {
 
   padding:
     80px 40px
-    160px;
+    170px;
 
   text-align: center;
 }
@@ -295,18 +456,22 @@ img {
 .home-statement p {
   margin: 0;
 
-  font-size: clamp(25px, 3vw, 38px);
+  color: #eeeeee;
+
+  font-size:
+    clamp(25px, 3vw, 38px);
 
   font-weight: 300;
 
-  line-height: 1.35;
+  line-height: 1.4;
 
   letter-spacing: -0.025em;
 }
 
-/* =========================
+
+/* ========================================
    FOOTER
-   ========================= */
+   ======================================== */
 
 .site-footer {
   max-width: var(--max-width);
@@ -315,22 +480,25 @@ img {
 
   padding:
     35px 40px
-    40px;
+    45px;
 
   border-top:
-    1px solid var(--light-gray);
+    1px solid var(--line);
 
   display: flex;
 
   justify-content: space-between;
 
   align-items: flex-end;
+
+  color: #777777;
 }
 
 .footer-contact p {
-  margin: 0 0 10px;
+  margin:
+    0 0 10px;
 
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .footer-links {
@@ -340,21 +508,23 @@ img {
 }
 
 .footer-links a {
-  font-size: 12px;
-  color: var(--gray);
+  color: #888888;
+
+  font-size: 11px;
 }
 
 .copyright {
   margin: 0;
 
-  color: var(--gray);
+  color: #666666;
 
-  font-size: 11px;
+  font-size: 10px;
 }
 
-/* =========================
+
+/* ========================================
    PORTFOLIO
-   ========================= */
+   ======================================== */
 
 .portfolio {
   max-width: var(--max-width);
@@ -363,13 +533,17 @@ img {
 
   padding:
     120px 40px
-    150px;
+    160px;
 }
 
 .portfolio h1 {
-  margin: 0 0 80px;
+  margin:
+    0 0 80px;
 
-  font-size: clamp(48px, 6vw, 80px);
+  color: #ffffff;
+
+  font-size:
+    clamp(48px, 6vw, 80px);
 
   font-weight: 300;
 
@@ -385,17 +559,17 @@ img {
   padding-bottom: 12px;
 
   border-bottom:
-    1px solid var(--light-gray);
+    1px solid var(--line);
 
-  color: var(--gray);
+  color: #777777;
 
-  font-size: 11px;
+  font-size: 10px;
 
   font-weight: 500;
 
   text-transform: uppercase;
 
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
 }
 
 .grid {
@@ -409,9 +583,9 @@ img {
 }
 
 .work {
-  border: 0;
-
   padding: 0;
+
+  border: 0;
 
   background: transparent;
 }
@@ -425,17 +599,20 @@ img {
 }
 
 .work h3 {
-  margin: 0 0 5px;
+  margin:
+    0 0 5px;
+
+  color: #ffffff;
 
   font-size: 16px;
 
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .work p {
   margin: 0;
 
-  color: var(--gray);
+  color: #777777;
 
   font-size: 12px;
 }
@@ -450,23 +627,26 @@ img {
   display: flex;
 
   align-items: center;
-
   justify-content: center;
 
-  background: var(--off-white);
+  background: var(--bg-soft);
 
-  color: #999;
+  border:
+    1px solid var(--line);
 
-  font-size: 11px;
+  color: #666666;
+
+  font-size: 10px;
 
   text-transform: uppercase;
 
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
 }
 
-/* =========================
+
+/* ========================================
    VIDEO
-   ========================= */
+   ======================================== */
 
 .video {
   width: 100%;
@@ -475,7 +655,7 @@ img {
 
   overflow: hidden;
 
-  background: #111111;
+  background: #000000;
 }
 
 .video iframe {
@@ -485,9 +665,10 @@ img {
   border: 0;
 }
 
-/* =========================
+
+/* ========================================
    ABOUT
-   ========================= */
+   ======================================== */
 
 .about-page {
   max-width: 1000px;
@@ -496,13 +677,17 @@ img {
 
   padding:
     120px 40px
-    150px;
+    160px;
 }
 
 .about-page h1 {
-  margin: 0 0 80px;
+  margin:
+    0 0 80px;
 
-  font-size: clamp(48px, 6vw, 80px);
+  color: #ffffff;
+
+  font-size:
+    clamp(48px, 6vw, 80px);
 
   font-weight: 300;
 
@@ -515,30 +700,34 @@ img {
   margin:
     70px 0 20px;
 
-  font-size: 12px;
+  color: #ffffff;
+
+  font-size: 11px;
 
   font-weight: 500;
 
   text-transform: uppercase;
 
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
 }
 
 .about-page p {
   max-width: 720px;
 
-  margin: 0 0 22px;
+  margin:
+    0 0 22px;
 
-  color: var(--dark-gray);
+  color: #b0b0b0;
 
-  font-size: 16px;
+  font-size: 15px;
 
   line-height: 1.9;
 }
 
-/* =========================
+
+/* ========================================
    CONTACT
-   ========================= */
+   ======================================== */
 
 .contact-page {
   max-width: 900px;
@@ -551,9 +740,13 @@ img {
 }
 
 .contact-page h1 {
-  margin: 0 0 40px;
+  margin:
+    0 0 40px;
 
-  font-size: clamp(48px, 6vw, 80px);
+  color: #ffffff;
+
+  font-size:
+    clamp(48px, 6vw, 80px);
 
   font-weight: 300;
 
@@ -563,9 +756,9 @@ img {
 }
 
 .contact-page p {
-  color: var(--gray);
+  color: #888888;
 
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .contact-list {
@@ -584,22 +777,26 @@ img {
 .contact-list a {
   display: inline-block;
 
-  padding-bottom: 3px;
+  padding-bottom: 4px;
 
   border-bottom:
-    1px solid var(--black);
+    1px solid #eeeeee;
+
+  color: #ffffff;
 
   font-size: 18px;
 }
 
-/* =========================
+
+/* ========================================
    MOBILE
-   ========================= */
+   ======================================== */
 
 @media (max-width: 700px) {
 
   .site-header {
-    padding: 24px 20px;
+    padding:
+      24px 20px;
   }
 
   .site-nav {
@@ -610,29 +807,53 @@ img {
     font-size: 11px;
   }
 
+
+  .hero-video {
+    height: 75vh;
+
+    min-height: 500px;
+  }
+
+
+  .hero-header {
+    padding:
+      24px 20px;
+  }
+
+
+  .hero-controls {
+    right: 18px;
+    bottom: 18px;
+  }
+
+
   .home-intro {
     padding:
       100px 20px
-      90px;
+      100px;
 
     display: block;
   }
 
-  .home-intro h1 {
-    font-size: 48px;
 
+  .home-intro h1 {
     margin-bottom: 55px;
+
+    font-size: 48px;
   }
+
 
   .home-text p {
-    font-size: 15px;
+    font-size: 14px;
   }
+
 
   .featured {
     padding:
       0 20px
-      90px;
+      100px;
   }
+
 
   .featured-grid {
     grid-template-columns: 1fr;
@@ -640,11 +861,13 @@ img {
     gap: 45px;
   }
 
+
   .home-statement {
     padding:
       60px 25px
-      100px;
+      110px;
   }
+
 
   .site-footer {
     padding:
@@ -654,9 +877,11 @@ img {
     display: block;
   }
 
+
   .copyright {
     margin-top: 30px;
   }
+
 
   .portfolio,
   .about-page,
@@ -665,10 +890,12 @@ img {
     padding-right: 20px;
   }
 
+
   .portfolio {
     padding-top: 80px;
     padding-bottom: 100px;
   }
+
 
   .portfolio h1,
   .about-page h1,
@@ -676,140 +903,11 @@ img {
     margin-bottom: 55px;
   }
 
+
   .grid {
     grid-template-columns: 1fr;
 
     gap: 45px;
-  }
-}
-/* =========================
-   FULLSCREEN HERO VIDEO
-   ========================= */
-
-.hero-video {
-  position: relative;
-
-  width: 100%;
-  height: 100vh;
-
-  min-height: 650px;
-
-  overflow: hidden;
-
-  background: #111111;
-}
-
-.hero-video video {
-  position: absolute;
-
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-}
-
-.hero-overlay {
-  position: absolute;
-
-  inset: 0;
-
-  background: rgba(0, 0, 0, 0.12);
-
-  pointer-events: none;
-}
-
-
-/* Header sits on top of the video */
-
-.hero-header {
-  position: absolute;
-
-  top: 0;
-  left: 0;
-  right: 0;
-
-  z-index: 10;
-
-  max-width: none;
-
-  padding:
-    30px 40px;
-
-  color: #ffffff;
-}
-
-.hero-header .brand,
-.hero-header .site-nav a {
-  color: #ffffff;
-}
-
-
-/* Video controls */
-
-.hero-controls {
-  position: absolute;
-
-  right: 24px;
-  bottom: 24px;
-
-  z-index: 5;
-
-  display: flex;
-
-  gap: 10px;
-}
-
-.hero-controls button {
-  width: 36px;
-  height: 36px;
-
-  padding: 0;
-
-  border: 1px solid rgba(255,255,255,0.45);
-
-  background: rgba(0,0,0,0.25);
-
-  color: #ffffff;
-
-  font-family: Arial, sans-serif;
-
-  font-size: 12px;
-
-  cursor: pointer;
-
-  backdrop-filter: blur(5px);
-
-  transition:
-    background 0.2s ease;
-}
-
-.hero-controls button:hover {
-  background: rgba(255,255,255,0.2);
-
-  opacity: 1;
-}
-
-
-/* Mobile */
-
-@media (max-width: 700px) {
-
-  .hero-video {
-    height: 75vh;
-    min-height: 500px;
-  }
-
-  .hero-header {
-    padding:
-      24px 20px;
-  }
-
-  .hero-controls {
-    right: 18px;
-    bottom: 18px;
   }
 
 }
