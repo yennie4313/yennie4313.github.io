@@ -911,3 +911,39 @@ a:hover {
   }
 
 }
+/* =========================
+   HOME KEYWORDS
+   ========================= */
+
+.home-keywords {
+  max-width: 1280px;
+  margin: 0 auto;
+
+  padding:
+    25px 40px
+    100px;
+
+  border-top:
+    1px solid var(--line);
+
+  color: #777777;
+
+  font-size: 11px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.12em;
+}
+
+@media (max-width: 700px) {
+
+  .home-keywords {
+    padding:
+      20px
+      20px
+      80px;
+
+    line-height: 2;
+  }
+
+}
