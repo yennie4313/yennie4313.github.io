@@ -1670,3 +1670,31 @@ a:hover {
   height: 100%;
   border: 0;
 }
+/* =========================================
+   FEATURED SCORING WORK — TEXT VISIBILITY
+   ========================================= */
+
+.featured-heading p {
+  font-size: 15px !important;
+  color: #999 !important;
+  line-height: 1.6 !important;
+}
+
+.featured-subtitle {
+  font-size: 15px !important;
+  color: #aaa !important;
+  line-height: 1.6 !important;
+}
+
+.featured-tags {
+  font-size: 13px !important;
+  color: #888 !important;
+  letter-spacing: 0.04em !important;
+  line-height: 1.6 !important;
+}
+
+.featured-short-description {
+  font-size: 14px !important;
+  color: #999 !important;
+  line-height: 1.7 !important;
+}
