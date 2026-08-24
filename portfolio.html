@@ -17,20 +17,181 @@
   >
 
   <link rel="stylesheet" href="style.css">
+
+
+  <!-- ==================================================
+       PORTFOLIO PAGE LAYOUT OVERRIDES
+       ================================================== -->
+
+  <style>
+
+    /* --------------------------------
+       Portfolio intro
+       -------------------------------- */
+
+    .portfolio-intro {
+      display: none !important;
+    }
+
+
+    /* --------------------------------
+       Main portfolio spacing
+       -------------------------------- */
+
+    main.portfolio {
+      padding-top: 20px !important;
+    }
+
+
+    /* --------------------------------
+       Featured section
+       -------------------------------- */
+
+    .featured-scoring {
+      margin-top: 20px !important;
+    }
+
+
+    .featured-heading {
+      margin-bottom: 36px !important;
+    }
+
+
+    .featured-heading h2 {
+      margin-bottom: 12px !important;
+    }
+
+
+    .featured-heading p {
+      margin-bottom: 0 !important;
+    }
+
+
+    /* --------------------------------
+       Two-column featured grid
+       -------------------------------- */
+
+    .featured-grid {
+      display: grid !important;
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      gap: 64px 28px !important;
+      width: 100% !important;
+    }
+
+
+    /* --------------------------------
+       Featured work
+       -------------------------------- */
+
+    .featured-work {
+      width: 100% !important;
+      min-width: 0 !important;
+    }
+
+
+    /* --------------------------------
+       Featured video
+       -------------------------------- */
+
+    .featured-video {
+      width: 100% !important;
+      aspect-ratio: 16 / 9 !important;
+      overflow: hidden !important;
+      position: relative !important;
+      margin-top: 18px !important;
+      background: #111 !important;
+    }
+
+
+    .featured-video iframe {
+      display: block !important;
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      border: 0 !important;
+    }
+
+
+    .featured-video video {
+      display: block !important;
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+    }
+
+
+    /* --------------------------------
+       Featured information
+       -------------------------------- */
+
+    .featured-info {
+      margin-top: 22px !important;
+    }
+
+
+    .featured-info h3 {
+      margin-bottom: 10px !important;
+    }
+
+
+    /* --------------------------------
+       Competition label
+       -------------------------------- */
+
+    .featured-intro {
+      margin-bottom: 0 !important;
+    }
+
+
+    .competition-label {
+      display: block !important;
+      margin-bottom: 10px !important;
+    }
+
+
+    .featured-short-description {
+      margin-bottom: 0 !important;
+    }
+
+
+    /* --------------------------------
+       Mobile
+       -------------------------------- */
+
+    @media (max-width: 800px) {
+
+      main.portfolio {
+        padding-top: 10px !important;
+      }
+
+
+      .featured-grid {
+        grid-template-columns: 1fr !important;
+        gap: 52px !important;
+      }
+
+    }
+
+  </style>
+
 </head>
 
 
 <body>
 
-  <!-- =========================
+
+  <!-- ==================================================
        HEADER
-       ========================= -->
+       ================================================== -->
 
   <header class="site-header">
 
     <a href="index.html" class="brand">
       YEEUN
     </a>
+
 
     <nav class="site-nav">
 
@@ -56,29 +217,11 @@
 
 
 
-  <!-- =========================
+  <!-- ==================================================
        PORTFOLIO
-       ========================= -->
+       ================================================== -->
 
   <main class="portfolio">
-
-
-    <!-- =========================
-         PORTFOLIO INTRO
-         ========================= -->
-
-    <header class="portfolio-intro">
-
-      <h1>
-        Portfolio
-      </h1>
-
-      <p>
-        Original Scores for Visual Storytelling
-      </p>
-
-    </header>
-
 
 
     <!-- ==================================================
@@ -102,9 +245,9 @@
 
 
 
-      <!-- =========================
-           TWO COLUMN GRID
-           ========================= -->
+      <!-- ==================================================
+           FEATURED VIDEO GRID
+           ================================================== -->
 
       <div class="featured-grid">
 
@@ -129,8 +272,6 @@
 
           </div>
 
-
-          <!-- Vimeo -->
 
           <div class="featured-video">
 
@@ -187,8 +328,6 @@
           </div>
 
 
-          <!-- Vimeo -->
-
           <div class="featured-video">
 
             <iframe
@@ -243,8 +382,6 @@
 
           </div>
 
-
-          <!-- Vimeo -->
 
           <div class="featured-video">
 
@@ -306,9 +443,9 @@
 
 
 
-      <!-- =========================
+      <!-- ==================================================
            LYRICAL & EMOTIONAL
-           ========================= -->
+           ================================================== -->
 
       <div class="portfolio-category">
 
@@ -410,9 +547,9 @@
 
 
 
-      <!-- =========================
+      <!-- ==================================================
            TENSION & SUSPENSE
-           ========================= -->
+           ================================================== -->
 
       <div class="portfolio-category">
 
@@ -490,9 +627,9 @@
 
 
 
-      <!-- =========================
+      <!-- ==================================================
            ACTION
-           ========================= -->
+           ================================================== -->
 
       <div class="portfolio-category">
 
@@ -570,9 +707,9 @@
 
 
 
-      <!-- =========================
+      <!-- ==================================================
            HYBRID
-           ========================= -->
+           ================================================== -->
 
       <div class="portfolio-category">
 
@@ -620,9 +757,9 @@
 
 
 
-      <!-- =========================
+      <!-- ==================================================
            COMEDY
-           ========================= -->
+           ================================================== -->
 
       <div class="portfolio-category">
 
@@ -676,9 +813,9 @@
 
 
 
-  <!-- =========================
+  <!-- ==================================================
        FOOTER
-       ========================= -->
+       ================================================== -->
 
   <footer class="site-footer">
 
