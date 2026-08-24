@@ -19,33 +19,25 @@
   <link rel="stylesheet" href="style.css">
 
 
-  <!-- ==================================================
-       PORTFOLIO PAGE LAYOUT OVERRIDES
-       ================================================== -->
-
   <style>
 
-    /* --------------------------------
-       Portfolio intro
-       -------------------------------- */
+    /* =========================================
+       PORTFOLIO PAGE
+       ========================================= */
 
     .portfolio-intro {
       display: none !important;
     }
 
 
-    /* --------------------------------
-       Main portfolio spacing
-       -------------------------------- */
-
     main.portfolio {
       padding-top: 20px !important;
     }
 
 
-    /* --------------------------------
-       Featured section
-       -------------------------------- */
+    /* =========================================
+       FEATURED SCORING WORK
+       ========================================= */
 
     .featured-scoring {
       margin-top: 20px !important;
@@ -67,9 +59,9 @@
     }
 
 
-    /* --------------------------------
-       Two-column featured grid
-       -------------------------------- */
+    /* =========================================
+       TWO COLUMN VIDEO GRID
+       ========================================= */
 
     .featured-grid {
       display: grid !important;
@@ -79,27 +71,26 @@
     }
 
 
-    /* --------------------------------
-       Featured work
-       -------------------------------- */
-
     .featured-work {
       width: 100% !important;
       min-width: 0 !important;
+      display: flex !important;
+      flex-direction: column !important;
     }
 
 
-    /* --------------------------------
-       Featured video
-       -------------------------------- */
+    /* =========================================
+       VIDEO
+       ========================================= */
 
     .featured-video {
       width: 100% !important;
       aspect-ratio: 16 / 9 !important;
       overflow: hidden !important;
       position: relative !important;
-      margin-top: 18px !important;
+      margin: 0 0 22px 0 !important;
       background: #111 !important;
+      order: 1 !important;
     }
 
 
@@ -122,43 +113,55 @@
     }
 
 
-    /* --------------------------------
-       Featured information
-       -------------------------------- */
+    /* =========================================
+       WORK INFORMATION
+       ========================================= */
 
     .featured-info {
-      margin-top: 22px !important;
+      order: 2 !important;
+      margin: 0 !important;
     }
 
 
     .featured-info h3 {
-      margin-bottom: 10px !important;
+      margin: 0 0 9px 0 !important;
     }
 
 
-    /* --------------------------------
-       Competition label
-       -------------------------------- */
+    .featured-subtitle {
+      margin: 0 0 10px 0 !important;
+    }
+
+
+    .featured-tags {
+      margin: 0 !important;
+    }
+
+
+    /* =========================================
+       DESCRIPTION
+       ========================================= */
 
     .featured-intro {
-      margin-bottom: 0 !important;
+      order: 3 !important;
+      margin: 16px 0 0 0 !important;
     }
 
 
     .competition-label {
-      display: block !important;
-      margin-bottom: 10px !important;
+      display: none !important;
     }
 
 
     .featured-short-description {
-      margin-bottom: 0 !important;
+      margin: 0 !important;
+      line-height: 1.7 !important;
     }
 
 
-    /* --------------------------------
-       Mobile
-       -------------------------------- */
+    /* =========================================
+       MOBILE
+       ========================================= */
 
     @media (max-width: 800px) {
 
@@ -182,9 +185,9 @@
 <body>
 
 
-  <!-- ==================================================
+  <!-- =========================================
        HEADER
-       ================================================== -->
+       ========================================= -->
 
   <header class="site-header">
 
@@ -217,16 +220,16 @@
 
 
 
-  <!-- ==================================================
+  <!-- =========================================
        PORTFOLIO
-       ================================================== -->
+       ========================================= -->
 
   <main class="portfolio">
 
 
-    <!-- ==================================================
+    <!-- =========================================
          FEATURED SCORING WORK
-         ================================================== -->
+         ========================================= -->
 
     <section class="featured-scoring">
 
@@ -245,33 +248,17 @@
 
 
 
-      <!-- ==================================================
-           FEATURED VIDEO GRID
-           ================================================== -->
-
       <div class="featured-grid">
 
 
-        <!-- ==================================================
-             01 — BIFSC 2026
-             ================================================== -->
+        <!-- =====================================
+             BIFSC 2026
+             ===================================== -->
 
         <article class="featured-work">
 
 
-          <div class="featured-intro">
-
-            <span class="competition-label">
-              Competition Entry
-            </span>
-
-            <p class="featured-short-description">
-              Original score composed for a selected scene
-              for the Berlin International Film Scoring Competition 2026.
-            </p>
-
-          </div>
-
+          <!-- VIDEO -->
 
           <div class="featured-video">
 
@@ -286,6 +273,8 @@
 
           </div>
 
+
+          <!-- TITLE & INFO -->
 
           <div class="featured-info">
 
@@ -303,30 +292,31 @@
 
           </div>
 
-        </article>
 
-
-
-        <!-- ==================================================
-             02 — BRIDGERTON
-             ================================================== -->
-
-        <article class="featured-work">
-
+          <!-- DESCRIPTION -->
 
           <div class="featured-intro">
 
-            <span class="competition-label">
-              Competition Entry
-            </span>
-
             <p class="featured-short-description">
               Original score composed for a selected scene
-              from Bridgerton as part of the scoring competition.
+              for the Berlin International Film Scoring Competition 2026.
             </p>
 
           </div>
 
+
+        </article>
+
+
+
+        <!-- =====================================
+             BRIDGERTON
+             ===================================== -->
+
+        <article class="featured-work">
+
+
+          <!-- VIDEO -->
 
           <div class="featured-video">
 
@@ -341,6 +331,8 @@
 
           </div>
 
+
+          <!-- TITLE & INFO -->
 
           <div class="featured-info">
 
@@ -358,30 +350,31 @@
 
           </div>
 
-        </article>
 
-
-
-        <!-- ==================================================
-             03 — LITTLE AMELIE
-             ================================================== -->
-
-        <article class="featured-work">
-
+          <!-- DESCRIPTION -->
 
           <div class="featured-intro">
 
-            <span class="competition-label">
-              Competition Entry
-            </span>
-
             <p class="featured-short-description">
               Original score composed for a selected scene
-              from Little Amelie for a film music composition competition.
+              from Bridgerton as part of the scoring competition.
             </p>
 
           </div>
 
+
+        </article>
+
+
+
+        <!-- =====================================
+             LITTLE AMELIE
+             ===================================== -->
+
+        <article class="featured-work">
+
+
+          <!-- VIDEO -->
 
           <div class="featured-video">
 
@@ -396,6 +389,8 @@
 
           </div>
 
+
+          <!-- TITLE & INFO -->
 
           <div class="featured-info">
 
@@ -413,6 +408,19 @@
 
           </div>
 
+
+          <!-- DESCRIPTION -->
+
+          <div class="featured-intro">
+
+            <p class="featured-short-description">
+              Original score composed for a selected scene
+              from Little Amelie for a film music composition competition.
+            </p>
+
+          </div>
+
+
         </article>
 
 
@@ -422,9 +430,9 @@
 
 
 
-    <!-- ==================================================
+    <!-- =========================================
          FILM & DRAMA
-         ================================================== -->
+         ========================================= -->
 
     <section class="portfolio-section">
 
@@ -443,9 +451,9 @@
 
 
 
-      <!-- ==================================================
+      <!-- =====================================
            LYRICAL & EMOTIONAL
-           ================================================== -->
+           ===================================== -->
 
       <div class="portfolio-category">
 
@@ -456,8 +464,6 @@
 
         <div class="portfolio-grid">
 
-
-          <!-- AFTERGLOW -->
 
           <article class="portfolio-work">
 
@@ -509,8 +515,6 @@
 
 
 
-          <!-- COMING SOON -->
-
           <article class="portfolio-work">
 
             <div class="work-placeholder">
@@ -547,9 +551,9 @@
 
 
 
-      <!-- ==================================================
+      <!-- =====================================
            TENSION & SUSPENSE
-           ================================================== -->
+           ===================================== -->
 
       <div class="portfolio-category">
 
@@ -627,9 +631,9 @@
 
 
 
-      <!-- ==================================================
+      <!-- =====================================
            ACTION
-           ================================================== -->
+           ===================================== -->
 
       <div class="portfolio-category">
 
@@ -707,9 +711,9 @@
 
 
 
-      <!-- ==================================================
+      <!-- =====================================
            HYBRID
-           ================================================== -->
+           ===================================== -->
 
       <div class="portfolio-category">
 
@@ -757,9 +761,9 @@
 
 
 
-      <!-- ==================================================
+      <!-- =====================================
            COMEDY
-           ================================================== -->
+           ===================================== -->
 
       <div class="portfolio-category">
 
@@ -813,9 +817,9 @@
 
 
 
-  <!-- ==================================================
+  <!-- =========================================
        FOOTER
-       ================================================== -->
+       ========================================= -->
 
   <footer class="site-footer">
 
