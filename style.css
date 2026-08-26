@@ -1231,3 +1231,6 @@ a:hover {
   }
 
 }
+.portfolio-intro {
+  display: none !important;
+}
