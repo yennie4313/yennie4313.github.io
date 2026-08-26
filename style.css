@@ -1235,7 +1235,7 @@ a:hover {
   display: none !important;
 }
 /* =========================================================
-   HEADER — FINAL SIZE & POSITION
+   HEADER — FINAL SIZE
    ========================================================= */
 
 .site-header {
@@ -1256,7 +1256,7 @@ a:hover {
     Arial,
     sans-serif;
 
-  font-size: 20px !important;
+  font-size: 23px !important;
   font-weight: 700 !important;
   letter-spacing: 0.08em;
 }
@@ -1264,7 +1264,7 @@ a:hover {
 .site-nav {
   display: flex;
   align-items: center;
-  gap: 38px;
+  gap: 42px;
 }
 
 .site-nav a {
@@ -1274,7 +1274,7 @@ a:hover {
     Arial,
     sans-serif;
 
-  font-size: 17px !important;
+  font-size: 20px !important;
   font-weight: 400 !important;
   letter-spacing: 0 !important;
 }
