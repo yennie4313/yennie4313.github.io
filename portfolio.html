@@ -17,184 +17,20 @@
   >
 
   <link rel="stylesheet" href="style.css">
-
-
-  <style>
-
-    /* =========================================
-       PORTFOLIO PAGE
-       ========================================= */
-
-    .portfolio-intro {
-      display: none !important;
-    }
-
-
-    main.portfolio {
-      padding-top: 20px !important;
-    }
-
-
-    /* =========================================
-       FEATURED SCORING WORK
-       ========================================= */
-
-    .featured-scoring {
-      margin-top: 20px !important;
-    }
-
-
-    .featured-heading {
-      margin-bottom: 36px !important;
-    }
-
-
-    .featured-heading h2 {
-      margin-bottom: 12px !important;
-    }
-
-
-    .featured-heading p {
-      margin-bottom: 0 !important;
-    }
-
-
-    /* =========================================
-       TWO COLUMN VIDEO GRID
-       ========================================= */
-
-    .featured-grid {
-      display: grid !important;
-      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-      gap: 64px 28px !important;
-      width: 100% !important;
-    }
-
-
-    .featured-work {
-      width: 100% !important;
-      min-width: 0 !important;
-      display: flex !important;
-      flex-direction: column !important;
-    }
-
-
-    /* =========================================
-       VIDEO
-       ========================================= */
-
-    .featured-video {
-      width: 100% !important;
-      aspect-ratio: 16 / 9 !important;
-      overflow: hidden !important;
-      position: relative !important;
-      margin: 0 0 22px 0 !important;
-      background: #111 !important;
-      order: 1 !important;
-    }
-
-
-    .featured-video iframe {
-      display: block !important;
-      position: absolute !important;
-      top: 0 !important;
-      left: 0 !important;
-      width: 100% !important;
-      height: 100% !important;
-      border: 0 !important;
-    }
-
-
-    .featured-video video {
-      display: block !important;
-      width: 100% !important;
-      height: 100% !important;
-      object-fit: cover !important;
-    }
-
-
-    /* =========================================
-       WORK INFORMATION
-       ========================================= */
-
-    .featured-info {
-      order: 2 !important;
-      margin: 0 !important;
-    }
-
-
-    .featured-info h3 {
-      margin: 0 0 9px 0 !important;
-    }
-
-
-    .featured-subtitle {
-      margin: 0 0 10px 0 !important;
-    }
-
-
-    .featured-tags {
-      margin: 0 !important;
-    }
-
-
-    /* =========================================
-       DESCRIPTION
-       ========================================= */
-
-    .featured-intro {
-      order: 3 !important;
-      margin: 16px 0 0 0 !important;
-    }
-
-
-    .competition-label {
-      display: none !important;
-    }
-
-
-    .featured-short-description {
-      margin: 0 !important;
-      line-height: 1.7 !important;
-    }
-
-
-    /* =========================================
-       MOBILE
-       ========================================= */
-
-    @media (max-width: 800px) {
-
-      main.portfolio {
-        padding-top: 10px !important;
-      }
-
-
-      .featured-grid {
-        grid-template-columns: 1fr !important;
-        gap: 52px !important;
-      }
-
-    }
-
-  </style>
-
 </head>
 
 
 <body>
 
-
-  <!-- =========================================
+  <!-- =========================
        HEADER
-       ========================================= -->
+       ========================= -->
 
   <header class="site-header">
 
     <a href="index.html" class="brand">
       YEEUN
     </a>
-
 
     <nav class="site-nav">
 
@@ -220,16 +56,34 @@
 
 
 
-  <!-- =========================================
+  <!-- =========================
        PORTFOLIO
-       ========================================= -->
+       ========================= -->
 
   <main class="portfolio">
 
 
-    <!-- =========================================
+    <!-- =========================
+         PORTFOLIO INTRO
+         ========================= -->
+
+    <header class="portfolio-intro">
+
+      <h1>
+        Portfolio
+      </h1>
+
+      <p>
+        Original Scores for Visual Storytelling
+      </p>
+
+    </header>
+
+
+
+    <!-- ==================================================
          FEATURED SCORING WORK
-         ========================================= -->
+         ================================================== -->
 
     <section class="featured-scoring">
 
@@ -248,12 +102,16 @@
 
 
 
+      <!-- =========================
+           TWO COLUMN GRID
+           ========================= -->
+
       <div class="featured-grid">
 
 
-        <!-- =====================================
-             BIFSC 2026
-             ===================================== -->
+        <!-- ==================================================
+             01 — BIFSC 2026
+             ================================================== -->
 
         <article class="featured-work">
 
@@ -262,55 +120,61 @@
 
           <div class="featured-video">
 
-            <iframe
-              src="https://player.vimeo.com/video/1220847094?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-              frameborder="0"
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-              title="BIFSC 2026"
-            ></iframe>
+            <div style="padding:56.25% 0 0 0;position:relative;">
+
+              <iframe
+                src="https://player.vimeo.com/video/1220847094?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                title="bifsc"
+              >
+              </iframe>
+
+            </div>
 
           </div>
 
 
-          <!-- TITLE & INFO -->
+          <!-- WORK INFORMATION -->
 
           <div class="featured-info">
+
 
             <h3>
               BIFSC 2026
             </h3>
 
+
+            <div class="featured-divider">
+            </div>
+
+
             <p class="featured-subtitle">
               Berlin International Film Scoring Competition
             </p>
 
+
             <p class="featured-tags">
-              Film Scoring · Hybrid · Orchestral
+              FILM SCORING · HYBRID · ORCHESTRAL
             </p>
 
-          </div>
 
-
-          <!-- DESCRIPTION -->
-
-          <div class="featured-intro">
-
-            <p class="featured-short-description">
+            <p class="featured-description">
               Selected scene — original score for BIFSC 2026.
             </p>
 
-          </div>
 
+          </div>
 
         </article>
 
 
 
-        <!-- =====================================
-             BRIDGERTON
-             ===================================== -->
+        <!-- ==================================================
+             02 — BRIDGERTON
+             ================================================== -->
 
         <article class="featured-work">
 
@@ -319,55 +183,61 @@
 
           <div class="featured-video">
 
-            <iframe
-              src="https://player.vimeo.com/video/1220852195?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-              frameborder="0"
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-              title="Bridgerton Scoring Competition"
-            ></iframe>
+            <div style="padding:56.25% 0 0 0;position:relative;">
+
+              <iframe
+                src="https://player.vimeo.com/video/1220852195?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                title="bridgerton"
+              >
+              </iframe>
+
+            </div>
 
           </div>
 
 
-          <!-- TITLE & INFO -->
+          <!-- WORK INFORMATION -->
 
           <div class="featured-info">
+
 
             <h3>
               Bridgerton Scoring Competition
             </h3>
 
+
+            <div class="featured-divider">
+            </div>
+
+
             <p class="featured-subtitle">
               Period Drama · Orchestral
             </p>
 
+
             <p class="featured-tags">
-              Film Scoring · Period · Orchestral
+              FILM SCORING · PERIOD · ORCHESTRAL
             </p>
 
-          </div>
 
-
-          <!-- DESCRIPTION -->
-
-          <div class="featured-intro">
-
-            <p class="featured-short-description">
+            <p class="featured-description">
               Selected scene — original orchestral score for Bridgerton.
             </p>
 
-          </div>
 
+          </div>
 
         </article>
 
 
 
-        <!-- =====================================
-             LITTLE AMELIE
-             ===================================== -->
+        <!-- ==================================================
+             03 — LITTLE AMELIE
+             ================================================== -->
 
         <article class="featured-work">
 
@@ -376,47 +246,53 @@
 
           <div class="featured-video">
 
-            <iframe
-              src="https://player.vimeo.com/video/1220860568?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-              frameborder="0"
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-              title="Little Amelie"
-            ></iframe>
+            <div style="padding:56.25% 0 0 0;position:relative;">
+
+              <iframe
+                src="https://player.vimeo.com/video/1220860568?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                title="Little Amelie"
+              >
+              </iframe>
+
+            </div>
 
           </div>
 
 
-          <!-- TITLE & INFO -->
+          <!-- WORK INFORMATION -->
 
           <div class="featured-info">
+
 
             <h3>
               Little Amelie
             </h3>
 
+
+            <div class="featured-divider">
+            </div>
+
+
             <p class="featured-subtitle">
               Lyrical · Everyday
             </p>
 
+
             <p class="featured-tags">
-              Film Scoring · Lyrical · Contemporary
+              FILM SCORING · LYRICAL · CONTEMPORARY
             </p>
 
-          </div>
 
-
-          <!-- DESCRIPTION -->
-
-          <div class="featured-intro">
-
-            <p class="featured-short-description">
-              Selected scene — original lyrical score for Little Amelie.
+            <p class="featured-description">
+              Selected scene — original score for Little Amelie.
             </p>
 
-          </div>
 
+          </div>
 
         </article>
 
@@ -427,9 +303,9 @@
 
 
 
-    <!-- =========================================
+    <!-- ==================================================
          FILM & DRAMA
-         ========================================= -->
+         ================================================== -->
 
     <section class="portfolio-section">
 
@@ -448,9 +324,9 @@
 
 
 
-      <!-- =====================================
+      <!-- =========================
            LYRICAL & EMOTIONAL
-           ===================================== -->
+           ========================= -->
 
       <div class="portfolio-category">
 
@@ -552,9 +428,9 @@
 
 
 
-      <!-- =====================================
+      <!-- =========================
            TENSION & SUSPENSE
-           ===================================== -->
+           ========================= -->
 
       <div class="portfolio-category">
 
@@ -632,9 +508,9 @@
 
 
 
-      <!-- =====================================
+      <!-- =========================
            ACTION
-           ===================================== -->
+           ========================= -->
 
       <div class="portfolio-category">
 
@@ -712,9 +588,9 @@
 
 
 
-      <!-- =====================================
+      <!-- =========================
            HYBRID
-           ===================================== -->
+           ========================= -->
 
       <div class="portfolio-category">
 
@@ -762,9 +638,9 @@
 
 
 
-      <!-- =====================================
+      <!-- =========================
            COMEDY
-           ===================================== -->
+           ========================= -->
 
       <div class="portfolio-category">
 
@@ -818,9 +694,9 @@
 
 
 
-  <!-- =========================================
+  <!-- =========================
        FOOTER
-       ========================================= -->
+       ========================= -->
 
   <footer class="site-footer">
 
