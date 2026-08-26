@@ -68,9 +68,9 @@ a:hover {
 
 .site-header {
   width: 100%;
-  max-width: none;
+  max-width: var(--max-width);
 
-  margin: 0;
+  margin: 0 auto;
 
   padding: 30px 40px;
 
@@ -84,40 +84,39 @@ a:hover {
   z-index: 20;
 }
 
-
-/* YEEUN */
-
 .brand {
   color: #ffffff;
 
-  font-size: 22px;
-  font-weight: 600;
+  font-family:
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  font-size: 20px;
+  font-weight: 700;
 
   letter-spacing: 0.08em;
-
-  line-height: 1;
 }
-
-
-/* NAVIGATION */
 
 .site-nav {
   display: flex;
-
   gap: 38px;
-
-  align-items: center;
 }
 
 .site-nav a {
-  color: #d0d0d0;
+  color: #d8d8d8;
 
-  font-size: 18px;
+  font-family:
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  font-size: 17px;
   font-weight: 400;
 
-  letter-spacing: 0;
-
-  line-height: 1;
+  letter-spacing: -0.01em;
 }
 
 .site-nav a:hover {
@@ -134,7 +133,7 @@ a:hover {
   position: relative;
 
   width: 100%;
-  height: calc(100vh - 77px);
+  height: calc(100vh - 80px);
 
   min-height: 600px;
 
@@ -184,8 +183,6 @@ a:hover {
   z-index: 30;
 
   max-width: none;
-
-  margin: 0;
 
   background:
     linear-gradient(
@@ -511,43 +508,11 @@ a:hover {
 
 
 /* =========================================================
-   PORTFOLIO — INTRO
+   PORTFOLIO — REMOVE LARGE TITLE
    ========================================================= */
 
 .portfolio-intro {
-  padding:
-    65px 0
-    55px;
-
-  border-bottom:
-    1px solid var(--line);
-}
-
-.portfolio-intro h1 {
-  margin: 0 0 18px;
-
-  color: #ffffff;
-
-  font-size:
-    clamp(52px, 7vw, 90px);
-
-  font-weight: 300;
-
-  line-height: 0.95;
-
-  letter-spacing: -0.055em;
-}
-
-.portfolio-intro p {
-  margin: 0;
-
-  color: #777777;
-
-  font-size: 12px;
-
-  text-transform: uppercase;
-
-  letter-spacing: 0.14em;
+  display: none !important;
 }
 
 
@@ -564,6 +529,8 @@ a:hover {
 
 .featured-heading {
   margin-bottom: 45px;
+
+  padding-bottom: 0;
 }
 
 .featured-heading h2 {
@@ -572,13 +539,13 @@ a:hover {
 
   color: #ffffff;
 
-  font-size: 26px;
+  font-size: 28px;
 
   font-weight: 400;
 
   line-height: 1.2;
 
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
 }
 
 .featured-heading p {
@@ -586,7 +553,7 @@ a:hover {
 
   color: #888888;
 
-  font-size: 13px;
+  font-size: 14px;
 
   line-height: 1.6;
 }
@@ -618,7 +585,7 @@ a:hover {
 
 
 /* =========================================================
-   PORTFOLIO — DESCRIPTION
+   PORTFOLIO — DESCRIPTION ABOVE VIDEO
    ========================================================= */
 
 .featured-intro {
@@ -696,7 +663,10 @@ a:hover {
    ========================================================= */
 
 .featured-info {
-  padding: 0;
+  padding: 22px 0 0;
+
+  border-top:
+    1px solid var(--line);
 }
 
 .featured-info h3 {
@@ -726,7 +696,7 @@ a:hover {
 }
 
 .featured-tags {
-  margin: 0;
+  margin: 0 0 18px;
 
   color: #666666;
 
@@ -737,6 +707,27 @@ a:hover {
   text-transform: uppercase;
 
   letter-spacing: 0.07em;
+}
+
+
+/* =========================================================
+   PORTFOLIO — DESCRIPTION LINE
+   ========================================================= */
+
+.featured-info .featured-description,
+.featured-info > p:last-child {
+  margin: 18px 0 0;
+
+  padding-top: 16px;
+
+  border-top:
+    1px solid #1c1c1c;
+
+  color: #aaaaaa;
+
+  font-size: 13px;
+
+  line-height: 1.7;
 }
 
 
@@ -1089,8 +1080,7 @@ a:hover {
   }
 
   .brand {
-    font-size: 19px;
-    font-weight: 600;
+    font-size: 18px;
   }
 
   .site-nav {
@@ -1098,7 +1088,7 @@ a:hover {
   }
 
   .site-nav a {
-    font-size: 15px;
+    font-size: 13px;
   }
 
 
@@ -1171,14 +1161,7 @@ a:hover {
   }
 
   .portfolio-intro {
-    padding:
-      65px 0
-      60px;
-  }
-
-  .portfolio-intro h1 {
-    font-size:
-      clamp(55px, 16vw, 90px);
+    display: none !important;
   }
 
   .featured-scoring {
@@ -1199,6 +1182,15 @@ a:hover {
   }
 
   .featured-short-description {
+    font-size: 12px;
+  }
+
+  .featured-info {
+    padding-top: 18px;
+  }
+
+  .featured-info .featured-description,
+  .featured-info > p:last-child {
     font-size: 12px;
   }
 
