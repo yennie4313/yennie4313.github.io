@@ -1,6 +1,5 @@
 /* =========================================================
    YEEUN — FILM SCORING PORTFOLIO
-   CLEAN CINEMATIC DESIGN
    ========================================================= */
 
 :root {
@@ -88,7 +87,7 @@ a:hover {
 .brand {
   color: #ffffff;
 
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
 
   letter-spacing: 0.1em;
@@ -96,16 +95,16 @@ a:hover {
 
 .site-nav {
   display: flex;
-  gap: 30px;
+  gap: 34px;
 }
 
 .site-nav a {
   color: #d0d0d0;
 
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 400;
 
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
 }
 
 .site-nav a:hover {
@@ -483,7 +482,7 @@ a:hover {
 
 
 /* =========================================================
-   PORTFOLIO — MAIN CONTAINER
+   PORTFOLIO — MAIN
    ========================================================= */
 
 .portfolio {
@@ -499,12 +498,6 @@ a:hover {
 /* =========================================================
    PORTFOLIO — INTRO
    ========================================================= */
-
-/*
-   IMPORTANT:
-   We intentionally keep this much smaller than before.
-   The goal is to show the scoring videos quickly.
-*/
 
 .portfolio-intro {
   padding:
@@ -544,7 +537,7 @@ a:hover {
 
 
 /* =========================================================
-   PORTFOLIO — FEATURED SCORING WORK
+   PORTFOLIO — FEATURED
    ========================================================= */
 
 .featured-scoring {
@@ -585,7 +578,7 @@ a:hover {
 
 
 /* =========================================================
-   PORTFOLIO — TWO COLUMN VIDEO GRID
+   PORTFOLIO — VIDEO GRID
    ========================================================= */
 
 .featured-grid {
@@ -610,7 +603,7 @@ a:hover {
 
 
 /* =========================================================
-   PORTFOLIO — SMALL LABEL
+   PORTFOLIO — DESCRIPTION
    ========================================================= */
 
 .featured-intro {
@@ -662,11 +655,6 @@ a:hover {
   overflow: hidden;
 }
 
-
-/*
-   Vimeo iframe
-*/
-
 .featured-video iframe {
   display: block;
 
@@ -675,11 +663,6 @@ a:hover {
 
   border: 0;
 }
-
-
-/*
-   Original video fallback
-*/
 
 .featured-video video {
   display: block;
@@ -694,7 +677,7 @@ a:hover {
 
 
 /* =========================================================
-   PORTFOLIO — VIDEO INFORMATION
+   PORTFOLIO — INFO
    ========================================================= */
 
 .featured-info {
