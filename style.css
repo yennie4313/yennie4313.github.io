@@ -1234,3 +1234,47 @@ a:hover {
 .portfolio-intro {
   display: none !important;
 }
+/* =========================================================
+   HEADER — FINAL SIZE & POSITION
+   ========================================================= */
+
+.site-header {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 30px 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-family:
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+}
+
+.site-nav a {
+  font-family:
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  font-size: 17px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+}
