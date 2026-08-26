@@ -87,36 +87,25 @@ a:hover {
 .brand {
   color: #ffffff;
 
-  font-family:
-    "Helvetica Neue",
-    Helvetica,
-    Arial,
-    sans-serif;
-
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
 
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
 }
 
 .site-nav {
   display: flex;
-  gap: 38px;
+
+  gap: 34px;
 }
 
 .site-nav a {
-  color: #d8d8d8;
+  color: #d0d0d0;
 
-  font-family:
-    "Helvetica Neue",
-    Helvetica,
-    Arial,
-    sans-serif;
-
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 400;
 
-  letter-spacing: -0.01em;
+  letter-spacing: 0.01em;
 }
 
 .site-nav a:hover {
@@ -133,7 +122,7 @@ a:hover {
   position: relative;
 
   width: 100%;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 77px);
 
   min-height: 600px;
 
@@ -211,6 +200,7 @@ a:hover {
   z-index: 10;
 
   display: flex;
+
   gap: 8px;
 }
 
@@ -508,11 +498,43 @@ a:hover {
 
 
 /* =========================================================
-   PORTFOLIO — REMOVE LARGE TITLE
+   PORTFOLIO — INTRO
    ========================================================= */
 
 .portfolio-intro {
-  display: none !important;
+  padding:
+    65px 0
+    55px;
+
+  border-bottom:
+    1px solid var(--line);
+}
+
+.portfolio-intro h1 {
+  margin: 0 0 18px;
+
+  color: #ffffff;
+
+  font-size:
+    clamp(52px, 7vw, 90px);
+
+  font-weight: 300;
+
+  line-height: 0.95;
+
+  letter-spacing: -0.055em;
+}
+
+.portfolio-intro p {
+  margin: 0;
+
+  color: #777777;
+
+  font-size: 12px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.14em;
 }
 
 
@@ -529,8 +551,6 @@ a:hover {
 
 .featured-heading {
   margin-bottom: 45px;
-
-  padding-bottom: 0;
 }
 
 .featured-heading h2 {
@@ -539,13 +559,13 @@ a:hover {
 
   color: #ffffff;
 
-  font-size: 28px;
+  font-size: 26px;
 
   font-weight: 400;
 
   line-height: 1.2;
 
-  letter-spacing: -0.025em;
+  letter-spacing: -0.02em;
 }
 
 .featured-heading p {
@@ -553,7 +573,7 @@ a:hover {
 
   color: #888888;
 
-  font-size: 14px;
+  font-size: 13px;
 
   line-height: 1.6;
 }
@@ -585,7 +605,7 @@ a:hover {
 
 
 /* =========================================================
-   PORTFOLIO — DESCRIPTION ABOVE VIDEO
+   PORTFOLIO — DESCRIPTION
    ========================================================= */
 
 .featured-intro {
@@ -663,15 +683,19 @@ a:hover {
    ========================================================= */
 
 .featured-info {
-  padding: 22px 0 0;
+  padding: 0;
 
-  border-top:
-    1px solid var(--line);
+  border-top: 0;
 }
 
 .featured-info h3 {
-  margin:
-    0 0 7px;
+  margin: 0;
+
+  padding:
+    0 0 14px;
+
+  border-bottom:
+    1px solid var(--line);
 
   color: #ffffff;
 
@@ -686,7 +710,7 @@ a:hover {
 
 .featured-subtitle {
   margin:
-    0 0 10px;
+    14px 0 10px;
 
   color: #999999;
 
@@ -696,7 +720,7 @@ a:hover {
 }
 
 .featured-tags {
-  margin: 0 0 18px;
+  margin: 0;
 
   color: #666666;
 
@@ -709,25 +733,8 @@ a:hover {
   letter-spacing: 0.07em;
 }
 
-
-/* =========================================================
-   PORTFOLIO — DESCRIPTION LINE
-   ========================================================= */
-
-.featured-info .featured-description,
-.featured-info > p:last-child {
-  margin: 18px 0 0;
-
-  padding-top: 16px;
-
-  border-top:
-    1px solid #1c1c1c;
-
-  color: #aaaaaa;
-
-  font-size: 13px;
-
-  line-height: 1.7;
+.featured-short-description {
+  margin-top: 14px;
 }
 
 
@@ -1080,7 +1087,7 @@ a:hover {
   }
 
   .brand {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   .site-nav {
@@ -1088,7 +1095,7 @@ a:hover {
   }
 
   .site-nav a {
-    font-size: 13px;
+    font-size: 11px;
   }
 
 
@@ -1102,7 +1109,7 @@ a:hover {
 
   .hero-header {
     padding:
-      24px 20px;
+      0;
   }
 
   .hero-controls {
@@ -1161,7 +1168,14 @@ a:hover {
   }
 
   .portfolio-intro {
-    display: none !important;
+    padding:
+      65px 0
+      60px;
+  }
+
+  .portfolio-intro h1 {
+    font-size:
+      clamp(55px, 16vw, 90px);
   }
 
   .featured-scoring {
@@ -1179,18 +1193,15 @@ a:hover {
 
   .featured-info h3 {
     font-size: 20px;
+
+    padding-bottom: 12px;
+  }
+
+  .featured-subtitle {
+    margin-top: 12px;
   }
 
   .featured-short-description {
-    font-size: 12px;
-  }
-
-  .featured-info {
-    padding-top: 18px;
-  }
-
-  .featured-info .featured-description,
-  .featured-info > p:last-child {
     font-size: 12px;
   }
 
