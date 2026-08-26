@@ -84,27 +84,40 @@ a:hover {
   z-index: 20;
 }
 
+
+/* YEEUN */
+
 .brand {
   color: #ffffff;
 
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 22px;
+  font-weight: 600;
 
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
+
+  line-height: 1;
 }
+
+
+/* NAVIGATION */
 
 .site-nav {
   display: flex;
-  gap: 34px;
+
+  gap: 38px;
+
+  align-items: center;
 }
 
 .site-nav a {
   color: #d0d0d0;
 
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 400;
 
-  letter-spacing: 0.01em;
+  letter-spacing: 0;
+
+  line-height: 1;
 }
 
 .site-nav a:hover {
@@ -171,6 +184,8 @@ a:hover {
   z-index: 30;
 
   max-width: none;
+
+  margin: 0;
 
   background:
     linear-gradient(
@@ -1073,12 +1088,17 @@ a:hover {
       24px 20px;
   }
 
+  .brand {
+    font-size: 19px;
+    font-weight: 600;
+  }
+
   .site-nav {
     gap: 15px;
   }
 
   .site-nav a {
-    font-size: 11px;
+    font-size: 15px;
   }
 
 
