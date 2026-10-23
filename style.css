@@ -1061,3 +1061,116 @@ a:hover {
     font-weight: 400;
     letter-spacing: 2px;
 }
+/* ========================================
+   SCREEN SCORING — IMAGE LAYOUT
+   ======================================== */
+
+/* Category layout */
+.portfolio-category {
+    margin-top: 48px;
+    margin-bottom: 64px;
+}
+
+/* Category title and divider */
+.portfolio-category > h3.category-heading {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 24px;
+}
+
+.portfolio-category > h3.category-heading::after {
+    content: "";
+    display: block;
+    height: 1px;
+    flex: 1;
+    background: rgba(255, 255, 255, 0.35);
+}
+
+/* Two-column layout */
+.lyrical-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 24px;
+    row-gap: 30px;
+}
+
+/* Each work: image on the left, information on the right */
+.lyrical-work {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 18px;
+    min-width: 0;
+}
+
+/* Consistent portrait images */
+.lyrical-work .work-image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 0.58 / 1;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Track information */
+.lyrical-work .work-description {
+    min-width: 0;
+}
+
+.lyrical-work .work-description h4 {
+    margin: 0 0 6px;
+}
+
+.lyrical-work .work-type {
+    margin-bottom: 14px;
+}
+
+/* Audio player */
+.lyrical-work .work-audio {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Other categories */
+.portfolio-category .lyrical-grid {
+    width: 100%;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .lyrical-grid {
+        column-gap: 20px;
+        row-gap: 28px;
+    }
+
+    .lyrical-work {
+        gap: 12px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .portfolio-category {
+        margin-top: 36px;
+        margin-bottom: 48px;
+    }
+
+    .lyrical-grid {
+        grid-template-columns: 1fr;
+        row-gap: 24px;
+    }
+
+    .lyrical-work {
+        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    .lyrical-work .work-image {
+        aspect-ratio: 0.68 / 1;
+    }
+}
