@@ -1,221 +1,459 @@
-/* ========================================
-   SCREEN SCORING — INTRO
-======================================== */
+<!DOCTYPE html>
+<html lang="en">
 
-.screen-intro {
-  padding: 65px 0 55px;
-}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-.screen-intro h1 {
-  margin: 0 0 18px;
-  color: #ffffff;
-  font-size: clamp(48px, 7vw, 90px);
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -0.045em;
-}
+  <title>Portfolio — YEEUN</title>
 
-.screen-intro p {
-  margin: 0;
-  color: #e0e0e0;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.6;
-  letter-spacing: 0;
-}
+  <meta
+    name="description"
+    content="Original scores composed for film, drama, and visual storytelling by Yeeun."
+  >
 
+  <link rel="stylesheet" href="style.css">
+</head>
 
-/* ========================================
-   FEATURED DESCRIPTION
-======================================== */
+<body>
 
-.featured-description {
-  margin-top: 14px;
-  color: #999999;
-  font-size: 13px;
-  line-height: 1.7;
-}
+  <!-- HEADER -->
+  <header class="site-header">
+    <a href="index.html" class="brand">YEEUN</a>
+
+    <nav class="site-nav">
+      <a href="portfolio.html">Portfolio</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
 
-/* ========================================
-   PORTFOLIO CATEGORY HEADING
-======================================== */
+  <main class="portfolio">
 
-.portfolio-category {
-  padding: 40px 0 75px;
-  border-top: 0;
-}
+    <!-- SCREEN SCORING INTRO -->
+    <header class="screen-intro">
+      <h1>SCREEN SCORING</h1>
 
-.category-heading {
-  display: flex;
-  align-items: center;
-  gap: 22px;
-  margin: 0 0 28px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid #333333;
-  color: #eeeeee;
-  font-size: 16px;
-  font-weight: 400;
-  letter-spacing: 0.1em;
-}
-
-.category-number {
-  white-space: nowrap;
-}
+      <p>
+        Original scores composed for film, drama, and visual storytelling.
+      </p>
+    </header>
 
 
-/* ========================================
-   LYRIC IMAGES + AUDIO
-======================================== */
+    <!-- FEATURED SCORING WORK -->
+    <section class="featured-scoring">
 
-.lyrical-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  column-gap: 40px;
-  row-gap: 55px;
-}
+      <div class="featured-heading">
+        <h2>Featured Scoring Work</h2>
 
-.lyrical-work {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  align-items: center;
-  gap: 20px;
-  min-width: 0;
-}
+        <p>
+          Selected scoring projects created for film and visual media.
+        </p>
+      </div>
 
-.work-image {
-  display: block;
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  object-position: center;
-  background: #101010;
-}
+      <div class="featured-grid">
 
-.lyrical-work .work-info {
-  min-width: 0;
-  padding-top: 0;
-}
+        <!-- BIFSC 2026 -->
+        <article class="featured-work">
 
-.lyrical-work .work-info h3 {
-  margin: 0 0 3px;
-  color: #f5f5f5;
-  font-size: clamp(18px, 1.8vw, 27px);
-  font-weight: 400;
-  line-height: 1.3;
-}
+          <div class="featured-video">
+            <iframe
+              src="https://player.vimeo.com/video/1220847094?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              title="BIFSC 2026"
+              allowfullscreen>
+            </iframe>
+          </div>
 
-.lyrical-work .work-type {
-  margin: 0 0 14px;
-  color: #b0b0b0;
-  font-size: 14px;
-}
+          <div class="featured-info">
+            <h3>BIFSC 2026</h3>
 
-.lyrical-work audio {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  height: 42px;
-}
+            <p class="featured-subtitle">
+              Berlin International Film Scoring Competition
+            </p>
+
+            <p class="featured-tags">
+              FILM SCORING · HYBRID · ORCHESTRAL
+            </p>
+
+            <p class="featured-description">
+              Selected scene — original score for BIFSC 2026.
+            </p>
+          </div>
+
+        </article>
 
 
-/* ========================================
-   PLACEHOLDERS FOR FUTURE WORKS
-======================================== */
+        <!-- BRIDGERTON -->
+        <article class="featured-work">
 
-.work-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  padding: 15px;
-  overflow: hidden;
-  background: #101010;
-  border: 1px solid #242424;
-  color: #666666;
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  text-align: center;
-}
+          <div class="featured-video">
+            <iframe
+              src="https://player.vimeo.com/video/1220852195?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              title="Bridgerton Scoring Competition"
+              allowfullscreen>
+            </iframe>
+          </div>
 
-.portfolio-work:not(.lyrical-work) .work-info {
-  padding-top: 18px;
-}
+          <div class="featured-info">
+            <h3>Bridgerton Scoring Competition</h3>
 
-.portfolio-work:not(.lyrical-work) .work-info h3 {
-  margin: 0 0 5px;
-  color: #ffffff;
-  font-size: 18px;
-  font-weight: 400;
-}
+            <p class="featured-subtitle">
+              Period Drama · Orchestral
+            </p>
+
+            <p class="featured-tags">
+              FILM SCORING · PERIOD · ORCHESTRAL
+            </p>
+
+            <p class="featured-description">
+              Selected scene — original orchestral score for Bridgerton.
+            </p>
+          </div>
+
+        </article>
 
 
-/* ========================================
-   RESPONSIVE
-======================================== */
+        <!-- LITTLE AMELIE -->
+        <article class="featured-work">
 
-@media (max-width: 900px) {
-  .lyrical-grid {
-    column-gap: 25px;
-  }
+          <div class="featured-video">
+            <iframe
+              src="https://player.vimeo.com/video/1220860568?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              title="Little Amelie"
+              allowfullscreen>
+            </iframe>
+          </div>
 
-  .lyrical-work {
-    grid-template-columns: 1fr;
-    align-content: start;
-    gap: 14px;
-  }
+          <div class="featured-info">
+            <h3>Little Amelie</h3>
 
-  .lyrical-work .work-info {
-    padding-top: 0;
-  }
+            <p class="featured-subtitle">
+              Lyrical · Everyday
+            </p>
 
-  .lyrical-work .work-info h3 {
-    font-size: 22px;
-  }
+            <p class="featured-tags">
+              FILM SCORING · LYRICAL · CONTEMPORARY
+            </p>
 
-  .lyrical-work audio {
-    margin-top: 12px;
-  }
-}
+            <p class="featured-description">
+              Selected scene — original score for Little Amelie.
+            </p>
+          </div>
 
-@media (max-width: 600px) {
-  .screen-intro {
-    padding: 45px 0 40px;
-  }
+        </article>
 
-  .screen-intro h1 {
-    font-size: 42px;
-  }
+      </div>
 
-  .screen-intro p {
-    font-size: 16px;
-  }
+    </section>
 
-  .portfolio {
-    width: calc(100% - 40px);
-  }
 
-  .category-heading {
-    gap: 12px;
-    font-size: 12px;
-  }
+    <!-- ORIGINAL SCORES -->
+    <section class="portfolio-section">
 
-  .lyrical-grid {
-    grid-template-columns: 1fr;
-    row-gap: 40px;
-  }
+      <!-- 01 LYRICAL & EMOTIONAL -->
+      <section class="portfolio-category">
 
-  .lyrical-work {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 16px;
-  }
+        <h2 class="category-heading">
+          <span class="category-number">01 /</span>
+          <span>LYRICAL &amp; EMOTIONAL</span>
+        </h2>
 
-  .lyrical-work .work-info h3 {
-    font-size: 20px;
-  }
+        <div class="portfolio-grid lyrical-grid">
 
-  .lyrical-work .work-type {
-    font-size: 12px;
-  }
-}
+          <!-- GOLDEN DAYS -->
+          <article class="portfolio-work lyrical-work">
+
+            <img
+              class="work-image"
+              src="images/golden-days.png"
+              alt="Golden Days — a couple sharing a joyful moment"
+              loading="lazy"
+            >
+
+            <div class="work-info">
+              <h3>Golden Days</h3>
+
+              <p class="work-type">Original Score</p>
+
+              <audio controls preload="metadata">
+                <source src="audio/golden-days.mp3" type="audio/mpeg">
+                Your browser does not support audio playback.
+              </audio>
+            </div>
+
+          </article>
+
+
+          <!-- BACK THEN -->
+          <article class="portfolio-work lyrical-work">
+
+            <img
+              class="work-image"
+              src="images/back-then.png"
+              alt="Back Then — two people holding hands"
+              loading="lazy"
+            >
+
+            <div class="work-info">
+              <h3>Back Then</h3>
+
+              <p class="work-type">Original Score</p>
+
+              <audio controls preload="metadata">
+                <source src="audio/back-then.mp3" type="audio/mpeg">
+                Your browser does not support audio playback.
+              </audio>
+            </div>
+
+          </article>
+
+
+          <!-- YEARNING -->
+          <article class="portfolio-work lyrical-work">
+
+            <img
+              class="work-image"
+              src="images/yearning.png"
+              alt="Yearning — two figures dancing in the sunlight"
+              loading="lazy"
+            >
+
+            <div class="work-info">
+              <h3>Yearning</h3>
+
+              <p class="work-type">Original Score</p>
+
+              <audio controls preload="metadata">
+                <source src="audio/yearning.mp3" type="audio/mpeg">
+                Your browser does not support audio playback.
+              </audio>
+            </div>
+
+          </article>
+
+
+          <!-- AFTERGLOW -->
+          <article class="portfolio-work lyrical-work">
+
+            <img
+              class="work-image"
+              src="images/afterglow.jpg"
+              alt="Afterglow — an elderly couple walking together beneath the trees"
+              loading="lazy"
+            >
+
+            <div class="work-info">
+              <h3>Afterglow</h3>
+
+              <p class="work-type">Original Score</p>
+
+              <audio controls preload="metadata">
+                <source src="audio/afterglow.mp3" type="audio/mpeg">
+                Your browser does not support audio playback.
+              </audio>
+            </div>
+
+          </article>
+
+        </div>
+
+      </section>
+
+
+      <!-- 02 TENSION & SUSPENSE -->
+      <section class="portfolio-category">
+
+        <h2 class="category-heading">
+          <span class="category-number">02 /</span>
+          <span>TENSION &amp; SUSPENSE</span>
+        </h2>
+
+        <div class="portfolio-grid">
+
+          <article class="portfolio-work">
+            <div class="work-placeholder">IMAGE COMING SOON</div>
+            <div class="work-info">
+              <h3>Gravity of Time</h3>
+              <p class="work-type">Original Score</p>
+            </div>
+          </article>
+
+          <article class="portfolio-work">
+            <div class="work-placeholder">IMAGE COMING SOON</div>
+            <div class="work-info">
+              <h3>Momentum</h3>
+              <p class="work-type">Original Score</p>
+            </div>
+          </article>
+
+          <article class="portfolio-work">
+            <div class="work-placeholder">IMAGE COMING SOON</div>
+            <div class="work-info">
+              <h3>Resolve</h3>
+              <p class="work-type">Original Score</p>
+            </div>
+          </article>
+
+        </div>
+
+      </section>
+
+
+      <!-- 03 ACTION -->
+      <section class="portfolio-category">
+
+        <h2 class="category-heading">
+          <span class="category-number">03 /</span>
+          <span>ACTION</span>
+        </h2>
+
+        <div class="portfolio-grid">
+
+          <article class="portfolio-work">
+            <div class="work-placeholder">IMAGE COMING SOON</div>
+            <div class="work-info">
+              <h3>Neon Circuit</h3>
+              <p class="work-type">Original Score</p>
+            </div>
+          </article>
+
+          <article class="portfolio-work">
+            <div class="work-placeholder">IMAGE COMING SOON</div>
+            <div class="work-info">
+              <h3>The Chase</h3>
+              <p class="work-type">Original Score</p>
+            </div>
+          </article>
+
+        </div>
+
+      </section>
+
+
+      <!-- 04 ORCHESTRAL -->
+      <section class="portfolio-category">
+
+        <h2 class="category-heading">
+          <span class="category-number">04 /</span>
+          <span>ORCHESTRAL</span>
+        </h2>
+
+        <div class="portfolio-grid">
+
+          <article class="portfolio-work">
+            <div class="work-placeholder">IMAGE COMING SOON</div>
+            <div class="work-info">
+              <h3>An Ode to Life</h3>
+              <p class="work-type">Original Score</p>
+            </div>
+          </article>
+
+          <article class="portfolio-work">
+            <div class="work-placeholder">IMAGE COMING SOON</div>
+            <div class="work-info">
+              <h3>Whispers of the Oboe</h3>
+              <p class="work-type">Original Score</p>
+            </div>
+          </article>
+
+        </div>
+
+      </section>
+
+
+      <!-- 05 HYBRID & CINEMATIC -->
+      <section class="portfolio-category">
+
+        <h2 class="category-heading">
+          <span class="category-number">05 /</span>
+          <span>HYBRID &amp; CINEMATIC</span>
+        </h2>
+
+        <div class="portfolio-grid">
+
+          <article class="portfolio-work">
+            <div class="work-placeholder">IMAGE COMING SOON</div>
+            <div class="work-info">
+              <h3>Desert Theme</h3>
+              <p class="work-type">Original Score</p>
+            </div>
+          </article>
+
+          <article class="portfolio-work">
+            <div class="work-placeholder">IMAGE COMING SOON</div>
+            <div class="work-info">
+              <h3>Awakening</h3>
+              <p class="work-type">Original Score</p>
+            </div>
+          </article>
+
+        </div>
+
+      </section>
+
+
+      <!-- 06 COMEDY -->
+      <section class="portfolio-category">
+
+        <h2 class="category-heading">
+          <span class="category-number">06 /</span>
+          <span>COMEDY</span>
+        </h2>
+
+        <div class="portfolio-grid">
+
+          <article class="portfolio-work">
+            <div class="work-placeholder">IMAGE COMING SOON</div>
+            <div class="work-info">
+              <h3>Musical Banter</h3>
+              <p class="work-type">Original Score</p>
+            </div>
+          </article>
+
+          <article class="portfolio-work">
+            <div class="work-placeholder">IMAGE COMING SOON</div>
+            <div class="work-info">
+              <h3>Monkey Business</h3>
+              <p class="work-type">Original Score</p>
+            </div>
+          </article>
+
+        </div>
+
+      </section>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+
+    <div class="footer-contact">
+      <p>
+        <a href="mailto:youremail@example.com">
+          youremail@example.com
+        </a>
+      </p>
+
+      <div class="footer-links">
+        <a href="#">YouTube</a>
+        <a href="#">Instagram</a>
+      </div>
+    </div>
+
+    <p class="copyright">© 2026 Yeeun</p>
+
+  </footer>
+
+</body>
+</html>
