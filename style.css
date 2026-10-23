@@ -1346,3 +1346,23 @@ a:hover {
         aspect-ratio: 0.68 / 1 !important;
     }
 }
+/* Track title and description improvements */
+
+.lyrical-work .work-description h4 {
+    color: #f2eee8 !important;
+    font-size: 21px !important;
+    font-weight: 400 !important;
+    line-height: 1.35;
+    margin: 0 0 10px !important;
+}
+
+.lyrical-work .work-description p {
+    color: #c4c0ba !important;
+    font-size: 13px !important;
+    line-height: 1.65 !important;
+    margin-bottom: 12px !important;
+}
+
+.lyrical-work .work-type {
+    display: none !important;
+}
