@@ -1055,3 +1055,9 @@ a:hover {
     font-size: 16px;
   }
 }
+/* Match SCREEN SCORING title size to Featured Scoring Work */
+.screen-intro h1 {
+    font-size: 32px !important;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
