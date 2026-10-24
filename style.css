@@ -1457,3 +1457,33 @@ a:hover {
     margin-top: 0 !important;
     margin-bottom: 12px !important;
 }
+/* Fine-tune image size to fit all four tracks */
+.lyrical-work {
+    grid-template-columns: minmax(0, 0.72fr) minmax(0, 1fr) !important;
+    gap: 12px !important;
+}
+
+.lyrical-work .work-image {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 0.78 / 1 !important;
+    object-fit: cover !important;
+}
+
+.lyrical-grid {
+    column-gap: 24px !important;
+    row-gap: 12px !important;
+}
+
+.portfolio-category > h3.category-heading {
+    margin-bottom: 10px !important;
+}
+
+.lyrical-work .work-description h4 {
+    font-size: 17px !important;
+}
+
+.lyrical-work .work-description p {
+    font-size: 11px !important;
+    line-height: 1.4 !important;
+}
