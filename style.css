@@ -1592,3 +1592,104 @@ a:hover {
         object-fit: contain;
     }
 }
+/* ========================================
+   TENSION & SUSPENSE — THREE COLUMN LAYOUT
+   ======================================== */
+
+.tension-category {
+    margin-top: 36px;
+    margin-bottom: 48px;
+}
+
+/* Three equal columns */
+.tension-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 32px;
+    align-items: start;
+}
+
+/* Each work */
+.tension-work {
+    min-width: 0;
+}
+
+/* Image container */
+.tension-image-wrap {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    overflow: hidden;
+    background: #080808;
+}
+
+/* Preserve the original image proportions */
+.tension-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* Text below each image */
+.tension-info {
+    padding-top: 18px;
+}
+
+.tension-info h4 {
+    color: #ffffff;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 1.4;
+    margin: 0 0 10px;
+}
+
+.tension-info p {
+    color: #c4c4c4;
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 0 0 18px;
+}
+
+/* Audio player */
+.tension-info audio {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .tension-grid {
+        gap: 20px;
+    }
+
+    .tension-info h4 {
+        font-size: 18px;
+    }
+
+    .tension-info p {
+        font-size: 12px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .tension-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .tension-image-wrap {
+        aspect-ratio: auto;
+    }
+
+    .tension-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .tension-info {
+        padding-top: 14px;
+    }
+}
