@@ -1495,3 +1495,100 @@ a:hover {
     object-fit: cover !important;
     object-position: center 60% !important;
 }
+/* ========================================
+   TENSION & SUSPENSE — THREE COLUMN LAYOUT
+   ======================================== */
+
+/* Three columns for tension tracks only */
+.portfolio-category:has(h3.category-heading) {
+    /* Keep existing category styling */
+}
+
+/* Three-column grid */
+.tension-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+    align-items: start;
+}
+
+/* Each track displayed vertically */
+.tension-grid .tension-work {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+/* Preserve the original image proportions */
+.tension-grid .work-image {
+    display: block;
+    width: 100%;
+    height: 320px;
+    object-fit: contain;
+    object-position: center;
+    background: #080808;
+}
+
+/* Track information below the image */
+.tension-grid .work-description {
+    padding-top: 16px;
+}
+
+.tension-grid .work-description h4 {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.35;
+    margin: 0 0 10px;
+}
+
+.tension-grid .work-description p {
+    color: #c4c4c4;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0 0 16px;
+}
+
+/* Audio player */
+.tension-grid audio,
+.tension-grid .work-audio {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .tension-grid {
+        gap: 18px;
+    }
+
+    .tension-grid .work-image {
+        height: 260px;
+    }
+
+    .tension-grid .work-description h4 {
+        font-size: 19px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .tension-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .tension-grid .work-image {
+        height: auto;
+        max-height: 440px;
+    }
+
+    .tension-grid .tension-work {
+        align-items: stretch;
+    }
+
+    .tension-grid .work-image {
+        object-fit: contain;
+    }
+}
