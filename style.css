@@ -1487,3 +1487,11 @@ a:hover {
     font-size: 11px !important;
     line-height: 1.4 !important;
 }
+/* Make portrait images taller without increasing width */
+.lyrical-work .work-image {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 0.68 / 1 !important;
+    object-fit: cover !important;
+    object-position: center 60% !important;
+}
