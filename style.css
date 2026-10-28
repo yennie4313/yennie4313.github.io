@@ -2368,7 +2368,8 @@ a:hover {
 }
 /* Match ACTION & ORCHESTRAL text with LYRICAL */
 
-.editorial-info h4 {
+.editorial-info h4,
+.editorial-info h4 a {
     font-family: inherit !important;
     font-size: 20px !important;
     font-weight: 400 !important;
