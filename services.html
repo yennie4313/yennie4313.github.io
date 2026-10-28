@@ -66,10 +66,10 @@
     .services-hero-description {
       max-width: 650px;
       margin: 0;
-      color: #aaa;
+      color: #c4c4c4;
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-size: 14px;
-      line-height: 1.7;
+      font-size: 15px;
+      line-height: 1.8;
     }
 
     /* SERVICE SECTIONS */
@@ -77,25 +77,25 @@
     .service-block,
     .service-block.service-reverse {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-      gap: 48px;
+      grid-template-columns: minmax(0, 0.85fr) minmax(0, 1fr);
+      gap: 65px;
       align-items: center;
       padding: 42px 0;
       border-bottom: 1px solid #242424;
     }
 
-    /* Portrait images — smaller and closer to the original proportions */
+    .service-block.service-reverse {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
+    }
 
-.service-block,
-.service-block.service-reverse {
-  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1fr);
-  gap: 65px;
-}
+    /* PORTRAIT IMAGES */
+
+    /* Portrait images without black side bars */
 
 .service-image {
   width: 100%;
-  max-width: 420px;
-  aspect-ratio: 2 / 3;
+  max-width: 320px;
+  aspect-ratio: 3 / 4;
   justify-self: center;
   overflow: hidden;
   background: #101010;
@@ -105,59 +105,51 @@
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
-  transition: none;
-}
-
-.service-image:hover img {
-  transform: none;
-}
-
-/* Mobile */
-@media (max-width: 700px) {
-  .service-block,
-  .service-block.service-reverse {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 24px;
-  }
-
-  .service-image {
-    width: 78%;
-    max-width: 340px;
-    aspect-ratio: 2 / 3;
-    margin: 0 auto;
-  }
 }
 
     .service-content {
       min-width: 0;
     }
 
+    /* CATEGORY NUMBER — MATCH PORTFOLIO */
+
     .service-number {
-      margin: 0 0 12px;
-      color: #999;
-      font-size: 10px;
-      letter-spacing: 0.14em;
+      margin: 0 0 16px;
+      color: #e5e5e5;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 19px;
+      font-weight: 400;
+      line-height: 1.4;
+      letter-spacing: 0.09em;
     }
 
+    /* SERVICE TITLE — MATCH PORTFOLIO CATEGORY HEADING */
+
     .service-content h2 {
-      margin: 0 0 16px;
-      color: #f2f2f2;
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-size: clamp(22px, 2.3vw, 30px);
+      margin: 0 0 20px;
+      color: #e5e5e5;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 25px;
       font-weight: 400;
-      line-height: 1.25;
-      letter-spacing: -0.025em;
+      line-height: 1.4;
+      letter-spacing: 0.04em;
       text-transform: uppercase;
     }
 
+    .service-rule {
+      margin-bottom: 20px;
+    }
+
+    /* DESCRIPTION — LARGER AND MORE READABLE */
+
     .service-description {
-      margin: 0 0 20px;
-      color: #aaa;
+      margin: 0 0 24px;
+      color: #c4c4c4;
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-size: 13px;
-      line-height: 1.8;
+      font-size: 15px;
+      line-height: 1.9;
     }
 
     /* SERVICE DETAILS */
@@ -173,13 +165,13 @@
       justify-content: space-between;
       align-items: center;
       gap: 12px;
-      padding: 10px 0;
+      padding: 12px 0;
       border-bottom: 1px solid #292929;
-      color: #c7c7c7;
+      color: #d0d0d0;
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-size: 10px;
-      line-height: 1.5;
-      letter-spacing: 0.08em;
+      font-size: 12px;
+      line-height: 1.6;
+      letter-spacing: 0.04em;
       text-transform: uppercase;
     }
 
@@ -188,7 +180,8 @@
     }
 
     .service-details li span:last-child {
-      color: #777;
+      flex-shrink: 0;
+      color: #999;
       font-size: 14px;
     }
 
@@ -207,21 +200,21 @@
     }
 
     .services-contact h2 {
-      margin: 0 0 12px;
-      color: #f2f2f2;
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-size: clamp(25px, 3vw, 36px);
+      margin: 0 0 16px;
+      color: #e5e5e5;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 30px;
       font-weight: 400;
-      line-height: 1.25;
-      letter-spacing: -0.025em;
+      line-height: 1.4;
+      letter-spacing: 0.03em;
       text-transform: uppercase;
     }
 
     .services-contact p:not(.services-eyebrow) {
       margin: 0;
-      color: #999;
+      color: #c4c4c4;
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-size: 13px;
+      font-size: 15px;
       line-height: 1.8;
     }
 
@@ -235,7 +228,7 @@
       border: 1px solid #777;
       color: #eee;
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-size: 10px;
+      font-size: 11px;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       transition: background 0.25s ease, color 0.25s ease;
@@ -262,21 +255,29 @@
 
       .service-block,
       .service-block.service-reverse {
-        gap: 28px;
+        gap: 32px;
         padding: 35px 0;
       }
 
+      .service-image {
+        max-width: 320px;
+      }
+
+      .service-number {
+        font-size: 17px;
+      }
+
       .service-content h2 {
-        font-size: 23px;
+        font-size: 22px;
       }
 
       .service-description {
-        font-size: 12px;
+        font-size: 14px;
       }
 
       .service-details li {
-        font-size: 9px;
-        letter-spacing: 0.04em;
+        font-size: 11px;
+        letter-spacing: 0.02em;
       }
     }
 
@@ -297,13 +298,14 @@
       }
 
       .services-hero-description {
-        font-size: 13px;
+        font-size: 14px;
+        line-height: 1.8;
       }
 
       .service-block,
       .service-block.service-reverse {
-        grid-template-columns: 1fr;
-        gap: 22px;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
         padding: 30px 0;
       }
 
@@ -316,20 +318,32 @@
       }
 
       .service-image {
-        aspect-ratio: 16 / 10;
+        width: 78%;
+        max-width: 300px;
+        aspect-ratio: 2 / 3;
+        margin: 0 auto;
+      }
+
+      .service-number {
+        margin-bottom: 12px;
+        font-size: 15px;
       }
 
       .service-content h2 {
-        font-size: 25px;
+        margin-bottom: 16px;
+        font-size: 23px;
       }
 
       .service-description {
-        margin-bottom: 18px;
-        font-size: 13px;
+        margin-bottom: 20px;
+        font-size: 14px;
+        line-height: 1.85;
       }
 
       .service-details li {
-        font-size: 9px;
+        padding: 12px 0;
+        font-size: 11px;
+        line-height: 1.6;
       }
 
       .services-contact {
@@ -338,7 +352,11 @@
       }
 
       .services-contact h2 {
-        font-size: 28px;
+        font-size: 25px;
+      }
+
+      .services-contact p:not(.services-eyebrow) {
+        font-size: 14px;
       }
 
       .services-contact-button {
@@ -360,7 +378,11 @@
       }
 
       .service-content h2 {
-        font-size: 23px;
+        font-size: 21px;
+      }
+
+      .service-details li {
+        font-size: 10px;
       }
     }
   </style>
