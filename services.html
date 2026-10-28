@@ -1,1 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Services — YEEUN</title>
+  <meta name="description" content="Original music composition and cinematic scoring for film and visual storytelling by Yeeun.">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* SERVICES PAGE */
+
+    .services-page {
+      width: min(100% - 10vw, 1280px);
+      margin: 0 auto;
+    }
+
+    /* HERO */
+
+    .services-hero {
+      padding: 100px 0 110px;
+      border-bottom: 1px solid #242424;
+    }
+
+    .services-eyebrow {
+      margin: 0 0 22px;
+      color: #999;
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+
+    .services-hero h1 {
+      max-width: 850px;
+      margin: 0 0 28px;
+      color: #f2f0eb;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(48px, 7vw, 88px);
+      font-weight: 400;
+      line-height: 1.05;
+      letter-spacing: -0.035em;
+      text-transform: uppercase;
+    }
+
+    .services-hero h1 span {
+      display: block;
+    }
+
+    .services-hero-rule,
+    .service-rule {
+      width: 42px;
+      height: 1px;
+      margin-bottom: 24px;
+      background: #999;
+    }
+
+    .services-hero-description {
+      max-width: 540px;
+      margin: 0;
+      color: #aaa;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 16px;
+      line-height: 1.9;
+    }
+
+    /* SERVICE SECTIONS */
+
+    .service-block {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 70px;
+      align-items: center;
+      padding: 75px 0;
+      border-bottom: 1px solid #242424;
+    }
+
+    .service-block.service-reverse {
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    }
+
+    .service-image {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      background: #101010;
+    }
+
+    .service-image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.7s ease;
+    }
+
+    .service-image:hover img {
+      transform: scale(1.025);
+    }
+
+    .service-content {
+      min-width: 0;
+    }
+
+    .service-number {
+      margin: 0 0 18px;
+      color: #999;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+    }
+
+    .service-content h2 {
+      margin: 0 0 22px;
+      color: #f2f0eb;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(30px, 3.2vw, 43px);
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -0.025em;
+      text-transform: uppercase;
+    }
+
+    .service-description {
+      margin: 0 0 30px;
+      color: #aaa;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    /* SERVICE DETAILS */
+
+    .service-details {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .service-details li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 13px 0;
+      border-bottom: 1px solid #292929;
+      color: #c7c7c7;
+      font-size: 10px;
+      line-height: 1.5;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .service-details li:first-child {
+      border-top: 1px solid #292929;
+    }
+
+    .service-details li span:last-child {
+      color: #777;
+      font-size: 15px;
+    }
+
+    /* CONTACT */
+
+    .services-contact {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+      padding: 90px 0 100px;
+    }
+
+    .services-contact-copy {
+      max-width: 720px;
+    }
+
+    .services-contact h2 {
+      margin: 0 0 20px;
+      color: #f2f0eb;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(30px, 4vw, 46px);
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -0.025em;
+      text-transform: uppercase;
+    }
+
+    .services-contact p:not(.services-eyebrow) {
+      margin: 0;
+      color: #999;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .services-contact-button {
+      display: inline-flex;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: center;
+      gap: 22px;
+      padding: 15px 22px;
+      border: 1px solid #777;
+      color: #eee;
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      transition: background 0.25s ease, color 0.25s ease;
+    }
+
+    .services-contact-button:hover {
+      background: #eee;
+      color: #080808;
+      opacity: 1;
+    }
+
+    /* FOOTER */
+
+    .services-page + .site-footer {
+      width: min(100% - 10vw, 1280px);
+    }
+
+    /* TABLET */
+
+    @media (max-width: 900px) {
+      .services-hero {
+        padding: 80px 0 85px;
+      }
+
+      .service-block,
+      .service-block.service-reverse {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 32px;
+        padding: 55px 0;
+      }
+
+      .service-content h2 {
+        font-size: 32px;
+      }
+
+      .service-description {
+        font-size: 13px;
+      }
+
+      .services-contact {
+        gap: 25px;
+      }
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+      .services-page {
+        width: calc(100% - 40px);
+      }
+
+      .services-hero {
+        padding: 60px 0 65px;
+      }
+
+      .services-hero h1 {
+        font-size: clamp(42px, 11vw, 64px);
+      }
+
+      .services-hero-description {
+        font-size: 14px;
+      }
+
+      .service-block,
+      .service-block.service-reverse {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 42px 0 48px;
+      }
+
+      .service-block.service-reverse .service-image {
+        order: 0;
+      }
+
+      .service-block.service-reverse .service-content {
+        order: 1;
+      }
+
+      .service-image {
+        aspect-ratio: 4 / 3;
+      }
+
+      .service-content h2 {
+        font-size: 32px;
+      }
+
+      .service-description {
+        margin-bottom: 24px;
+        font-size: 13px;
+      }
+
+      .service-details li {
+        font-size: 9px;
+        letter-spacing: 0.1em;
+      }
+
+      .services-contact {
+        display: block;
+        padding: 65px 0 75px;
+      }
+
+      .services-contact h2 {
+        font-size: 34px;
+      }
+
+      .services-contact-button {
+        margin-top: 28px;
+      }
+
+      .services-page + .site-footer {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .services-page {
+        width: calc(100% - 28px);
+      }
+
+      .services-hero h1 {
+        font-size: 39px;
+      }
+
+      .service-content h2 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <a href="index.html" class="brand">YEEUN</a>
+
+    <nav class="site-nav">
+      <a href="portfolio.html">Portfolio</a>
+      <a href="services.html" aria-current="page">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="services-page">
+
+    <!-- HERO -->
+    <section class="services-hero">
+
+      <p class="services-eyebrow">Services</p>
+
+      <h1>
+        <span>Music for</span>
+        <span>Visual Stories</span>
+      </h1>
+
+      <div class="services-hero-rule"></div>
+
+      <p class="services-hero-description">
+        I compose original music for film and visual storytelling,
+        shaping melodies, harmonies, and orchestral textures to support
+        the emotion and atmosphere of each scene.
+      </p>
+
+    </section>
+
+    <!-- SERVICE 01 -->
+    <section class="service-block">
+
+      <div class="service-image">
+        <img
+          src="images/services-composition.jpg"
+          alt="A cinematic image of a music composition workspace"
+          loading="lazy">
+      </div>
+
+      <div class="service-content">
+
+        <p class="service-number">01 /</p>
+
+        <h2>The Art of Composition</h2>
+
+        <div class="service-rule"></div>
+
+        <p class="service-description">
+          Every story has its own musical language.
+          I develop original musical ideas that reflect the characters,
+          atmosphere, and emotional journey of a project, creating scores
+          that deepen the connection between story and audience.
+        </p>
+
+        <ul class="service-details">
+          <li><span>Original Music Composition</span><span>+</span></li>
+          <li><span>Thematic Development</span><span>+</span></li>
+          <li><span>MIDI Demo Production</span><span>+</span></li>
+          <li><span>Creative Collaboration</span><span>+</span></li>
+        </ul>
+
+      </div>
+
+    </section>
+
+    <!-- SERVICE 02 -->
+    <section class="service-block service-reverse">
+
+      <div class="service-content">
+
+        <p class="service-number">02 /</p>
+
+        <h2>Cinematic &amp; Orchestral Scoring</h2>
+
+        <div class="service-rule"></div>
+
+        <p class="service-description">
+          From intimate emotional moments to powerful cinematic sequences,
+          I explore orchestral colors, layered textures, and expressive
+          melodies to shape the mood, tension, and movement of a story.
+          Each score is guided by the needs of the project.
+        </p>
+
+        <ul class="service-details">
+          <li><span>Orchestral &amp; Hybrid Scoring</span><span>+</span></li>
+          <li><span>Lyrical &amp; Emotional Music</span><span>+</span></li>
+          <li><span>Tension &amp; Suspense</span><span>+</span></li>
+          <li><span>Action &amp; Cinematic Music</span><span>+</span></li>
+        </ul>
+
+      </div>
+
+      <div class="service-image">
+        <img
+          src="images/services-orchestra.jpg"
+          alt="A cinematic orchestral performance in warm dramatic light"
+          loading="lazy">
+      </div>
+
+    </section>
+
+    <!-- CONTACT CTA -->
+    <section class="services-contact">
+
+      <div class="services-contact-copy">
+
+        <p class="services-eyebrow">Let's Work Together</p>
+
+        <h2>Bring Your Story to Life</h2>
+
+        <p>
+          Have a film or visual story that needs music?
+          I'd love to hear about your project and explore how music
+          can help bring your vision to life.
+        </p>
+
+      </div>
+
+      <a
+        class="services-contact-button"
+        href="mailto:ke9276@naver.com">
+        Get in Touch
+        <span aria-hidden="true">→</span>
+      </a>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+
+    <div class="footer-contact">
+      <p>
+        <a href="mailto:ke9276@naver.com">ke9276@naver.com</a>
+      </p>
+    </div>
+
+    <p class="copyright">© 2026 Yeeun</p>
+
+  </footer>
+
+</body>
+</html>
