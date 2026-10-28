@@ -2478,3 +2478,11 @@ a:hover {
         font-size: 11px !important;
     }
 }
+/* COMEDY audio player size */
+.comedy-info audio {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  margin-top: 8px !important;
+}
