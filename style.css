@@ -2112,7 +2112,7 @@ a:hover {
 /* Image left, information right */
 .editorial-work {
   display: grid !important;
-  grid-template-columns: 130px minmax(0, 1fr) !important;
+  grid-template-columns: minmax(0, 0.72fr) minmax(0, 1fr) !important;
   align-items: center !important;
   gap: 16px !important;
   min-width: 0 !important;
@@ -2121,8 +2121,9 @@ a:hover {
 
 /* Image size matches LYRICAL */
 .editorial-image {
-  width: 130px !important;
-  height: 180px !important;
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 0.68 / 1 !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -2236,4 +2237,132 @@ a:hover {
     max-width: 100% !important;
     height: 34px !important;
   }
+}
+/* =========================================
+   FINAL FIX — ACTION & ORCHESTRAL
+   Match LYRICAL & EMOTIONAL layout
+   ========================================= */
+
+/* Category spacing and heading */
+.portfolio-category.editorial-category {
+    margin-top: 0 !important;
+}
+
+.portfolio-category.editorial-category > .category-heading {
+    margin-bottom: 24px !important;
+}
+
+/* Two-column work grid, matching LYRICAL */
+.editorial-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 32px 24px !important;
+    width: 100% !important;
+}
+
+/* Each work: image on the left, information on the right */
+.editorial-work {
+    display: grid !important;
+    grid-template-columns: minmax(0, 0.72fr) minmax(0, 1fr) !important;
+    gap: 12px !important;
+    align-items: center !important;
+    min-width: 0 !important;
+}
+
+/* Portrait image */
+.editorial-image {
+    display: block !important;
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 0.68 / 1 !important;
+    overflow: hidden !important;
+}
+
+.editorial-image img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+}
+
+/* Text information */
+.editorial-info {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+}
+
+.editorial-info h4 {
+    margin: 0 0 10px !important;
+    font-size: 17px !important;
+    line-height: 1.4 !important;
+    font-weight: 500 !important;
+}
+
+.editorial-info .work-type {
+    margin: 0 0 12px !important;
+    font-size: 12px !important;
+    line-height: 1.7 !important;
+}
+
+/* Audio player */
+.editorial-info audio {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-top: 8px !important;
+}
+
+/* Tablet: preserve the same two-column layout */
+@media (max-width: 900px) {
+    .editorial-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 28px 18px !important;
+    }
+
+    .editorial-work {
+        grid-template-columns: minmax(0, 0.72fr) minmax(0, 1fr) !important;
+        gap: 10px !important;
+    }
+}
+
+/* Mobile: one work per row, compact portrait image */
+@media (max-width: 600px) {
+    .editorial-grid {
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 28px !important;
+    }
+
+    .editorial-work {
+        grid-template-columns: 105px minmax(0, 1fr) !important;
+        gap: 14px !important;
+    }
+
+    .editorial-image {
+        width: 105px !important;
+        height: 145px !important;
+        aspect-ratio: auto !important;
+    }
+
+    .editorial-info h4 {
+        font-size: 16px !important;
+        margin-bottom: 8px !important;
+    }
+
+    .editorial-info .work-type {
+        font-size: 11px !important;
+        margin-bottom: 8px !important;
+    }
+
+    .editorial-info audio {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 34px !important;
+        margin-top: 6px !important;
+    }
 }
