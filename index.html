@@ -34,6 +34,7 @@
       line-height: 1.9;
     }
 
+
     /* =========================
        SELECTED WORK
        ========================= */
@@ -42,6 +43,8 @@
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 28px;
+      max-width: 1000px;
+      margin: 0 auto;
     }
 
     .featured-item {
@@ -52,26 +55,18 @@
     }
 
     .featured-image {
-  width: 100%;
-  aspect-ratio: 3 / 4;
-  overflow: hidden;
-  background: #151515;
-}
-
-.featured-image img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  transition: transform 0.5s ease;
-}
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      overflow: hidden;
+      background: #151515;
+    }
 
     .featured-image img {
       display: block;
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: center;
       transition: transform 0.5s ease;
     }
 
@@ -87,14 +82,33 @@
       margin: 0;
     }
 
+
     /* =========================
-       HOME KEYWORDS
+       SECTION SPACING
        ========================= */
+
+    .home-keywords {
+      padding-top: 45px;
+      padding-bottom: 45px;
+    }
 
     .home-keywords p {
       line-height: 1.8;
       letter-spacing: 0.04em;
     }
+
+    .home-statement {
+      padding: 75px 24px;
+    }
+
+    .home-statement p {
+      max-width: 850px;
+      margin: 0 auto;
+      font-size: clamp(28px, 3.5vw, 42px);
+      line-height: 1.45;
+      text-align: center;
+    }
+
 
     /* =========================
        FOOTER
@@ -110,11 +124,13 @@
       opacity: 0.6;
     }
 
+
     /* =========================
        MOBILE
        ========================= */
 
     @media (max-width: 700px) {
+
       .home-intro {
         grid-template-columns: 1fr;
         gap: 24px;
@@ -123,30 +139,58 @@
       .featured-grid {
         grid-template-columns: 1fr;
         gap: 36px;
+        max-width: 420px;
       }
+
+      .home-keywords {
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
+
+      .home-statement {
+        padding: 55px 20px;
+      }
+
+      .home-statement p {
+        font-size: 27px;
+      }
+
     }
+
   </style>
 </head>
 
+
 <body>
 
-  <!-- HEADER -->
+  <!-- =========================
+       HEADER
+       ========================= -->
 
   <header class="site-header hero-header">
 
-    <a href="index.html" class="brand">YEEUN</a>
+    <a href="index.html" class="brand">
+      YEEUN
+    </a>
 
     <nav class="site-nav">
+
       <a href="portfolio.html">Portfolio</a>
+
       <a href="services.html">Services</a>
+
       <a href="about.html">About</a>
+
       <a href="contact.html">Contact</a>
+
     </nav>
 
   </header>
 
 
-  <!-- HERO VIDEO -->
+  <!-- =========================
+       HERO VIDEO
+       ========================= -->
 
   <section class="hero-video">
 
@@ -158,8 +202,14 @@
       loop
       preload="auto"
     >
-      <source src="hero-web.mp4" type="video/mp4">
+
+      <source
+        src="hero-web.mp4"
+        type="video/mp4"
+      >
+
       Your browser does not support video playback.
+
     </video>
 
     <div class="hero-overlay"></div>
@@ -170,13 +220,17 @@
         id="playButton"
         type="button"
         aria-label="Pause video"
-      >❚❚</button>
+      >
+        ❚❚
+      </button>
 
       <button
         id="muteButton"
         type="button"
         aria-label="Turn sound on"
-      >🔇</button>
+      >
+        🔇
+      </button>
 
     </div>
 
@@ -185,7 +239,9 @@
 
   <main>
 
-    <!-- INTRO -->
+    <!-- =========================
+         INTRO
+         ========================= -->
 
     <section class="home-intro">
 
@@ -199,17 +255,20 @@
         <p>
           I compose original music for
           <strong>film, drama, trailers, and visual media</strong>,
-          combining orchestral writing, hybrid textures,
+          blending orchestral writing with hybrid textures
           and contemporary sound.
         </p>
 
         <p>
           From <strong>tension and action to lyrical and emotional themes</strong>,
-          each score is shaped around the story, atmosphere,
-          and emotion of the scene.
+          I shape each score around the story, atmosphere,
+          and emotion of the scene — bringing visual storytelling to life.
         </p>
 
-        <a href="about.html" class="text-link">
+        <a
+          href="about.html"
+          class="text-link"
+        >
           More about me →
         </a>
 
@@ -218,15 +277,22 @@
     </section>
 
 
-    <!-- SELECTED WORK -->
+    <!-- =========================
+         SELECTED WORK
+         ========================= -->
 
     <section class="featured">
 
       <div class="section-heading">
 
-        <h2>Selected Work</h2>
+        <h2>
+          Selected Work
+        </h2>
 
-        <a href="portfolio.html" class="text-link">
+        <a
+          href="portfolio.html"
+          class="text-link"
+        >
           View all →
         </a>
 
@@ -235,40 +301,58 @@
 
       <div class="featured-grid">
 
-               <!-- WORK 01: GRAVITY OF TIME -->
+        <!-- WORK 01: GRAVITY OF TIME -->
 
-        <a href="portfolio.html" class="featured-item">
+        <a
+          href="portfolio.html"
+          class="featured-item"
+        >
 
           <div class="featured-image">
+
             <img
               src="images/gravity-of-time.jpg"
-              alt="Gravity of Time — Tension & Suspense"
+              alt="Gravity of Time — Tension and Suspense"
               loading="lazy"
             >
+
           </div>
 
-          <h3>Gravity of Time</h3>
+          <h3>
+            Gravity of Time
+          </h3>
 
-          <p>TENSION &amp; SUSPENSE</p>
+          <p>
+            TENSION &amp; SUSPENSE
+          </p>
 
         </a>
 
 
         <!-- WORK 02: MOMENTUM -->
 
-        <a href="portfolio.html" class="featured-item">
+        <a
+          href="portfolio.html"
+          class="featured-item"
+        >
 
           <div class="featured-image">
+
             <img
               src="images/momentum.jpg"
-              alt="Momentum — Tension & Suspense"
+              alt="Momentum — Tension and Suspense"
               loading="lazy"
             >
+
           </div>
 
-          <h3>Momentum</h3>
+          <h3>
+            Momentum
+          </h3>
 
-          <p>TENSION &amp; SUSPENSE</p>
+          <p>
+            TENSION &amp; SUSPENSE
+          </p>
 
         </a>
 
@@ -277,7 +361,9 @@
     </section>
 
 
-    <!-- KEYWORDS -->
+    <!-- =========================
+         KEYWORDS
+         ========================= -->
 
     <section class="home-keywords">
 
@@ -288,7 +374,9 @@
     </section>
 
 
-    <!-- STATEMENT -->
+    <!-- =========================
+         STATEMENT
+         ========================= -->
 
     <section class="home-statement">
 
@@ -302,7 +390,9 @@
   </main>
 
 
-  <!-- FOOTER -->
+  <!-- =========================
+       FOOTER
+       ========================= -->
 
   <footer class="site-footer">
 
@@ -323,37 +413,85 @@
   </footer>
 
 
-  <!-- VIDEO CONTROLS -->
+  <!-- =========================
+       VIDEO CONTROLS
+       ========================= -->
 
   <script>
-    const video = document.getElementById("heroVideo");
-    const playButton = document.getElementById("playButton");
-    const muteButton = document.getElementById("muteButton");
 
-    playButton.addEventListener("click", function () {
-      if (video.paused) {
-        video.play();
-        playButton.textContent = "❚❚";
-        playButton.setAttribute("aria-label", "Pause video");
-      } else {
-        video.pause();
-        playButton.textContent = "▶";
-        playButton.setAttribute("aria-label", "Play video");
+    const video =
+      document.getElementById("heroVideo");
+
+    const playButton =
+      document.getElementById("playButton");
+
+    const muteButton =
+      document.getElementById("muteButton");
+
+
+    playButton.addEventListener(
+      "click",
+      function () {
+
+        if (video.paused) {
+
+          video.play();
+
+          playButton.textContent = "❚❚";
+
+          playButton.setAttribute(
+            "aria-label",
+            "Pause video"
+          );
+
+        } else {
+
+          video.pause();
+
+          playButton.textContent = "▶";
+
+          playButton.setAttribute(
+            "aria-label",
+            "Play video"
+          );
+
+        }
+
       }
-    });
+    );
 
-    muteButton.addEventListener("click", function () {
-      video.muted = !video.muted;
 
-      if (video.muted) {
-        muteButton.textContent = "🔇";
-        muteButton.setAttribute("aria-label", "Turn sound on");
-      } else {
-        muteButton.textContent = "🔊";
-        muteButton.setAttribute("aria-label", "Mute video");
+    muteButton.addEventListener(
+      "click",
+      function () {
+
+        video.muted = !video.muted;
+
+        if (video.muted) {
+
+          muteButton.textContent = "🔇";
+
+          muteButton.setAttribute(
+            "aria-label",
+            "Turn sound on"
+          );
+
+        } else {
+
+          muteButton.textContent = "🔊";
+
+          muteButton.setAttribute(
+            "aria-label",
+            "Mute video"
+          );
+
+        }
+
       }
-    });
+    );
+
   </script>
+
 
 </body>
 
