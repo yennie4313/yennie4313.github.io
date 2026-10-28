@@ -52,11 +52,20 @@
     }
 
     .featured-image {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      overflow: hidden;
-      background: #151515;
-    }
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: #151515;
+}
+
+.featured-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
 
     .featured-image img {
       display: block;
@@ -226,21 +235,21 @@
 
       <div class="featured-grid">
 
-        <!-- WORK 01: GRAVITY OF TIME -->
+               <!-- WORK 01: GRAVITY OF TIME -->
 
         <a href="portfolio.html" class="featured-item">
 
           <div class="featured-image">
             <img
               src="images/gravity-of-time.jpg"
-              alt="Gravity of Time — Original Film Score"
+              alt="Gravity of Time — Tension & Suspense"
               loading="lazy"
             >
           </div>
 
           <h3>Gravity of Time</h3>
 
-          <p>Film Score · Orchestral</p>
+          <p>TENSION &amp; SUSPENSE</p>
 
         </a>
 
@@ -252,14 +261,14 @@
           <div class="featured-image">
             <img
               src="images/momentum.jpg"
-              alt="Momentum — Original Film Score"
+              alt="Momentum — Tension & Suspense"
               loading="lazy"
             >
           </div>
 
           <h3>Momentum</h3>
 
-          <p>Film Score · Action</p>
+          <p>TENSION &amp; SUSPENSE</p>
 
         </a>
 
