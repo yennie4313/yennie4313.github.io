@@ -2479,10 +2479,18 @@ a:hover {
     }
 }
 /* COMEDY audio player size */
+/* COMEDY audio player — match ACTION & ORCHESTRAL */
 .comedy-info audio {
   display: block !important;
   width: 100% !important;
   max-width: 100% !important;
+  height: 40px !important;
   box-sizing: border-box !important;
   margin-top: 8px !important;
+}
+
+@media (max-width: 700px) {
+  .comedy-info audio {
+    height: 34px !important;
+  }
 }
