@@ -2366,3 +2366,20 @@ a:hover {
         margin-top: 6px !important;
     }
 }
+/* Match ACTION & ORCHESTRAL text with LYRICAL */
+
+.editorial-info h4 {
+    font-family: inherit !important;
+    font-size: 20px !important;
+    font-weight: 400 !important;
+    line-height: 1.4 !important;
+    letter-spacing: normal !important;
+}
+
+.editorial-info .work-type {
+    font-family: inherit !important;
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    line-height: 1.7 !important;
+    letter-spacing: normal !important;
+}
