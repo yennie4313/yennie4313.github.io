@@ -3,53 +3,141 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <title>YEEUN — Composer for Film & Media</title>
+  <title>YEEUN — Composer for Film &amp; Media</title>
 
   <meta
     name="description"
-    content="Yeeun is a composer for film, drama, trailers, and visual media."
+    content="Yeeun is a composer for film, drama, trailers, and visual media, creating original music that brings visual stories to life."
   >
 
   <link rel="stylesheet" href="style.css">
-</head>
 
+  <style>
+    /* =========================
+       HOME INTRO
+       ========================= */
+
+    .home-intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .home-intro h1 {
+      margin-top: 0;
+    }
+
+    .home-text p {
+      line-height: 1.9;
+    }
+
+    /* =========================
+       SELECTED WORK
+       ========================= */
+
+    .featured-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px;
+    }
+
+    .featured-item {
+      display: block;
+      min-width: 0;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .featured-image {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: #151515;
+    }
+
+    .featured-image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .featured-item:hover .featured-image img {
+      transform: scale(1.035);
+    }
+
+    .featured-item h3 {
+      margin: 20px 0 8px;
+    }
+
+    .featured-item p {
+      margin: 0;
+    }
+
+    /* =========================
+       HOME KEYWORDS
+       ========================= */
+
+    .home-keywords p {
+      line-height: 1.8;
+      letter-spacing: 0.04em;
+    }
+
+    /* =========================
+       FOOTER
+       ========================= */
+
+    .home-footer-contact a {
+      color: inherit;
+      text-decoration: none;
+      transition: opacity 0.25s ease;
+    }
+
+    .home-footer-contact a:hover {
+      opacity: 0.6;
+    }
+
+    /* =========================
+       MOBILE
+       ========================= */
+
+    @media (max-width: 700px) {
+      .home-intro {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .featured-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+    }
+  </style>
+</head>
 
 <body>
 
-  <!-- =========================
-       HEADER
-       ========================= -->
+  <!-- HEADER -->
 
   <header class="site-header hero-header">
 
-    <a href="index.html" class="brand">
-      YEEUN
-    </a>
+    <a href="index.html" class="brand">YEEUN</a>
 
     <nav class="site-nav">
-
       <a href="portfolio.html">Portfolio</a>
-
       <a href="services.html">Services</a>
-
       <a href="about.html">About</a>
-
       <a href="contact.html">Contact</a>
-
     </nav>
 
   </header>
 
 
-  <!-- =========================
-       HERO VIDEO
-       ========================= -->
+  <!-- HERO VIDEO -->
 
   <section class="hero-video">
 
@@ -61,19 +149,11 @@
       loop
       preload="auto"
     >
-
-      <source
-        src="hero-web.mp4"
-        type="video/mp4"
-      >
-
+      <source src="hero-web.mp4" type="video/mp4">
       Your browser does not support video playback.
-
     </video>
 
-
     <div class="hero-overlay"></div>
-
 
     <div class="hero-controls">
 
@@ -81,29 +161,22 @@
         id="playButton"
         type="button"
         aria-label="Pause video"
-      >
-        ❚❚
-      </button>
-
+      >❚❚</button>
 
       <button
         id="muteButton"
         type="button"
         aria-label="Turn sound on"
-      >
-        🔇
-      </button>
+      >🔇</button>
 
     </div>
 
   </section>
 
 
-  <!-- =========================
-       INTRO
-       ========================= -->
-
   <main>
+
+    <!-- INTRO -->
 
     <section class="home-intro">
 
@@ -112,30 +185,23 @@
         Film &amp; Media.
       </h1>
 
-
       <div class="home-text">
 
         <p>
-          I create original music for
+          I compose original music for
           <strong>film, drama, trailers, and visual media</strong>,
-          blending orchestral writing with hybrid textures
+          combining orchestral writing, hybrid textures,
           and contemporary sound.
         </p>
 
-
         <p>
           From <strong>tension and action to lyrical and emotional themes</strong>,
-          my music is shaped to support the story,
-          atmosphere, and emotion of each scene —
-          bringing visual storytelling to life.
+          each score is shaped around the story, atmosphere,
+          and emotion of the scene.
         </p>
 
-
-        <a
-          href="about.html"
-          class="text-link"
-        >
-          Read more →
+        <a href="about.html" class="text-link">
+          More about me →
         </a>
 
       </div>
@@ -143,22 +209,15 @@
     </section>
 
 
-    <!-- =========================
-         SELECTED WORK
-         ========================= -->
+    <!-- SELECTED WORK -->
 
     <section class="featured">
 
       <div class="section-heading">
 
-        <h2>
-          Selected Work
-        </h2>
+        <h2>Selected Work</h2>
 
-        <a
-          href="portfolio.html"
-          class="text-link"
-        >
+        <a href="portfolio.html" class="text-link">
           View all →
         </a>
 
@@ -167,47 +226,40 @@
 
       <div class="featured-grid">
 
+        <!-- WORK 01: GRAVITY OF TIME -->
 
-        <!-- WORK 01 -->
+        <a href="portfolio.html" class="featured-item">
 
-        <a
-          href="portfolio.html"
-          class="featured-item"
-        >
-
-          <div class="featured-placeholder">
-            Film Score
+          <div class="featured-image">
+            <img
+              src="images/gravity-of-time.jpg"
+              alt="Gravity of Time — Original Film Score"
+              loading="lazy"
+            >
           </div>
 
-          <h3>
-            Suspense
-          </h3>
+          <h3>Gravity of Time</h3>
 
-          <p>
-            Film · Tension
-          </p>
+          <p>Film Score · Orchestral</p>
 
         </a>
 
 
-        <!-- WORK 02 -->
+        <!-- WORK 02: MOMENTUM -->
 
-        <a
-          href="portfolio.html"
-          class="featured-item"
-        >
+        <a href="portfolio.html" class="featured-item">
 
-          <div class="featured-placeholder">
-            Original Music
+          <div class="featured-image">
+            <img
+              src="images/momentum.jpg"
+              alt="Momentum — Original Film Score"
+              loading="lazy"
+            >
           </div>
 
-          <h3>
-            Lyrical Theme
-          </h3>
+          <h3>Momentum</h3>
 
-          <p>
-            Drama · Lyrical
-          </p>
+          <p>Film Score · Action</p>
 
         </a>
 
@@ -216,9 +268,7 @@
     </section>
 
 
-    <!-- =========================
-         KEYWORDS
-         ========================= -->
+    <!-- KEYWORDS -->
 
     <section class="home-keywords">
 
@@ -229,9 +279,7 @@
     </section>
 
 
-    <!-- =========================
-         STATEMENT
-         ========================= -->
+    <!-- STATEMENT -->
 
     <section class="home-statement">
 
@@ -245,35 +293,19 @@
   </main>
 
 
-  <!-- =========================
-       FOOTER
-       ========================= -->
+  <!-- FOOTER -->
 
   <footer class="site-footer">
 
-    <div class="footer-contact">
+    <div class="footer-contact home-footer-contact">
 
       <p>
-        <a href="mailto:youremail@example.com">
-          youremail@example.com
+        <a href="mailto:ke9276@naver.com">
+          ke9276@naver.com
         </a>
       </p>
 
-
-      <div class="footer-links">
-
-        <a href="#">
-          YouTube
-        </a>
-
-        <a href="#">
-          Instagram
-        </a>
-
-      </div>
-
     </div>
-
 
     <p class="copyright">
       © 2026 Yeeun
@@ -282,75 +314,37 @@
   </footer>
 
 
-  <!-- =========================
-       VIDEO CONTROLS
-       ========================= -->
+  <!-- VIDEO CONTROLS -->
 
   <script>
+    const video = document.getElementById("heroVideo");
+    const playButton = document.getElementById("playButton");
+    const muteButton = document.getElementById("muteButton");
 
-    const video =
-      document.getElementById("heroVideo");
-
-    const playButton =
-      document.getElementById("playButton");
-
-    const muteButton =
-      document.getElementById("muteButton");
-
-
-    playButton.addEventListener(
-      "click",
-      function () {
-
-        if (video.paused) {
-
-          video.play();
-
-          playButton.textContent = "❚❚";
-
-        } else {
-
-          video.pause();
-
-          playButton.textContent = "▶";
-
-        }
-
+    playButton.addEventListener("click", function () {
+      if (video.paused) {
+        video.play();
+        playButton.textContent = "❚❚";
+        playButton.setAttribute("aria-label", "Pause video");
+      } else {
+        video.pause();
+        playButton.textContent = "▶";
+        playButton.setAttribute("aria-label", "Play video");
       }
-    );
+    });
 
+    muteButton.addEventListener("click", function () {
+      video.muted = !video.muted;
 
-    muteButton.addEventListener(
-      "click",
-      function () {
-
-        video.muted = !video.muted;
-
-        if (video.muted) {
-
-          muteButton.textContent = "🔇";
-
-          muteButton.setAttribute(
-            "aria-label",
-            "Turn sound on"
-          );
-
-        } else {
-
-          muteButton.textContent = "🔊";
-
-          muteButton.setAttribute(
-            "aria-label",
-            "Mute video"
-          );
-
-        }
-
+      if (video.muted) {
+        muteButton.textContent = "🔇";
+        muteButton.setAttribute("aria-label", "Turn sound on");
+      } else {
+        muteButton.textContent = "🔊";
+        muteButton.setAttribute("aria-label", "Mute video");
       }
-    );
-
+    });
   </script>
-
 
 </body>
 
